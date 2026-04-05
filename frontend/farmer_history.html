@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Applications - AgriDSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; }
+    .header {
+      background: linear-gradient(135deg, #1e5631 0%, #145222 100%);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header a { color: white; text-decoration: none; padding: 8px 12px; background: rgba(255,255,255,0.2); border-radius: 6px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden; }
+    .card-header { padding: 16px 20px; border-bottom: 1px solid #eee; display:flex; justify-content:space-between; align-items:center; }
+    .card-header h2 { color: #1e5631; font-size: 1.1rem; }
+    .body { padding: 20px; }
+    .row { display: grid; grid-template-columns: 1fr 160px; gap: 12px; }
+    input { padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 0.95rem; }
+    input:focus { outline: none; border-color: #1e5631; box-shadow: 0 0 0 3px rgba(30,86,49,0.12); }
+    .btn { padding: 12px; background: #1e5631; color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
+    .btn:disabled { background: #9db5a5; cursor: not-allowed; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; font-size: 0.9rem; }
+    th { background: #f5f5f5; color: #1e5631; }
+    tr:hover { background: #fafafa; }
+    .badge { display:inline-block; padding: 4px 10px; border-radius: 999px; font-weight: 700; font-size: 0.75rem; }
+    .SUBMITTED { background:#e3f2fd; color:#1976d2; }
+    .UNDER_AI_REVIEW { background:#fff3e0; color:#f57c00; }
+    .OFFICER_REVIEW { background:#f3e5f5; color:#7b1fa2; }
+    .APPROVED { background:#e8f5e9; color:#388e3c; }
+    .REJECTED { background:#ffebee; color:#d32f2f; }
+    .empty { color:#666; padding: 14px 0; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div><i class="fas fa-leaf"></i> AgriDSS Farmer</div>
+    <div style="display:flex; gap:10px;">
+      <a href="farmer_portal.html"><i class="fas fa-plus"></i> New Application</a>
+      <a href="track_application.html"><i class="fas fa-search"></i> Track</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2><i class="fas fa-history"></i> Application History</h2>
+        <a href="login.html" style="color:#1e5631; text-decoration:none; font-weight:700;"><i class="fas fa-user"></i> Login</a>
+      </div>
+      <div class="body">
+        <div class="row">
+          <input id="mobile" type="tel" placeholder="Enter your 10-digit mobile number" />
+          <button class="btn" id="btn" onclick="loadHistory()"><i class="fas fa-download"></i> Fetch</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Application ID</th>
+              <th>Scheme</th>
+              <th>Status</th>
+              <th>Submitted</th>
+              <th>Final Decision</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="5" class="empty">Enter mobile number to view your applications.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadHistory() {
+      const mobile = document.getElementById('mobile').value.trim();
+      if (!mobile) return;
+      const btn = document.getElementById('btn');
+      const tbody = document.getElementById('tbody');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading';
+      try {
+        const res = await fetch('http://127.0.0.1:8000/api/farmer/application-history/' + encodeURIComponent(mobile));
+        const data = await res.json();
+        if (!data.success) throw new Error('Failed');
+        const apps = data.applications || [];
+        if (apps.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="5" class="empty">No applications found for this mobile number.</td></tr>';
+          return;
+        }
+        tbody.innerHTML = apps.map(a => {
+          const submitted = a.submitted_at ? new Date(a.submitted_at).toLocaleString() : '-';
+          const decision = a.final_decision || 'Pending';
+          return `
+            <tr>
+              <td>${a.application_id}</td>
+              <td>${a.scheme_name || '-'}</td>
+              <td><span class="badge ${a.status}">${(a.status || '').replace(/_/g,' ')}</span></td>
+              <td>${submitted}</td>
+              <td>${decision}</td>
+            </tr>
+          `;
+        }).join('');
+      } catch (e) {
+        tbody.innerHTML = '<tr><td colspan="5" class="empty">Cannot load history. Make sure API server is running.</td></tr>';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-download"></i> Fetch';
+      }
+    }
+
+    document.getElementById('mobile').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') loadHistory();
+    });
+  </script>
+</body>
+</html>

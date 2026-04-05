@@ -1,0 +1,90 @@
+{
+  "schemes": [
+    {
+      "scheme_id": "PMFBY",
+      "scheme_name": "Pradhan Mantri Fasal Bima Yojana",
+      "description": "Crop insurance scheme for farmers",
+      "eligibility": {
+        "farmer_types": ["small", "marginal", "large"],
+        "land_ownership": ["owned", "leased"],
+        "crops_covered": ["food_crops", "commercial_crops", "horticultural_crops"],
+        "seasons": ["kharif", "rabi", "zaid"]
+      },
+      "coverage": {
+        "sum_insured": "per hectare based on scale of finance",
+        "premium_rate": {
+          "kharif": 2.0,
+          "rabi": 1.5
+        }
+      },
+      "disasters_covered": ["flood", "drought", "cyclone", "pest", "disease", "landslide", "fire"]
+    },
+    {
+      "scheme_id": "SMAM",
+      "scheme_name": "Sub-Mission on Agricultural Mechanization",
+      "description": "Support for farm mechanization",
+      "eligibility": {
+        "farmer_types": ["small", "marginal", "medium", "large"],
+        "land_ownership": ["owned"],
+        "crops_covered": ["all"],
+        "seasons": ["all"]
+      },
+      "coverage": {
+        "subsidy_percentage": 40,
+        "max_subsidy": 75000
+      },
+      "disasters_covered": []
+    },
+    {
+      "scheme_id": "NDRF",
+      "scheme_name": "National Disaster Response Fund",
+      "description": "Ex-gratia payment for natural disaster affected",
+      "eligibility": {
+        "farmer_types": ["small", "marginal", "medium", "large"],
+        "land_ownership": ["owned", "leased"],
+        "crops_covered": ["all"],
+        "seasons": ["all"]
+      },
+      "coverage": {
+        "amount_per_hectare": 6800,
+        "max_amount": 100000
+      },
+      "disasters_covered": ["flood", "drought", "cyclone", "landslide", "cloudburst"]
+    },
+    {
+      "scheme_id": "CCIS",
+      "scheme_name": "Central Crop Insurance Scheme",
+      "description": "Historical crop insurance for losses",
+      "eligibility": {
+        "farmer_types": ["small", "marginal"],
+        "land_ownership": ["owned"],
+        "crops_covered": ["food_crops"],
+        "seasons": ["kharif", "rabi"]
+      },
+      "coverage": {
+        "sum_insured": "based on notional value"
+      },
+      "disasters_covered": ["flood", "drought", "cyclone"]
+    }
+  ],
+  "eligibility_rules": {
+    "land_holding": {
+      "small_farmer": {"max_hectares": 4},
+      "marginal_farmer": {"max_hectares": 1},
+      "medium_farmer": {"min_hectares": 4, "max_hectares": 10},
+      "large_farmer": {"min_hectares": 10}
+    },
+    "loss_threshold": {
+      "minimum_loss_percentage": 20,
+      "automatic_trigger": 35
+    },
+    "application_deadline_days": 72,
+    "required_documents": [
+      "land_records",
+      "aadhar_card",
+      "bank_account",
+      "photo",
+      "loss_assessment"
+    ]
+  }
+}

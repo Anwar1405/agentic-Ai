@@ -1,0 +1,109 @@
+{
+  "budget_allocation": [
+    {
+      "fiscal_year": "2024-25",
+      "state": "Maharashtra",
+      "scheme": "PMFBY",
+      "allocated_amount_rs": 2500000000,
+      "spent_amount_rs": 1800000000,
+      "remaining_amount_rs": 700000000,
+      "beneficiaries_count": 450000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Maharashtra",
+      "scheme": "NDRF",
+      "allocated_amount_rs": 500000000,
+      "spent_amount_rs": 420000000,
+      "remaining_amount_rs": 80000000,
+      "beneficiaries_count": 85000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Rajasthan",
+      "scheme": "PMFBY",
+      "allocated_amount_rs": 1800000000,
+      "spent_amount_rs": 1650000000,
+      "remaining_amount_rs": 150000000,
+      "beneficiaries_count": 320000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Rajasthan",
+      "scheme": "NDRF",
+      "allocated_amount_rs": 350000000,
+      "spent_amount_rs": 350000000,
+      "remaining_amount_rs": 0,
+      "beneficiaries_count": 120000,
+      "quota_remaining": false
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Odisha",
+      "scheme": "PMFBY",
+      "allocated_amount_rs": 1200000000,
+      "spent_amount_rs": 900000000,
+      "remaining_amount_rs": 300000000,
+      "beneficiaries_count": 280000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Odisha",
+      "scheme": "NDRF",
+      "allocated_amount_rs": 400000000,
+      "spent_amount_rs": 380000000,
+      "remaining_amount_rs": 20000000,
+      "beneficiaries_count": 95000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Bihar",
+      "scheme": "PMFBY",
+      "allocated_amount_rs": 1500000000,
+      "spent_amount_rs": 1100000000,
+      "remaining_amount_rs": 400000000,
+      "beneficiaries_count": 380000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Karnataka",
+      "scheme": "PMFBY",
+      "allocated_amount_rs": 1400000000,
+      "spent_amount_rs": 1000000000,
+      "remaining_amount_rs": 400000000,
+      "beneficiaries_count": 310000,
+      "quota_remaining": true
+    },
+    {
+      "fiscal_year": "2024-25",
+      "state": "Assam",
+      "scheme": "NDRF",
+      "allocated_amount_rs": 280000000,
+      "spent_amount_rs": 260000000,
+      "remaining_amount_rs": 20000000,
+      "beneficiaries_count": 72000,
+      "quota_remaining": true
+    }
+  ],
+  "max_subsidy_limits": {
+    "PMFBY": {
+      "small_farmer_rs": 50000,
+      "marginal_farmer_rs": 40000,
+      "medium_farmer_rs": 100000,
+      "large_farmer_rs": 200000
+    },
+    "NDRF": {
+      "per_hectare_rs": 6800,
+      "max_per_farmer_rs": 100000
+    },
+    "SMAM": {
+      "max_subsidy_rs": 75000
+    }
+  }
+}

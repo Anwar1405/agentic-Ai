@@ -1,0 +1,1001 @@
+land_record_id,farmer_id,state,district,survey_number,patta_number,land_area,land_type,ownership_status,document_status,land_use,last_updated,ethical_flag,dispute_status,verification_source
+LRWE000001,F486783,West Bengal,Bardhaman,740/50,WB67768065,22.86,dry,joint,valid,agricultural,10-03-2021,,none,revenue_records
+LRWE000002,F350904,West Bengal,Bardhaman,769/51,WB24612176,20.83,wet,disputed,invalid,agricultural,23-11-2023,false_succession_claim,inheritance_dispute,revenue_records
+LRRA000003,F348655,Rajasthan,Bhilwara,499-F,RJ43714936,15.51,wet,owner,valid,agricultural,29-03-2020,,none,digitized_land_registry
+LRMA000004,F122503,Madhya Pradesh,Sagar,477-E,MP47959794,25.72,wet,tenant,valid,agricultural,14-07-2024,,none,revenue_records
+LRAN000005,F467273,Andhra Pradesh,Vijayawada,823/23,AP11148065,6.17,wet,inherited,valid,agricultural,18-05-2023,,none,digitized_land_registry
+LRHA000006,F964571,Haryana,Faridabad,S1078,HR67478084,21.04,plantation,inherited,valid,horticultural,09-11-2022,,none,revenue_records
+LRAN000007,F786427,Andhra Pradesh,Vijayawada,499/47,AP83251688,21.83,garden,tenant,expired,converted_non_agricultural,24-05-2019,environmental_clearance_violation,encroachment_case,revenue_records
+LRUT000008,F650377,Uttar Pradesh,Gorakhpur,942-C,UP80283960,28.86,garden,tenant,valid,agricultural,25-05-2018,,none,satellite_mapping
+LRPU000009,F368723,Punjab,Patiala,434/18,PB72145523,36.65,plantation,inherited,valid,horticultural,01-01-2020,,none,satellite_mapping
+LRTA000010,F348327,Tamil Nadu,Erode,S8804,TN80934612,46,garden,owner,valid,horticultural,11-03-2020,,none,digitized_land_registry
+LRWE000011,F312482,West Bengal,Kolkata,3/228/1,WB95422902,18.72,wet,inherited,invalid,agricultural,28-07-2020,common_land_appropriation,boundary_dispute,revenue_records
+LRGU000012,F236786,Gujarat,Jamnagar,S2975,GJ71104207,20.81,plantation,disputed,pending_verification,agricultural,27-05-2019,sc_st_land_alienation,active_litigation,manual_verification
+LRHA000013,F117280,Haryana,Yamunanagar,53/19/2,HR47537470,24.7,garden,owner,valid,horticultural,19-05-2018,,none,revenue_records
+LRMA000014,F880193,Madhya Pradesh,Jabalpur,S5574,MP62460091,48.34,dry,inherited,valid,agricultural,22-09-2018,,none,satellite_mapping
+LRKA000015,F112481,Karnataka,Shimoga,34/643/4,KA74927686,16.6,plantation,inherited,valid,horticultural,11-03-2021,,none,revenue_records
+LRUT000016,F505320,Uttar Pradesh,Kanpur,380-E,UP19816082,18.76,dry,inherited,valid,agricultural,27-06-2024,,none,revenue_records
+LRTE000017,F766927,Telangana,Nizamabad,784-A,TS96717783,19.21,wet,owner,valid,agricultural,26-11-2024,,none,satellite_mapping
+LRMA000018,F327105,Madhya Pradesh,Gwalior,52/699/7,MP85861637,41.46,plantation,tenant,valid,agricultural,02-05-2023,,none,digitized_land_registry
+LRUT000019,F901238,Uttar Pradesh,Lucknow,38/954/7,UP47059516,21.94,dry,inherited,valid,agricultural,12-08-2023,,none,revenue_records
+LRKA000020,F976688,Karnataka,Shimoga,547/54,KA58448564,20.98,wet,owner,valid,agricultural,29-07-2018,,none,revenue_records
+LRAN000021,F830812,Andhra Pradesh,Tirupati,S4186,AP94379888,26.56,plantation,inherited,valid,agricultural,17-02-2021,,none,satellite_mapping
+LRUT000022,F218121,Uttar Pradesh,Moradabad,27/49/8,UP39295119,14.68,plantation,inherited,valid,agricultural,18-12-2018,,none,satellite_mapping
+LRKA000023,F288996,Karnataka,Bengaluru,64/361/3,KA79354977,24.38,dry,joint,valid,horticultural,09-05-2019,,none,revenue_records
+LRRA000024,F481038,Rajasthan,Jaipur,770/24,RJ46673929,32.09,dry,inherited,pending_verification,agricultural,15-03-2018,common_land_appropriation,active_litigation,revenue_records
+LRMA000025,F857035,Maharashtra,Kolhapur,965/48,,4.32,garden,joint,valid,agricultural,01-02-2023,encroachment_on_government_land,active_litigation,manual_verification
+LRHA000026,F923297,Haryana,Faridabad,76/291/9,HR59128584,36.59,wet,tenant,valid,agricultural,21-07-2023,,none,digitized_land_registry
+LRKA000027,F117142,Karnataka,Gulbarga,S6331,KA91431697,36.77,dry,disputed,expired,horticultural,12-05-2024,false_succession_claim,active_litigation,unverified
+LRMA000028,F800244,Maharashtra,Sangli,911/58,MH92048116,40.57,garden,inherited,valid,agricultural,31-03-2022,,none,satellite_mapping
+LRWE000029,F804798,West Bengal,Kolkata,S7855,WB76075645,9.59,garden,tenant,valid,horticultural,17-08-2022,,none,digitized_land_registry
+LRGU000030,F543176,Gujarat,Vadodara,S1337,GJ41644742,24.99,wet,joint,valid,agricultural,12-11-2024,,none,digitized_land_registry
+LRUT000031,F142811,Uttar Pradesh,Agra,S5465,UP31812758,4.79,dry,tenant,valid,horticultural,05-08-2022,,none,revenue_records
+LRWE000032,F594771,West Bengal,Siliguri,S3477,,51.1,garden,joint,pending_verification,horticultural,10-05-2024,ceiling_breach,none,revenue_records
+LRRA000033,F257788,Rajasthan,Pali,223-E,RJ45078645,12.97,garden,owner,pending_verification,horticultural,13-03-2020,encroachment_on_government_land,active_litigation,revenue_records
+LRAN000034,F184300,Andhra Pradesh,Nellore,80/928/5,AP16016715,34.82,plantation,tenant,valid,agricultural,04-05-2020,,none,digitized_land_registry
+LRHA000035,F132375,Haryana,Panchkula,S3555,HR75615253,14.94,plantation,inherited,valid,agricultural,20-09-2022,,none,satellite_mapping
+LRMA000036,F346797,Maharashtra,Ahmednagar,S4432,MH75766801,32.76,dry,joint,valid,horticultural,01-10-2021,,none,digitized_land_registry
+LRWE000037,F184164,West Bengal,Malda,913/39,WB97728933,17.38,wet,inherited,valid,agricultural,16-09-2019,,none,satellite_mapping
+LRMA000038,F199474,Maharashtra,Sangli,637-F,MH39865443,24.79,garden,owner,valid,agricultural,18-02-2018,,none,satellite_mapping
+LRAN000039,F792369,Andhra Pradesh,Tirupati,557-C,AP74521280,20.87,plantation,tenant,valid,agricultural,08-07-2023,,none,satellite_mapping
+LRWE000040,F348312,West Bengal,Durgapur,169-B,WB95155860,31.58,garden,inherited,valid,agricultural,27-04-2020,,none,revenue_records
+LRHA000041,F448533,Haryana,Gurugram,25/344/2,HR71417798,44.19,wet,inherited,valid,horticultural,07-12-2022,,none,satellite_mapping
+LRUT000042,F660604,Uttar Pradesh,Bareilly,47/478/8,,26.36,garden,joint,valid,agricultural,18-10-2018,encroachment_on_government_land,none,unverified
+LRMA000043,F691112,Madhya Pradesh,Sagar,S4125,,35.44,plantation,inherited,invalid,horticultural,05-07-2020,benami_transaction,pending_mutation,revenue_records
+LRTA000044,F832350,Tamil Nadu,Thanjavur,55/90/2,,43.89,garden,inherited,expired,converted_non_agricultural,26-05-2023,wetland_conversion_violation,encroachment_case,manual_verification
+LRMA000045,F138690,Madhya Pradesh,Sagar,48/566/6,MP14200001,4.52,dry,tenant,valid,agricultural,11-03-2019,,none,satellite_mapping
+LRRA000046,F226916,Rajasthan,Pali,56-B,RJ84071370,37.54,dry,owner,valid,agricultural,26-06-2020,,none,satellite_mapping
+LRHA000047,F435279,Haryana,Faridabad,754-D,HR47369100,12.99,wet,tenant,valid,agricultural,30-11-2018,,none,digitized_land_registry
+LRAN000048,F308778,Andhra Pradesh,Kurnool,S5448,AP37531589,43.03,garden,tenant,valid,horticultural,12-06-2019,,none,revenue_records
+LRKA000049,F158854,Karnataka,Mangalore,233/71,KA16025749,34.37,garden,owner,valid,horticultural,16-03-2024,,none,revenue_records
+LRHA000050,F909062,Haryana,Sonipat,41/635/5,HR25798891,47.09,plantation,inherited,valid,horticultural,13-10-2021,,none,revenue_records
+LRKA000051,F272077,Karnataka,Gulbarga,218/96,KA95225687,10.87,wet,owner,valid,agricultural,09-11-2023,,none,revenue_records
+LRUT000052,F138591,Uttar Pradesh,Gorakhpur,289-D,UP57696981,4.11,plantation,joint,valid,horticultural,25-03-2022,,none,revenue_records
+LRWE000053,F670657,West Bengal,Bardhaman,20/887/4,WB98061111,42.55,dry,owner,valid,agricultural,25-09-2021,,none,revenue_records
+LRPU000054,F964049,Punjab,Hoshiarpur,26/977/6,PB46178513,20.67,plantation,owner,valid,horticultural,01-05-2018,,none,revenue_records
+LRWE000055,F230818,West Bengal,Durgapur,318/8,WB25608171,45.47,dry,inherited,valid,agricultural,03-12-2019,,none,satellite_mapping
+LRGU000056,F466739,Gujarat,Anand,S6862,GJ39486591,7.12,wet,owner,valid,agricultural,28-06-2023,,none,revenue_records
+LRHA000057,F981582,Haryana,Karnal,778-D,HR44605373,2.39,plantation,owner,valid,horticultural,31-03-2024,,none,satellite_mapping
+LRHA000058,F825398,Haryana,Ambala,S8483,HR34515744,19,wet,owner,valid,agricultural,11-02-2022,,none,satellite_mapping
+LRWE000059,F774410,West Bengal,Durgapur,466-F,WB70312553,10.7,wet,tenant,pending_verification,agricultural,26-03-2018,benami_transaction,pending_mutation,manual_verification
+LRUT000060,F511781,Uttar Pradesh,Lucknow,58/723/8,UP24822526,15.04,wet,owner,valid,horticultural,07-04-2020,,none,satellite_mapping
+LRTA000061,F946781,Tamil Nadu,Thanjavur,900/56,TN71719042,36.46,wet,joint,pending_verification,forest,18-03-2024,forest_land_encroachment,encroachment_case,manual_verification
+LRMA000062,F627369,Maharashtra,Nashik,S2036,MH86881823,43.54,garden,inherited,invalid,agricultural,14-04-2023,womens_inheritance_denial,active_litigation,unverified
+LRGU000063,F157558,Gujarat,Vadodara,S5787,GJ16739260,16.07,wet,owner,valid,horticultural,05-04-2021,encroachment_on_government_land,active_litigation,unverified
+LRTE000064,F430909,Telangana,Hyderabad,S8380,TS35927149,17.11,garden,tenant,valid,horticultural,07-05-2024,,none,satellite_mapping
+LRHA000065,F750879,Haryana,Ambala,S6050,HR84168544,43.54,plantation,joint,expired,forest,29-10-2020,water_body_encroachment,none,revenue_records
+LRKA000066,F756545,Karnataka,Hubli,462/41,KA36005868,45.72,garden,owner,valid,agricultural,14-09-2024,ceiling_breach,active_litigation,revenue_records
+LRHA000067,F698378,Haryana,Rohtak,381-D,HR83641466,20.96,plantation,owner,valid,horticultural,19-06-2021,,none,digitized_land_registry
+LRMA000068,F643784,Maharashtra,Nashik,213-E,MH74854633,3.4,wet,joint,valid,agricultural,23-11-2019,,none,revenue_records
+LRWE000069,F237463,West Bengal,Bardhaman,31/328/9,WB55461356,35.13,plantation,tenant,valid,agricultural,12-03-2020,,none,satellite_mapping
+LRWE000070,F844021,West Bengal,Baharampur,S5156,WB65421589,48.35,dry,owner,pending_verification,fallow,08-07-2021,environmental_clearance_violation,none,manual_verification
+LRTA000071,F944959,Tamil Nadu,Tiruchirappalli,833/75,TN96612068,39.45,plantation,joint,valid,horticultural,11-06-2023,,none,revenue_records
+LRKA000072,F482966,Karnataka,Gulbarga,802/67,KA46118302,19.33,dry,joint,pending_verification,fallow,19-01-2018,water_body_encroachment,none,manual_verification
+LRTE000073,F886388,Telangana,Suryapet,875/89,TS75720047,10.46,dry,owner,pending_verification,agricultural,30-07-2019,common_land_appropriation,pending_mutation,revenue_records
+LRWE000074,F518129,West Bengal,Asansol,169/17,WB80518542,44.51,plantation,joint,valid,agricultural,05-12-2023,tribal_land_violation,none,revenue_records
+LRAN000075,F131013,Andhra Pradesh,Kurnool,S9826,AP12354855,5.6,wet,owner,valid,agricultural,26-02-2018,,none,digitized_land_registry
+LRTE000076,F924079,Telangana,Suryapet,28/74/2,TS29959435,41.02,plantation,inherited,valid,horticultural,15-08-2018,,none,revenue_records
+LRTA000077,F471928,Tamil Nadu,Madurai,68/571/2,TN53070392,17.44,wet,tenant,valid,agricultural,01-09-2018,,none,digitized_land_registry
+LRWE000078,F417842,West Bengal,Asansol,44/556/7,WB42776259,16.06,dry,disputed,expired,converted_non_agricultural,25-02-2021,environmental_clearance_violation,encroachment_case,manual_verification
+LRHA000079,F158001,Haryana,Karnal,16-F,HR60045547,47.83,dry,tenant,valid,agricultural,12-06-2022,,none,revenue_records
+LRAN000080,F423113,Andhra Pradesh,Tirupati,6/793/4,AP55999720,41.84,dry,owner,valid,agricultural,27-03-2022,,none,revenue_records
+LRAN000081,F248603,Andhra Pradesh,Nellore,98/458/3,AP37555036,3.99,wet,joint,invalid,horticultural,14-04-2022,common_land_appropriation,pending_mutation,manual_verification
+LRPU000082,F583037,Punjab,Amritsar,20/553/3,PB68773572,28.02,plantation,inherited,missing,horticultural,11-06-2021,sc_st_land_alienation,inheritance_dispute,unverified
+LRMA000083,F458599,Maharashtra,Aurangabad,S8068,MH51765333,38.83,garden,joint,pending_verification,agricultural,23-05-2022,common_land_appropriation,boundary_dispute,revenue_records
+LRGU000084,F961204,Gujarat,Vadodara,308/32,GJ72221845,21.18,plantation,government_lease,valid,forest,26-02-2019,environmental_clearance_violation,none,manual_verification
+LRPU000085,F949022,Punjab,Mohali,858/42,PB91813038,7.62,dry,joint,valid,agricultural,20-01-2019,,none,satellite_mapping
+LRMA000086,F409360,Maharashtra,Nashik,S1893,MH20176030,10.98,garden,inherited,valid,horticultural,13-08-2019,,none,revenue_records
+LRHA000087,F265261,Haryana,Gurugram,S9400,HR40397284,24.91,wet,joint,valid,agricultural,23-03-2024,,none,digitized_land_registry
+LRAN000088,F389805,Andhra Pradesh,Vijayawada,811-B,AP48120187,3.75,garden,owner,valid,agricultural,01-12-2024,,none,satellite_mapping
+LRPU000089,F516529,Punjab,Hoshiarpur,521-C,PB70191381,22.07,dry,joint,valid,agricultural,24-06-2019,,none,digitized_land_registry
+LRMA000090,F744586,Maharashtra,Sangli,16/853/3,MH47431755,29.12,wet,owner,valid,agricultural,01-06-2024,,none,digitized_land_registry
+LRTA000091,F710856,Tamil Nadu,Coimbatore,842-A,TN72882944,41.64,wet,disputed,pending_verification,forest,03-08-2019,wetland_conversion_violation,encroachment_case,revenue_records
+LRAN000092,F472594,Andhra Pradesh,Tirupati,438/33,AP21808548,6.65,wet,tenant,valid,agricultural,16-02-2024,,none,revenue_records
+LRMA000093,F528505,Madhya Pradesh,Dewas,S7868,MP62026963,36.56,wet,joint,invalid,agricultural,06-11-2020,common_land_appropriation,pending_mutation,manual_verification
+LRRA000094,F109812,Rajasthan,Alwar,65/5,RJ79783031,25.71,garden,tenant,valid,agricultural,01-09-2021,,none,satellite_mapping
+LRAN000095,F385484,Andhra Pradesh,Kurnool,288-E,AP63075085,23.58,plantation,disputed,valid,converted_non_agricultural,29-10-2023,water_body_encroachment,none,manual_verification
+LRAN000096,F368744,Andhra Pradesh,Guntur,125-F,AP24228090,38.5,garden,inherited,invalid,horticultural,15-05-2020,benami_transaction,boundary_dispute,revenue_records
+LRWE000097,F925037,West Bengal,Durgapur,935/22,WB73726720,33.41,dry,joint,valid,agricultural,22-06-2023,,none,digitized_land_registry
+LRGU000098,F817423,Gujarat,Surat,834/16,GJ90391937,33.16,plantation,tenant,pending_verification,agricultural,29-10-2024,sc_st_land_alienation,active_litigation,unverified
+LRKA000099,F672845,Karnataka,Hubli,S6543,KA14153955,11.42,wet,inherited,valid,agricultural,23-12-2023,,none,satellite_mapping
+LRMA000100,F160419,Madhya Pradesh,Ratlam,970/48,MP43070487,1.39,wet,joint,valid,horticultural,14-09-2023,,none,revenue_records
+LRPU000101,F516483,Punjab,Mohali,895/27,PB74134187,45.91,dry,disputed,expired,forest,24-08-2019,forest_land_encroachment,none,unverified
+LRTA000102,F134505,Tamil Nadu,Erode,374-F,,38.98,plantation,owner,invalid,agricultural,10-12-2020,fraudulent_mutation,boundary_dispute,revenue_records
+LRKA000103,F677121,Karnataka,Tumkur,974/64,,42.41,wet,owner,invalid,agricultural,11-06-2023,benami_transaction,pending_mutation,revenue_records
+LRRA000104,F318517,Rajasthan,Jaipur,S6558,RJ83766972,25.26,wet,inherited,valid,horticultural,31-08-2019,,none,satellite_mapping
+LRGU000105,F986348,Gujarat,Surat,703-D,GJ85006657,22.87,wet,owner,valid,agricultural,04-12-2023,,none,digitized_land_registry
+LRWE000106,F310298,West Bengal,Kharagpur,271/2,WB20479499,31.03,wet,tenant,valid,horticultural,27-01-2023,,none,digitized_land_registry
+LRHA000107,F643969,Haryana,Sonipat,S4438,HR10081843,7.33,dry,tenant,valid,horticultural,24-07-2023,,none,digitized_land_registry
+LRAN000108,F707974,Andhra Pradesh,Rajahmundry,743/96,AP12420551,48.96,dry,tenant,valid,horticultural,18-02-2022,,none,satellite_mapping
+LRMA000109,F762939,Madhya Pradesh,Ujjain,S9638,MP54179809,19.28,plantation,inherited,pending_verification,agricultural,25-02-2019,common_land_appropriation,pending_mutation,revenue_records
+LRRA000110,F693792,Rajasthan,Bhilwara,S1861,RJ73602411,1.27,wet,joint,valid,agricultural,10-11-2022,,none,digitized_land_registry
+LRWE000111,F102998,West Bengal,Siliguri,259-A,WB97056336,4.13,dry,tenant,valid,agricultural,14-02-2018,,none,satellite_mapping
+LRTE000112,F982763,Telangana,Warangal,535-E,TS66220827,6.88,dry,joint,valid,horticultural,15-06-2024,,none,satellite_mapping
+LRMA000113,F811898,Maharashtra,Nagpur,S6183,MH61021324,17.03,wet,owner,valid,horticultural,17-02-2022,,none,digitized_land_registry
+LRKA000114,F696874,Karnataka,Bellary,693/14,KA44450438,31.04,dry,owner,valid,horticultural,03-01-2022,ceiling_breach,none,manual_verification
+LRTA000115,F513376,Tamil Nadu,Madurai,760-C,TN19869782,24.01,garden,joint,valid,agricultural,23-05-2018,,none,revenue_records
+LRTA000116,F573990,Tamil Nadu,Coimbatore,80/181/7,TN32669820,35.56,plantation,owner,pending_verification,agricultural,15-07-2021,encroachment_on_government_land,active_litigation,revenue_records
+LRTA000117,F471374,Tamil Nadu,Tiruchirappalli,208/48,TN30025771,74.22,dry,joint,valid,agricultural,05-01-2023,ceiling_breach,active_litigation,unverified
+LRMA000118,F182044,Madhya Pradesh,Gwalior,401/55,MP21151816,17.57,dry,disputed,missing,agricultural,28-01-2023,minor_heir_exploitation,inheritance_dispute,revenue_records
+LRRA000119,F458413,Rajasthan,Udaipur,989-B,RJ56614803,43.69,garden,owner,valid,agricultural,13-03-2018,,none,digitized_land_registry
+LRWE000120,F544598,West Bengal,Durgapur,31/64/7,WB84294210,7.52,dry,owner,invalid,agricultural,29-01-2018,fraudulent_mutation,pending_mutation,manual_verification
+LRAN000121,F634812,Andhra Pradesh,Guntur,15/31,AP70873583,6.07,dry,joint,valid,agricultural,01-02-2018,,none,revenue_records
+LRAN000122,F244252,Andhra Pradesh,Tirupati,S4306,AP11651183,16.69,plantation,joint,pending_verification,agricultural,14-12-2024,encroachment_on_government_land,active_litigation,revenue_records
+LRRA000123,F253028,Rajasthan,Bikaner,27/540/2,RJ94052081,23.41,dry,owner,valid,agricultural,23-09-2019,,none,digitized_land_registry
+LRTA000124,F467682,Tamil Nadu,Vellore,876/9,TN45557995,18.56,dry,owner,valid,agricultural,21-02-2024,,none,revenue_records
+LRGU000125,F466565,Gujarat,Vadodara,S1000,GJ75972392,14.75,garden,joint,valid,agricultural,01-07-2022,,none,digitized_land_registry
+LRTA000126,F169749,Tamil Nadu,Salem,591-C,TN81503150,25.3,wet,owner,valid,agricultural,28-02-2024,tribal_land_violation,none,unverified
+LRMA000127,F225328,Maharashtra,Satara,676/32,MH43768744,5.75,garden,tenant,valid,agricultural,31-08-2021,,none,digitized_land_registry
+LRMA000128,F309065,Maharashtra,Solapur,81/16/2,MH70570188,49.26,garden,owner,valid,agricultural,01-12-2019,,none,revenue_records
+LRMA000129,F166862,Maharashtra,Pune,S4158,MH47704995,9.29,garden,joint,valid,agricultural,29-04-2020,,none,digitized_land_registry
+LRGU000130,F198820,Gujarat,Jamnagar,144/74,GJ43669818,29.81,plantation,joint,pending_verification,agricultural,09-03-2022,fraudulent_mutation,boundary_dispute,unverified
+LRGU000131,F717119,Gujarat,Bhavnagar,344-C,GJ81186543,20.17,garden,joint,valid,horticultural,11-10-2018,,none,digitized_land_registry
+LRMA000132,F471307,Maharashtra,Solapur,82/280/3,,18.38,wet,owner,pending_verification,agricultural,15-05-2018,encroachment_on_government_land,none,unverified
+LRKA000133,F512624,Karnataka,Bellary,764-C,KA83318751,37.25,garden,inherited,valid,agricultural,13-06-2024,,none,satellite_mapping
+LRGU000134,F834093,Gujarat,Ahmedabad,59/224/6,GJ69424390,28.79,wet,owner,valid,agricultural,01-03-2023,,none,revenue_records
+LRGU000135,F549529,Gujarat,Mehsana,S7162,GJ34958590,23.02,dry,tenant,valid,agricultural,26-07-2020,,none,revenue_records
+LRTE000136,F974812,Telangana,Nizamabad,S486,TS11959942,23.52,plantation,owner,valid,agricultural,19-07-2018,,none,digitized_land_registry
+LRTE000137,F851445,Telangana,Mahbubnagar,652-E,TS95698860,25.56,plantation,disputed,expired,agricultural,11-11-2018,womens_inheritance_denial,inheritance_dispute,revenue_records
+LRUT000138,F276132,Uttar Pradesh,Aligarh,781-B,UP78661778,39.36,wet,inherited,valid,agricultural,29-01-2021,,none,digitized_land_registry
+LRTE000139,F321283,Telangana,Suryapet,30/793/1,TS82985284,34.06,plantation,tenant,expired,agricultural,18-02-2024,false_succession_claim,active_litigation,unverified
+LRMA000140,F217275,Madhya Pradesh,Bhopal,6/916/2,MP12698634,22.69,dry,inherited,valid,agricultural,06-08-2024,,none,satellite_mapping
+LRHA000141,F241663,Haryana,Panipat,157/22,,42.26,plantation,owner,invalid,agricultural,24-01-2024,fraudulent_mutation,boundary_dispute,unverified
+LRHA000142,F884091,Haryana,Rohtak,981-D,HR43418706,20.34,garden,inherited,valid,agricultural,30-06-2023,,none,satellite_mapping
+LRGU000143,F968323,Gujarat,Ahmedabad,9/146/3,GJ37794990,8.04,garden,tenant,valid,agricultural,23-07-2024,,none,digitized_land_registry
+LRUT000144,F850745,Uttar Pradesh,Agra,3/153/2,UP95663695,34.76,plantation,owner,valid,agricultural,10-05-2019,ceiling_breach,active_litigation,manual_verification
+LRGU000145,F736644,Gujarat,Gandhinagar,S7352,GJ11590549,12.01,dry,joint,expired,fallow,15-12-2024,environmental_clearance_violation,encroachment_case,revenue_records
+LRMA000146,F904540,Madhya Pradesh,Sagar,381/66,MP97819914,15.37,wet,joint,valid,agricultural,25-08-2019,,none,revenue_records
+LRPU000147,F686698,Punjab,Amritsar,301-F,PB50352313,25.37,plantation,joint,pending_verification,agricultural,17-06-2018,tribal_land_violation,none,manual_verification
+LRHA000148,F109093,Haryana,Ambala,624/41,HR29964084,45.74,garden,inherited,valid,agricultural,16-08-2024,,none,satellite_mapping
+LRWE000149,F507566,West Bengal,Asansol,11/806/9,WB54536707,47.34,dry,tenant,valid,agricultural,15-09-2022,,none,revenue_records
+LRGU000150,F809813,Gujarat,Mehsana,943/14,GJ85175455,40.97,dry,owner,valid,horticultural,17-04-2020,,none,digitized_land_registry
+LRTE000151,F476429,Telangana,Warangal,S7899,TS67088456,37.68,dry,joint,valid,horticultural,10-11-2020,,none,revenue_records
+LRAN000152,F100859,Andhra Pradesh,Kurnool,723/65,AP61917905,46.59,plantation,inherited,valid,agricultural,19-01-2024,,none,revenue_records
+LRHA000153,F299448,Haryana,Panipat,355/75,HR59686854,20.09,garden,inherited,valid,agricultural,31-10-2021,,none,revenue_records
+LRMA000154,F404612,Madhya Pradesh,Rewa,33/586/8,MP49380907,18.41,plantation,tenant,valid,horticultural,12-06-2024,,none,revenue_records
+LRMA000155,F189765,Madhya Pradesh,Satna,6/196/6,MP57963687,10.33,garden,owner,valid,agricultural,06-05-2018,,none,satellite_mapping
+LRGU000156,F103127,Gujarat,Vadodara,S9591,GJ14748856,27.63,garden,joint,valid,agricultural,12-10-2021,,none,revenue_records
+LRPU000157,F194085,Punjab,Moga,88/237/8,PB76229532,1.31,dry,owner,valid,agricultural,07-02-2019,,none,digitized_land_registry
+LRRA000158,F334182,Rajasthan,Kota,S429,RJ45695123,16.18,garden,joint,valid,horticultural,04-08-2022,,none,revenue_records
+LRTA000159,F147035,Tamil Nadu,Thanjavur,72/279/9,TN20358848,10.49,dry,owner,valid,agricultural,07-09-2020,encroachment_on_government_land,none,manual_verification
+LRMA000160,F684916,Maharashtra,Ahmednagar,S4487,MH72659445,46.59,garden,owner,valid,agricultural,01-01-2018,,none,satellite_mapping
+LRTA000161,F140201,Tamil Nadu,Tiruchirappalli,225-B,TN34491659,7.15,garden,owner,valid,agricultural,16-03-2023,,none,satellite_mapping
+LRTE000162,F637221,Telangana,Warangal,S7570,TS21123411,33.33,dry,inherited,valid,agricultural,20-08-2023,,none,satellite_mapping
+LRAN000163,F126027,Andhra Pradesh,Vijayawada,205/79,AP61594361,3.75,garden,tenant,valid,horticultural,17-04-2022,,none,revenue_records
+LRMA000164,F324638,Madhya Pradesh,Jabalpur,S2400,MP87205720,15.56,dry,disputed,missing,agricultural,30-06-2022,womens_inheritance_denial,inheritance_dispute,manual_verification
+LRMA000165,F319222,Maharashtra,Solapur,23/110/4,MH61468680,17.65,dry,government_lease,pending_verification,converted_non_agricultural,04-07-2019,water_body_encroachment,encroachment_case,revenue_records
+LRTA000166,F962725,Tamil Nadu,Vellore,165-D,TN15013658,20.37,wet,tenant,valid,agricultural,19-09-2022,,none,satellite_mapping
+LRRA000167,F715341,Rajasthan,Bhilwara,614-C,RJ67412822,46.69,wet,inherited,valid,agricultural,21-02-2024,,none,satellite_mapping
+LRHA000168,F480820,Haryana,Panipat,660-A,HR58494414,28.47,wet,joint,valid,horticultural,02-12-2023,,none,satellite_mapping
+LRGU000169,F172825,Gujarat,Vadodara,84/547/7,GJ29791918,41.05,garden,tenant,valid,agricultural,25-09-2023,,none,digitized_land_registry
+LRTE000170,F123522,Telangana,Warangal,54/775/7,TS27929013,17.49,wet,owner,valid,agricultural,21-02-2019,,none,digitized_land_registry
+LRMA000171,F539746,Madhya Pradesh,Sagar,S4438,MP95302718,23.49,plantation,owner,valid,agricultural,01-05-2022,,none,satellite_mapping
+LRRA000172,F277800,Rajasthan,Udaipur,260-B,,4.65,dry,joint,valid,fallow,13-04-2018,wetland_conversion_violation,none,unverified
+LRMA000173,F458262,Maharashtra,Pune,S2455,MH62032507,6.63,garden,inherited,invalid,agricultural,28-03-2020,fraudulent_mutation,pending_mutation,unverified
+LRPU000174,F276029,Punjab,Mohali,S305,PB64306680,27.45,wet,owner,valid,agricultural,05-06-2019,,none,digitized_land_registry
+LRPU000175,F888285,Punjab,Ludhiana,S428,PB33163664,44.22,wet,inherited,valid,horticultural,09-06-2020,,none,digitized_land_registry
+LRWE000176,F934504,West Bengal,Kharagpur,35/73,WB70417115,40.07,garden,inherited,pending_verification,horticultural,24-12-2024,common_land_appropriation,pending_mutation,unverified
+LRAN000177,F474692,Andhra Pradesh,Guntur,46/724/1,AP72578828,25.06,wet,tenant,valid,horticultural,11-01-2020,,none,revenue_records
+LRRA000178,F130805,Rajasthan,Bikaner,786/83,RJ65273260,39.36,dry,owner,valid,agricultural,30-04-2023,,none,digitized_land_registry
+LRRA000179,F682190,Rajasthan,Sikar,706/94,RJ89440575,14.92,wet,owner,invalid,agricultural,29-03-2018,common_land_appropriation,boundary_dispute,revenue_records
+LRRA000180,F847698,Rajasthan,Alwar,S5195,RJ47222762,19.79,dry,inherited,invalid,agricultural,12-06-2022,benami_transaction,pending_mutation,revenue_records
+LRMA000181,F670670,Maharashtra,Solapur,48/119/6,MH86563095,49.26,wet,tenant,pending_verification,horticultural,21-05-2024,womens_inheritance_denial,pending_mutation,unverified
+LRRA000182,F650659,Rajasthan,Jodhpur,373/23,RJ89745542,24.86,plantation,inherited,valid,agricultural,12-12-2018,,none,digitized_land_registry
+LRPU000183,F216514,Punjab,Patiala,S1471,PB73978991,16.98,wet,inherited,valid,agricultural,27-09-2023,,none,satellite_mapping
+LRRA000184,F639253,Rajasthan,Bikaner,509-F,RJ17855341,36.4,dry,owner,valid,agricultural,22-09-2019,ceiling_breach,none,manual_verification
+LRHA000185,F820842,Haryana,Rohtak,11-C,HR65462149,21.66,dry,owner,pending_verification,agricultural,31-03-2020,tribal_land_violation,active_litigation,manual_verification
+LRKA000186,F208910,Karnataka,Mangalore,78/208/9,KA94499062,42.14,plantation,inherited,valid,agricultural,12-02-2018,,none,digitized_land_registry
+LRTA000187,F160234,Tamil Nadu,Tirunelveli,34/447/7,TN36633398,35.18,wet,joint,pending_verification,agricultural,24-07-2023,fraudulent_mutation,boundary_dispute,unverified
+LRPU000188,F489668,Punjab,Jalandhar,68/180/2,PB17557157,15.74,garden,inherited,valid,horticultural,16-09-2022,,none,digitized_land_registry
+LRRA000189,F154777,Rajasthan,Pali,S1539,RJ50812556,45.7,dry,joint,valid,agricultural,16-06-2024,,none,satellite_mapping
+LRUT000190,F559272,Uttar Pradesh,Lucknow,S1171,UP46282096,36.65,garden,tenant,valid,agricultural,04-07-2020,,none,digitized_land_registry
+LRTA000191,F819748,Tamil Nadu,Erode,848-A,TN63131105,32.69,plantation,inherited,pending_verification,agricultural,31-07-2021,land_grabbing_from_elderly,pending_mutation,manual_verification
+LRHA000192,F230704,Haryana,Karnal,660/38,HR90668314,22.17,wet,joint,valid,agricultural,13-07-2023,,none,revenue_records
+LRAN000193,F377696,Andhra Pradesh,Nellore,88/360/7,AP25336458,5.72,garden,inherited,valid,converted_non_agricultural,16-09-2022,forest_land_encroachment,encroachment_case,manual_verification
+LRTA000194,F443446,Tamil Nadu,Tirunelveli,19-E,TN38933791,0.62,dry,joint,valid,agricultural,17-06-2019,,none,digitized_land_registry
+LRGU000195,F834992,Gujarat,Jamnagar,Jan-66,GJ11623820,26.29,dry,inherited,valid,agricultural,12-10-2022,,none,satellite_mapping
+LRUT000196,F241849,Uttar Pradesh,Aligarh,635/36,UP69612711,22.99,dry,inherited,valid,agricultural,27-02-2022,,none,satellite_mapping
+LRMA000197,F670572,Maharashtra,Kolhapur,S285,MH15277416,46.89,plantation,owner,pending_verification,agricultural,16-11-2023,encroachment_on_government_land,active_litigation,unverified
+LRWE000198,F103709,West Bengal,Asansol,S6809,WB93257726,49.64,garden,owner,valid,agricultural,08-12-2022,tribal_land_violation,active_litigation,unverified
+LRUT000199,F659212,Uttar Pradesh,Meerut,720-C,UP62827270,12.05,garden,joint,valid,agricultural,03-06-2022,tribal_land_violation,active_litigation,revenue_records
+LRWE000200,F456855,West Bengal,Kolkata,558/88,WB70552858,39.02,garden,joint,valid,agricultural,18-04-2023,,none,revenue_records
+LRGU000201,F332883,Gujarat,Vadodara,636/23,GJ97678870,25.3,plantation,owner,expired,converted_non_agricultural,25-09-2024,wetland_conversion_violation,encroachment_case,manual_verification
+LRTE000202,F457195,Telangana,Mahbubnagar,S3574,TS90990664,49.17,plantation,joint,valid,agricultural,27-03-2023,,none,revenue_records
+LRUT000203,F325645,Uttar Pradesh,Bareilly,856/48,UP25939245,4.09,dry,inherited,valid,fallow,10-03-2022,water_body_encroachment,none,revenue_records
+LRAN000204,F731281,Andhra Pradesh,Tirupati,777/76,AP35527870,38.29,dry,tenant,valid,agricultural,26-07-2019,,none,revenue_records
+LRTE000205,F819094,Telangana,Khammam,575/31,,26.64,plantation,tenant,expired,converted_non_agricultural,13-05-2019,forest_land_encroachment,none,unverified
+LRAN000206,F447900,Andhra Pradesh,Kurnool,425/39,AP62849160,14.72,garden,tenant,valid,agricultural,26-03-2021,,none,digitized_land_registry
+LRWE000207,F190153,West Bengal,Howrah,209-F,WB10003941,24.8,dry,joint,valid,agricultural,06-08-2022,,none,revenue_records
+LRHA000208,F744226,Haryana,Hisar,431-B,HR94368979,14.21,wet,owner,valid,agricultural,02-10-2024,,none,satellite_mapping
+LRKA000209,F194008,Karnataka,Tumkur,S3750,KA87526682,29.72,wet,tenant,valid,agricultural,13-11-2018,,none,digitized_land_registry
+LRHA000210,F439599,Haryana,Panipat,20/399/5,HR25877532,49.54,wet,tenant,valid,agricultural,15-09-2024,,none,revenue_records
+LRTA000211,F397944,Tamil Nadu,Salem,66/232/3,TN85928494,8.37,plantation,tenant,missing,agricultural,22-09-2020,false_succession_claim,pending_mutation,manual_verification
+LRKA000212,F642705,Karnataka,Bellary,S6241,KA49686577,36.21,garden,inherited,valid,agricultural,18-02-2020,,none,satellite_mapping
+LRGU000213,F277038,Gujarat,Mehsana,S9592,GJ45485398,33.76,wet,tenant,valid,horticultural,13-06-2022,,none,satellite_mapping
+LRGU000214,F198801,Gujarat,Mehsana,69/681/2,GJ34528681,32.45,wet,government_lease,valid,converted_non_agricultural,22-11-2024,wetland_conversion_violation,none,unverified
+LRPU000215,F941970,Punjab,Ludhiana,64/498/8,PB20682232,45.98,garden,disputed,pending_verification,agricultural,06-08-2024,sc_st_land_alienation,pending_mutation,manual_verification
+LRPU000216,F115129,Punjab,Mohali,943/89,PB60673564,39.61,wet,joint,valid,agricultural,29-09-2019,encroachment_on_government_land,active_litigation,unverified
+LRWE000217,F435916,West Bengal,Bardhaman,S8524,WB56913810,22.64,wet,joint,valid,agricultural,05-10-2019,encroachment_on_government_land,active_litigation,revenue_records
+LRHA000218,F417544,Haryana,Panipat,42-F,HR72133472,12.11,garden,disputed,valid,converted_non_agricultural,16-11-2023,wetland_conversion_violation,encroachment_case,manual_verification
+LRGU000219,F516305,Gujarat,Surat,S6595,GJ50169825,13.45,wet,tenant,pending_verification,fallow,06-08-2018,environmental_clearance_violation,none,revenue_records
+LRKA000220,F636196,Karnataka,Davanagere,S4367,KA86247383,47.88,plantation,joint,valid,agricultural,01-08-2024,,none,satellite_mapping
+LRRA000221,F635828,Rajasthan,Udaipur,S5263,RJ26260677,20.08,dry,disputed,invalid,horticultural,17-04-2022,minor_heir_exploitation,active_litigation,unverified
+LRRA000222,F455238,Rajasthan,Jaipur,98/877/7,RJ67768984,36.8,wet,joint,valid,agricultural,11-10-2024,ceiling_breach,active_litigation,revenue_records
+LRMA000223,F341993,Madhya Pradesh,Sagar,904/22,MP43527732,36.42,dry,owner,valid,agricultural,31-01-2018,,none,revenue_records
+LRHA000224,F603160,Haryana,Sonipat,42/486/9,HR18442064,4.72,garden,joint,valid,agricultural,12-11-2022,,none,satellite_mapping
+LRHA000225,F476515,Haryana,Panchkula,S3247,,35.29,garden,disputed,expired,agricultural,03-08-2020,minor_heir_exploitation,pending_mutation,revenue_records
+LRTA000226,F419608,Tamil Nadu,Tiruchirappalli,S5590,TN56431345,27.21,dry,inherited,pending_verification,converted_non_agricultural,10-05-2020,forest_land_encroachment,encroachment_case,revenue_records
+LRMA000227,F735386,Madhya Pradesh,Dewas,S1343,MP96563405,36.36,plantation,tenant,valid,horticultural,28-05-2022,,none,satellite_mapping
+LRRA000228,F450557,Rajasthan,Bikaner,96/980/8,RJ77587003,24.98,garden,joint,valid,agricultural,29-04-2019,,none,satellite_mapping
+LRWE000229,F958643,West Bengal,Kharagpur,320/27,,4.71,dry,joint,valid,agricultural,10-03-2022,encroachment_on_government_land,active_litigation,revenue_records
+LRTA000230,F825070,Tamil Nadu,Madurai,577-F,TN70183350,43.08,plantation,joint,valid,horticultural,02-12-2021,,none,digitized_land_registry
+LRTE000231,F970221,Telangana,Adilabad,59/7,TS68598039,37.74,dry,owner,valid,agricultural,13-12-2020,,none,digitized_land_registry
+LRGU000232,F377011,Gujarat,Gandhinagar,74/237/1,GJ57522247,39.99,garden,tenant,valid,agricultural,26-07-2020,,none,digitized_land_registry
+LRMA000233,F800780,Madhya Pradesh,Jabalpur,94/842/7,MP85811441,5.37,dry,joint,valid,agricultural,11-09-2018,,none,satellite_mapping
+LRUT000234,F234783,Uttar Pradesh,Prayagraj,78/39/6,UP29030297,38.49,garden,joint,valid,agricultural,18-08-2024,encroachment_on_government_land,none,unverified
+LRMA000235,F237943,Maharashtra,Ahmednagar,946/65,MH30829169,0.33,garden,joint,valid,agricultural,10-10-2023,,none,satellite_mapping
+LRKA000236,F244481,Karnataka,Davanagere,367-A,KA55878062,27.16,plantation,joint,pending_verification,agricultural,21-02-2022,benami_transaction,pending_mutation,unverified
+LRHA000237,F703896,Haryana,Ambala,49/265/7,HR83195964,22.01,garden,tenant,valid,agricultural,05-05-2024,,none,revenue_records
+LRMA000238,F708345,Maharashtra,Akola,S9635,MH92351763,1.54,garden,joint,valid,agricultural,08-05-2019,,none,revenue_records
+LRTA000239,F823022,Tamil Nadu,Dindigul,S9333,TN31128239,18.74,dry,tenant,valid,agricultural,20-07-2024,,none,revenue_records
+LRWE000240,F785361,West Bengal,Haldia,777-F,,5.69,wet,joint,pending_verification,horticultural,05-06-2020,tribal_land_violation,none,unverified
+LRMA000241,F602184,Maharashtra,Akola,S2843,MH85656547,38.44,wet,tenant,valid,agricultural,31-01-2024,,none,revenue_records
+LRGU000242,F422717,Gujarat,Junagadh,915-F,GJ61422598,19.16,garden,joint,valid,horticultural,12-10-2018,tribal_land_violation,none,manual_verification
+LRKA000243,F474124,Karnataka,Belgaum,79/664/1,KA86924876,87.18,wet,joint,pending_verification,agricultural,30-01-2023,ceiling_breach,none,unverified
+LRTA000244,F673766,Tamil Nadu,Coimbatore,513/55,TN81054164,30.3,wet,inherited,valid,horticultural,23-04-2024,,none,revenue_records
+LRTA000245,F793797,Tamil Nadu,Erode,S5833,TN60706468,7.35,plantation,joint,valid,agricultural,26-09-2024,,none,revenue_records
+LRWE000246,F773575,West Bengal,Durgapur,S8647,WB91966769,24.6,garden,joint,valid,agricultural,26-05-2021,,none,revenue_records
+LRAN000247,F209042,Andhra Pradesh,Tirupati,528/8,AP29520619,34.32,garden,tenant,valid,agricultural,26-10-2018,,none,digitized_land_registry
+LRTE000248,F584362,Telangana,Warangal,97/794/8,TS38522984,39.52,dry,tenant,valid,agricultural,14-10-2024,,none,satellite_mapping
+LRTA000249,F661479,Tamil Nadu,Erode,S9296,TN88767996,13.7,garden,tenant,valid,agricultural,07-05-2020,,none,digitized_land_registry
+LRPU000250,F478768,Punjab,Amritsar,715-C,PB30623415,59.96,plantation,joint,pending_verification,agricultural,11-03-2019,ceiling_breach,none,revenue_records
+LRTA000251,F466058,Tamil Nadu,Chennai,243/40,TN78756468,33.08,wet,inherited,invalid,agricultural,15-12-2022,land_grabbing_from_elderly,boundary_dispute,manual_verification
+LRMA000252,F211256,Madhya Pradesh,Sagar,396-F,MP36371337,6.45,wet,owner,valid,agricultural,08-02-2022,,none,digitized_land_registry
+LRTA000253,F994061,Tamil Nadu,Thanjavur,57/163/2,TN30205966,29.02,plantation,owner,valid,horticultural,12-04-2021,tribal_land_violation,none,unverified
+LRHA000254,F167316,Haryana,Hisar,315/41,HR66838911,49.1,dry,inherited,valid,agricultural,24-04-2018,,none,revenue_records
+LRGU000255,F717452,Gujarat,Bhavnagar,981/86,GJ32997428,48.52,plantation,tenant,valid,agricultural,01-06-2021,,none,revenue_records
+LRKA000256,F424920,Karnataka,Bellary,64/238/8,KA83246995,32.35,plantation,inherited,valid,horticultural,04-12-2023,,none,satellite_mapping
+LRRA000257,F650855,Rajasthan,Sikar,S3701,RJ71448862,11.16,garden,owner,valid,agricultural,26-03-2024,,none,revenue_records
+LRGU000258,F308498,Gujarat,Surat,166-F,GJ21253417,38.15,dry,tenant,valid,agricultural,29-12-2021,,none,revenue_records
+LRKA000259,F804824,Karnataka,Bengaluru,S5847,KA78839099,3.1,plantation,tenant,pending_verification,agricultural,24-01-2023,womens_inheritance_denial,inheritance_dispute,unverified
+LRUT000260,F375865,Uttar Pradesh,Gorakhpur,S1820,UP45681603,33,wet,disputed,pending_verification,fallow,26-12-2020,wetland_conversion_violation,encroachment_case,manual_verification
+LRKA000261,F978989,Karnataka,Mysuru,44/828/9,KA73952958,15.97,dry,owner,valid,agricultural,20-11-2023,,none,digitized_land_registry
+LRPU000262,F362685,Punjab,Hoshiarpur,S9111,PB47764598,9.29,wet,joint,pending_verification,horticultural,05-03-2021,fraudulent_mutation,active_litigation,revenue_records
+LRKA000263,F839755,Karnataka,Tumkur,29/877/7,KA23582323,19.85,garden,owner,valid,agricultural,12-10-2023,,none,satellite_mapping
+LRAN000264,F831240,Andhra Pradesh,Anantapur,612-E,AP25877239,45.43,garden,inherited,valid,horticultural,12-11-2019,,none,revenue_records
+LRHA000265,F109866,Haryana,Hisar,287-E,HR93388946,31.68,wet,disputed,expired,agricultural,21-10-2019,benami_transaction,pending_mutation,revenue_records
+LRPU000266,F366156,Punjab,Jalandhar,23/13,PB29577875,31.79,dry,owner,valid,agricultural,18-12-2020,,none,revenue_records
+LRHA000267,F505397,Haryana,Panipat,748-D,HR21726069,41.81,garden,joint,valid,agricultural,22-09-2023,,none,satellite_mapping
+LRRA000268,F970476,Rajasthan,Kota,21/491/3,RJ27823616,37.16,wet,tenant,valid,agricultural,03-03-2023,,none,satellite_mapping
+LRMA000269,F229328,Maharashtra,Pune,904-B,MH27934341,10.72,wet,inherited,valid,horticultural,25-03-2022,,none,digitized_land_registry
+LRGU000270,F349630,Gujarat,Jamnagar,S1979,GJ22866699,48.73,plantation,inherited,missing,agricultural,30-08-2019,false_succession_claim,inheritance_dispute,manual_verification
+LRTA000271,F867334,Tamil Nadu,Erode,48/799/2,TN36647907,32.14,dry,owner,valid,agricultural,17-01-2021,tribal_land_violation,active_litigation,manual_verification
+LRHA000272,F121016,Haryana,Rohtak,531/16,HR89678596,45.14,garden,owner,valid,agricultural,10-05-2021,,none,revenue_records
+LRMA000273,F588589,Madhya Pradesh,Indore,S2147,MP54290345,41.68,wet,tenant,valid,horticultural,09-06-2021,,none,digitized_land_registry
+LRGU000274,F906335,Gujarat,Junagadh,S288,GJ23134561,36.77,garden,joint,valid,agricultural,02-08-2021,,none,satellite_mapping
+LRTE000275,F126750,Telangana,Karimnagar,807/51,TS13005230,24.91,plantation,disputed,expired,agricultural,10-08-2024,sc_st_land_alienation,pending_mutation,revenue_records
+LRRA000276,F174686,Rajasthan,Jaipur,24/178/4,RJ31833675,29.06,dry,owner,valid,horticultural,04-07-2024,,none,revenue_records
+LRKA000277,F631870,Karnataka,Mangalore,538-B,KA62410962,33.84,dry,tenant,pending_verification,horticultural,19-03-2024,false_succession_claim,active_litigation,unverified
+LRRA000278,F395638,Rajasthan,Sikar,S7245,RJ13740542,39.46,garden,owner,valid,agricultural,18-04-2023,,none,revenue_records
+LRRA000279,F606534,Rajasthan,Pali,S4367,RJ95140754,40.98,plantation,joint,valid,horticultural,21-11-2024,,none,revenue_records
+LRMA000280,F892937,Maharashtra,Ahmednagar,603/34,MH30475736,17.13,dry,inherited,valid,agricultural,14-08-2020,,none,revenue_records
+LRRA000281,F466326,Rajasthan,Kota,767/95,RJ16049863,20.23,garden,joint,valid,horticultural,27-07-2019,,none,revenue_records
+LRPU000282,F626739,Punjab,Mohali,S4762,PB64626869,4.93,dry,owner,valid,horticultural,13-06-2018,,none,satellite_mapping
+LRUT000283,F573574,Uttar Pradesh,Prayagraj,202-D,UP77705314,46.67,garden,joint,valid,agricultural,31-05-2021,,none,revenue_records
+LRMA000284,F405033,Maharashtra,Akola,434/17,MH23694830,13.8,dry,tenant,missing,horticultural,11-10-2022,sc_st_land_alienation,active_litigation,revenue_records
+LRKA000285,F487070,Karnataka,Bellary,564-C,KA18371881,8.22,garden,owner,valid,agricultural,23-11-2022,,none,digitized_land_registry
+LRTE000286,F809286,Telangana,Khammam,84/242/9,TS85847451,33.12,garden,owner,pending_verification,forest,09-09-2021,forest_land_encroachment,encroachment_case,unverified
+LRGU000287,F398218,Gujarat,Gandhinagar,S2535,GJ54398776,27.85,wet,tenant,valid,agricultural,24-03-2021,,none,revenue_records
+LRRA000288,F100750,Rajasthan,Kota,362/84,RJ91186435,39.56,plantation,owner,pending_verification,horticultural,02-02-2018,tribal_land_violation,active_litigation,manual_verification
+LRHA000289,F906876,Haryana,Hisar,64/829/5,HR17905949,46.1,wet,owner,valid,agricultural,16-10-2019,,none,satellite_mapping
+LRMA000290,F875002,Maharashtra,Akola,327/78,MH88835579,38.75,garden,tenant,valid,horticultural,04-01-2022,,none,revenue_records
+LRHA000291,F164208,Haryana,Ambala,S4305,,49.19,plantation,inherited,invalid,agricultural,15-01-2023,common_land_appropriation,boundary_dispute,manual_verification
+LRWE000292,F374212,West Bengal,Siliguri,838/43,WB79513872,15.69,wet,tenant,valid,horticultural,18-11-2021,,none,digitized_land_registry
+LRRA000293,F213946,Rajasthan,Bikaner,859/82,RJ81904302,0.67,wet,joint,valid,agricultural,01-06-2023,,none,revenue_records
+LRUT000294,F861160,Uttar Pradesh,Lucknow,S7556,UP77099167,38.59,garden,tenant,valid,fallow,11-02-2018,environmental_clearance_violation,none,unverified
+LRAN000295,F738137,Andhra Pradesh,Guntur,518/24,AP29235848,8.71,plantation,joint,valid,agricultural,01-05-2022,encroachment_on_government_land,active_litigation,revenue_records
+LRGU000296,F425585,Gujarat,Ahmedabad,853-C,GJ42436039,17.09,wet,owner,valid,agricultural,18-02-2020,,none,digitized_land_registry
+LRTE000297,F362446,Telangana,Suryapet,S4019,TS11139573,35.66,dry,tenant,expired,fallow,07-08-2022,forest_land_encroachment,encroachment_case,revenue_records
+LRMA000298,F913808,Madhya Pradesh,Ratlam,319-C,MP82453159,22.48,wet,inherited,pending_verification,agricultural,26-10-2021,land_grabbing_from_elderly,boundary_dispute,unverified
+LRTA000299,F774623,Tamil Nadu,Salem,126/73,TN48651235,23.85,garden,inherited,valid,agricultural,20-03-2023,,none,satellite_mapping
+LRUT000300,F494864,Uttar Pradesh,Aligarh,90/736/3,UP53468461,4.9,dry,tenant,valid,agricultural,08-11-2023,,none,satellite_mapping
+LRWE000301,F643870,West Bengal,Asansol,215-C,,2.93,garden,inherited,valid,forest,28-12-2022,water_body_encroachment,encroachment_case,revenue_records
+LRMA000302,F435448,Maharashtra,Pune,391/32,MH20720492,10.59,wet,tenant,valid,agricultural,15-11-2023,,none,satellite_mapping
+LRMA000303,F153489,Maharashtra,Pune,7/177/1,MH45892588,7.39,wet,owner,valid,agricultural,04-04-2018,,none,digitized_land_registry
+LRTE000304,F632015,Telangana,Hyderabad,S2312,TS44334444,14.26,garden,tenant,valid,agricultural,12-05-2024,,none,digitized_land_registry
+LRTE000305,F430485,Telangana,Nizamabad,S7156,TS46353391,29.13,garden,inherited,invalid,agricultural,08-07-2021,common_land_appropriation,boundary_dispute,unverified
+LRKA000306,F999943,Karnataka,Shimoga,633-B,KA20465794,26.28,dry,owner,valid,agricultural,28-12-2018,,none,digitized_land_registry
+LRRA000307,F202740,Rajasthan,Sikar,102-C,,25.47,garden,tenant,missing,agricultural,09-12-2021,womens_inheritance_denial,inheritance_dispute,revenue_records
+LRAN000308,F193306,Andhra Pradesh,Rajahmundry,S2588,AP33435293,38.83,dry,owner,valid,agricultural,20-10-2020,,none,digitized_land_registry
+LRPU000309,F330478,Punjab,Ludhiana,113-D,PB84374961,37.33,plantation,inherited,invalid,agricultural,05-02-2023,land_grabbing_from_elderly,active_litigation,unverified
+LRGU000310,F379502,Gujarat,Junagadh,559-E,GJ63597475,31.9,wet,inherited,valid,agricultural,09-11-2021,,none,digitized_land_registry
+LRWE000311,F565301,West Bengal,Kharagpur,949-C,WB92330092,0.37,dry,owner,pending_verification,agricultural,11-09-2021,benami_transaction,active_litigation,manual_verification
+LRUT000312,F178133,Uttar Pradesh,Lucknow,790/34,UP87229196,14.45,dry,tenant,valid,agricultural,28-08-2022,,none,satellite_mapping
+LRTE000313,F603647,Telangana,Nizamabad,S1793,TS29713855,32.23,dry,joint,valid,horticultural,16-10-2022,,none,digitized_land_registry
+LRPU000314,F129325,Punjab,Amritsar,S7588,PB81973045,5.59,garden,tenant,valid,agricultural,24-04-2018,,none,digitized_land_registry
+LRPU000315,F813948,Punjab,Moga,642/54,PB77503696,45.59,wet,tenant,valid,agricultural,30-10-2018,,none,digitized_land_registry
+LRTE000316,F674499,Telangana,Mahbubnagar,870/38,TS98409889,45.75,dry,inherited,invalid,horticultural,29-09-2024,common_land_appropriation,boundary_dispute,manual_verification
+LRUT000317,F999758,Uttar Pradesh,Aligarh,604-E,UP51897861,32.26,dry,disputed,pending_verification,agricultural,31-03-2019,benami_transaction,inheritance_dispute,revenue_records
+LRPU000318,F306764,Punjab,Pathankot,95/871/1,PB42404180,34.25,plantation,owner,valid,horticultural,09-04-2019,,none,revenue_records
+LRTA000319,F749244,Tamil Nadu,Tirunelveli,408/36,TN55378645,31.65,plantation,joint,expired,converted_non_agricultural,21-02-2020,forest_land_encroachment,encroachment_case,manual_verification
+LRMA000320,F820253,Maharashtra,Aurangabad,514/42,MH88755857,62.58,garden,owner,valid,agricultural,04-02-2024,ceiling_breach,active_litigation,manual_verification
+LRTA000321,F229928,Tamil Nadu,Tirunelveli,58/225/6,,3.27,garden,inherited,pending_verification,horticultural,16-03-2018,common_land_appropriation,pending_mutation,revenue_records
+LRAN000322,F983753,Andhra Pradesh,Nellore,249/16,AP89112061,13.28,dry,government_lease,valid,fallow,04-03-2024,environmental_clearance_violation,none,unverified
+LRAN000323,F821063,Andhra Pradesh,Guntur,22/199/7,AP66285982,44.63,wet,inherited,valid,agricultural,07-10-2024,,none,revenue_records
+LRUT000324,F815173,Uttar Pradesh,Gorakhpur,S7103,UP88247638,22.59,plantation,owner,valid,agricultural,10-07-2019,,none,digitized_land_registry
+LRMA000325,F603709,Madhya Pradesh,Rewa,527/39,MP48404938,4.27,plantation,tenant,valid,agricultural,05-08-2019,,none,revenue_records
+LRTE000326,F174040,Telangana,Karimnagar,S1521,,29.91,plantation,tenant,expired,agricultural,26-06-2018,womens_inheritance_denial,pending_mutation,revenue_records
+LRRA000327,F300324,Rajasthan,Ajmer,S9576,RJ95311981,34.32,garden,owner,valid,agricultural,05-12-2024,,none,digitized_land_registry
+LRWE000328,F833238,West Bengal,Kharagpur,41/120/3,WB88344328,9.79,garden,tenant,pending_verification,agricultural,10-12-2023,minor_heir_exploitation,inheritance_dispute,unverified
+LRGU000329,F986309,Gujarat,Vadodara,S481,GJ18085700,5.74,wet,inherited,missing,agricultural,20-03-2020,false_succession_claim,pending_mutation,manual_verification
+LRTA000330,F105234,Tamil Nadu,Chennai,S6957,TN53745149,13.74,wet,owner,valid,agricultural,22-11-2023,,none,revenue_records
+LRGU000331,F625660,Gujarat,Surat,S202,GJ23887183,8.6,dry,tenant,valid,fallow,28-02-2024,wetland_conversion_violation,none,revenue_records
+LRTE000332,F393788,Telangana,Warangal,458/15,TS99080296,29.71,dry,inherited,valid,agricultural,17-04-2024,,none,revenue_records
+LRKA000333,F806258,Karnataka,Tumkur,S7075,KA75491423,40.78,plantation,joint,invalid,agricultural,16-08-2019,benami_transaction,pending_mutation,manual_verification
+LRPU000334,F989979,Punjab,Firozpur,543-A,PB56822028,39.6,dry,joint,valid,forest,01-06-2022,water_body_encroachment,encroachment_case,revenue_records
+LRHA000335,F295954,Haryana,Hisar,65/48,HR38782630,36.14,dry,inherited,valid,agricultural,02-08-2022,,none,satellite_mapping
+LRMA000336,F234177,Maharashtra,Kolhapur,30/878/9,MH89955736,4.2,plantation,disputed,missing,agricultural,27-11-2023,false_succession_claim,active_litigation,unverified
+LRUT000337,F873703,Uttar Pradesh,Aligarh,S9471,UP43522703,26.76,wet,joint,valid,agricultural,05-08-2020,,none,digitized_land_registry
+LRMA000338,F605762,Madhya Pradesh,Bhopal,S136,MP35634834,29.44,wet,joint,valid,horticultural,18-04-2020,,none,digitized_land_registry
+LRWE000339,F762396,West Bengal,Malda,649-C,WB38821287,3.26,wet,joint,pending_verification,horticultural,12-08-2019,fraudulent_mutation,boundary_dispute,unverified
+LRRA000340,F790786,Rajasthan,Kota,667/77,RJ81069475,22.95,wet,tenant,missing,agricultural,04-12-2020,womens_inheritance_denial,active_litigation,manual_verification
+LRGU000341,F879081,Gujarat,Anand,10/128/6,GJ57213935,8.79,wet,owner,pending_verification,agricultural,06-02-2018,benami_transaction,active_litigation,unverified
+LRRA000342,F242929,Rajasthan,Jaipur,S6911,RJ32600914,29.38,garden,disputed,pending_verification,converted_non_agricultural,24-05-2020,wetland_conversion_violation,none,unverified
+LRRA000343,F382221,Rajasthan,Jaipur,447-B,RJ22550582,11.43,wet,inherited,valid,agricultural,12-01-2019,,none,digitized_land_registry
+LRTA000344,F405240,Tamil Nadu,Vellore,209/96,TN89894021,20.67,garden,inherited,valid,agricultural,10-10-2022,,none,revenue_records
+LRKA000345,F212770,Karnataka,Mysuru,679-D,KA47738709,2.55,wet,inherited,valid,agricultural,09-12-2021,,none,digitized_land_registry
+LRGU000346,F272948,Gujarat,Surat,78/456/3,GJ14060737,48.75,garden,owner,valid,horticultural,16-10-2018,,none,satellite_mapping
+LRHA000347,F844919,Haryana,Rohtak,14/126/2,HR63611176,7.93,wet,joint,invalid,agricultural,25-03-2018,common_land_appropriation,active_litigation,manual_verification
+LRKA000348,F825369,Karnataka,Davanagere,814-A,KA39217520,23,plantation,joint,valid,agricultural,13-08-2024,,none,digitized_land_registry
+LRGU000349,F539853,Gujarat,Ahmedabad,217/38,GJ74003541,12.02,garden,inherited,valid,agricultural,31-07-2024,,none,digitized_land_registry
+LRMA000350,F516458,Madhya Pradesh,Jabalpur,S1864,MP62871331,37.24,plantation,tenant,missing,agricultural,24-03-2023,sc_st_land_alienation,inheritance_dispute,unverified
+LRUT000351,F975935,Uttar Pradesh,Bareilly,125/32,UP94534857,18.21,garden,inherited,valid,agricultural,03-04-2020,,none,revenue_records
+LRHA000352,F925084,Haryana,Karnal,59/244/7,HR58015916,40.85,plantation,inherited,valid,agricultural,22-12-2022,,none,digitized_land_registry
+LRTA000353,F421979,Tamil Nadu,Chennai,72/260/3,TN64845247,7.67,garden,owner,valid,agricultural,15-02-2018,,none,revenue_records
+LRTE000354,F839175,Telangana,Karimnagar,849-C,TS90115538,31.23,dry,inherited,valid,agricultural,25-07-2018,,none,satellite_mapping
+LRHA000355,F533087,Haryana,Gurugram,633/67,HR55975304,22.01,dry,inherited,pending_verification,converted_non_agricultural,28-12-2021,wetland_conversion_violation,none,manual_verification
+LRHA000356,F611961,Haryana,Panchkula,61/704/7,HR83943858,0.69,dry,joint,pending_verification,agricultural,27-07-2022,land_grabbing_from_elderly,active_litigation,revenue_records
+LRWE000357,F410979,West Bengal,Durgapur,243/91,WB89637118,15.14,dry,joint,expired,forest,25-01-2018,environmental_clearance_violation,encroachment_case,unverified
+LRTE000358,F200256,Telangana,Adilabad,310-A,TS39710516,8.62,wet,inherited,valid,agricultural,24-07-2024,,none,digitized_land_registry
+LRTA000359,F312169,Tamil Nadu,Dindigul,120/25,TN75050796,45.9,garden,owner,valid,agricultural,01-08-2019,,none,digitized_land_registry
+LRPU000360,F522335,Punjab,Ludhiana,95/477/1,PB43094175,22.86,plantation,tenant,valid,agricultural,07-12-2021,,none,digitized_land_registry
+LRMA000361,F436704,Maharashtra,Aurangabad,47/918/3,MH41028729,15.35,wet,inherited,valid,agricultural,26-12-2021,,none,revenue_records
+LRMA000362,F425550,Maharashtra,Nagpur,637-B,MH32531907,3.45,plantation,tenant,valid,agricultural,05-09-2019,,none,satellite_mapping
+LRPU000363,F704718,Punjab,Pathankot,388-D,PB32451350,15.2,plantation,joint,valid,agricultural,17-08-2019,encroachment_on_government_land,active_litigation,revenue_records
+LRRA000364,F189368,Rajasthan,Jodhpur,S3870,RJ26738071,23.91,plantation,disputed,pending_verification,agricultural,04-07-2024,false_succession_claim,pending_mutation,unverified
+LRMA000365,F941809,Maharashtra,Sangli,765/59,MH76265384,34.08,dry,joint,expired,fallow,31-10-2019,forest_land_encroachment,none,revenue_records
+LRTE000366,F178685,Telangana,Suryapet,S1746,TS94674992,5.57,plantation,owner,valid,agricultural,30-05-2018,,none,digitized_land_registry
+LRAN000367,F652944,Andhra Pradesh,Eluru,S5698,AP19789522,23.01,garden,tenant,valid,horticultural,07-09-2019,,none,revenue_records
+LRKA000368,F257338,Karnataka,Bellary,500-A,KA97338501,2.64,plantation,joint,valid,horticultural,23-12-2023,,none,revenue_records
+LRTE000369,F560657,Telangana,Karimnagar,46/486/5,TS90872958,37.67,dry,inherited,valid,agricultural,14-12-2019,,none,revenue_records
+LRTA000370,F444585,Tamil Nadu,Dindigul,S1135,,10.74,plantation,inherited,invalid,agricultural,11-12-2023,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRAN000371,F186237,Andhra Pradesh,Rajahmundry,S4659,AP49150581,6.34,dry,tenant,valid,agricultural,07-10-2021,,none,digitized_land_registry
+LRKA000372,F473905,Karnataka,Davanagere,S6161,KA87141778,44.53,plantation,owner,valid,agricultural,21-08-2021,,none,satellite_mapping
+LRHA000373,F706494,Haryana,Hisar,74/775/2,HR26311768,1.66,dry,joint,pending_verification,agricultural,09-12-2021,fraudulent_mutation,active_litigation,revenue_records
+LRUT000374,F874531,Uttar Pradesh,Prayagraj,53/915/1,UP93799332,42.33,dry,owner,invalid,agricultural,14-11-2023,land_grabbing_from_elderly,active_litigation,revenue_records
+LRKA000375,F325729,Karnataka,Tumkur,337/87,KA19453456,10.58,wet,inherited,valid,agricultural,18-06-2022,,none,revenue_records
+LRTA000376,F984875,Tamil Nadu,Chennai,351/35,TN20391326,34.93,garden,tenant,valid,agricultural,31-07-2023,,none,digitized_land_registry
+LRHA000377,F992944,Haryana,Karnal,555/11,HR34117369,46.49,dry,joint,valid,agricultural,20-04-2018,,none,revenue_records
+LRHA000378,F267242,Haryana,Hisar,501/55,HR98250767,20.39,plantation,inherited,pending_verification,forest,13-08-2023,forest_land_encroachment,none,unverified
+LRHA000379,F877066,Haryana,Karnal,545-A,HR58679267,15.43,dry,joint,valid,horticultural,28-04-2022,,none,revenue_records
+LRMA000380,F594767,Madhya Pradesh,Jabalpur,76/492/2,MP55839252,4.09,garden,inherited,valid,agricultural,01-09-2021,,none,digitized_land_registry
+LRWE000381,F620231,West Bengal,Howrah,44/152/3,WB16551718,43.24,dry,inherited,valid,agricultural,15-03-2019,,none,revenue_records
+LRPU000382,F955310,Punjab,Moga,9/133/2,PB56103637,25.42,garden,owner,invalid,horticultural,07-05-2024,fraudulent_mutation,boundary_dispute,revenue_records
+LRWE000383,F297557,West Bengal,Asansol,94/75/3,WB44845115,25.02,plantation,inherited,missing,agricultural,04-08-2018,benami_transaction,active_litigation,manual_verification
+LRAN000384,F354519,Andhra Pradesh,Visakhapatnam,915-C,AP54396660,28.85,garden,joint,valid,horticultural,29-01-2020,,none,satellite_mapping
+LRHA000385,F232956,Haryana,Hisar,334-F,HR42916838,39.89,plantation,joint,valid,agricultural,25-05-2020,,none,digitized_land_registry
+LRHA000386,F100894,Haryana,Panchkula,33/519/2,HR99672456,32.36,wet,inherited,pending_verification,agricultural,09-07-2020,false_succession_claim,active_litigation,unverified
+LRAN000387,F394162,Andhra Pradesh,Guntur,906-B,AP36413902,33.55,dry,owner,valid,agricultural,19-12-2024,,none,revenue_records
+LRMA000388,F490238,Madhya Pradesh,Bhopal,S9534,MP72481189,28.61,plantation,tenant,valid,horticultural,13-02-2023,,none,digitized_land_registry
+LRAN000389,F533756,Andhra Pradesh,Visakhapatnam,S609,AP65095593,10.26,garden,tenant,valid,agricultural,01-09-2018,,none,satellite_mapping
+LRTA000390,F522604,Tamil Nadu,Erode,143/97,TN90056692,31.37,dry,inherited,missing,agricultural,12-05-2024,womens_inheritance_denial,active_litigation,unverified
+LRMA000391,F380610,Maharashtra,Satara,S6285,MH16187600,28.5,garden,inherited,valid,agricultural,12-06-2020,,none,revenue_records
+LRWE000392,F840559,West Bengal,Kolkata,816/15,WB38082977,33.25,dry,joint,valid,horticultural,16-12-2021,,none,digitized_land_registry
+LRRA000393,F573653,Rajasthan,Udaipur,S9454,RJ54860055,36.4,dry,government_lease,valid,forest,08-02-2021,forest_land_encroachment,encroachment_case,manual_verification
+LRMA000394,F669669,Maharashtra,Akola,37/533/8,MH96006868,29.48,garden,joint,valid,horticultural,16-10-2021,,none,revenue_records
+LRPU000395,F540036,Punjab,Patiala,74/222/3,PB25575300,20.11,dry,joint,expired,converted_non_agricultural,29-06-2021,forest_land_encroachment,none,manual_verification
+LRMA000396,F152444,Maharashtra,Kolhapur,S4781,MH52986517,49.43,wet,inherited,valid,horticultural,03-03-2022,,none,satellite_mapping
+LRHA000397,F435466,Haryana,Karnal,557/24,HR13474838,17.02,wet,government_lease,valid,fallow,18-08-2018,forest_land_encroachment,none,revenue_records
+LRKA000398,F450772,Karnataka,Bengaluru,532-D,KA70707136,9.69,garden,tenant,valid,agricultural,28-11-2021,,none,digitized_land_registry
+LRTA000399,F737303,Tamil Nadu,Madurai,194/48,TN81596577,8.9,wet,owner,pending_verification,agricultural,29-06-2021,tribal_land_violation,none,manual_verification
+LRMA000400,F694833,Maharashtra,Akola,S9592,MH21494704,2.96,wet,inherited,valid,agricultural,16-09-2021,,none,digitized_land_registry
+LRMA000401,F348067,Maharashtra,Sangli,552-E,MH65233123,25.7,wet,joint,valid,horticultural,28-03-2019,,none,satellite_mapping
+LRPU000402,F841076,Punjab,Firozpur,73/375/5,PB12851718,42.14,wet,owner,pending_verification,agricultural,27-12-2024,tribal_land_violation,none,manual_verification
+LRGU000403,F389367,Gujarat,Rajkot,212/14,GJ22687692,22.13,dry,tenant,valid,agricultural,20-05-2020,,none,digitized_land_registry
+LRHA000404,F325025,Haryana,Sonipat,9/646/2,HR26430966,23.33,dry,joint,valid,agricultural,08-03-2018,,none,satellite_mapping
+LRTE000405,F192763,Telangana,Mahbubnagar,S7403,TS76007437,20.66,dry,joint,valid,agricultural,27-08-2023,,none,satellite_mapping
+LRMA000406,F818613,Madhya Pradesh,Jabalpur,114-D,MP56433629,17.88,garden,tenant,valid,agricultural,13-09-2024,,none,digitized_land_registry
+LRKA000407,F966171,Karnataka,Shimoga,S6700,KA28434417,49.95,wet,inherited,valid,horticultural,30-08-2024,,none,digitized_land_registry
+LRUT000408,F319185,Uttar Pradesh,Aligarh,S1215,UP91854732,4.96,garden,inherited,valid,agricultural,11-05-2023,,none,revenue_records
+LRTE000409,F461937,Telangana,Ramagundam,S8335,TS49893369,33.79,dry,inherited,invalid,agricultural,19-09-2022,fraudulent_mutation,pending_mutation,unverified
+LRAN000410,F497075,Andhra Pradesh,Guntur,915-F,AP96359589,37.72,plantation,owner,invalid,agricultural,06-11-2022,common_land_appropriation,boundary_dispute,manual_verification
+LRMA000411,F314916,Madhya Pradesh,Gwalior,94/199/3,MP84379038,49.32,wet,joint,valid,agricultural,08-04-2019,,none,satellite_mapping
+LRTA000412,F571795,Tamil Nadu,Vellore,239/43,TN58212396,5.45,plantation,owner,valid,agricultural,11-02-2021,,none,revenue_records
+LRRA000413,F347835,Rajasthan,Kota,S7020,RJ62440695,38.99,wet,joint,expired,forest,12-09-2022,forest_land_encroachment,none,revenue_records
+LRRA000414,F169687,Rajasthan,Bikaner,43/13,RJ65896900,15.86,dry,tenant,valid,forest,14-08-2021,water_body_encroachment,encroachment_case,revenue_records
+LRRA000415,F519462,Rajasthan,Ajmer,S1633,RJ26267700,45.08,plantation,disputed,invalid,agricultural,29-07-2024,benami_transaction,inheritance_dispute,unverified
+LRKA000416,F483619,Karnataka,Belgaum,924-A,KA91543712,41.53,wet,joint,pending_verification,agricultural,25-12-2020,tribal_land_violation,active_litigation,revenue_records
+LRMA000417,F255524,Madhya Pradesh,Satna,364-C,MP17570295,5.56,wet,tenant,expired,converted_non_agricultural,21-04-2019,forest_land_encroachment,none,manual_verification
+LRPU000418,F942126,Punjab,Moga,105-D,PB45841934,14.98,dry,tenant,invalid,horticultural,19-02-2023,false_succession_claim,active_litigation,manual_verification
+LRRA000419,F456694,Rajasthan,Bhilwara,935/51,RJ85320396,27.22,plantation,disputed,expired,agricultural,24-07-2019,womens_inheritance_denial,pending_mutation,revenue_records
+LRKA000420,F879326,Karnataka,Bellary,65/735/1,KA84522571,5.34,dry,inherited,valid,agricultural,10-06-2023,,none,revenue_records
+LRKA000421,F302131,Karnataka,Mysuru,76/246/5,KA84238238,19.51,dry,inherited,valid,agricultural,23-09-2021,,none,digitized_land_registry
+LRTE000422,F385694,Telangana,Adilabad,240/94,TS86505222,13.59,plantation,disputed,pending_verification,forest,12-10-2022,forest_land_encroachment,encroachment_case,manual_verification
+LRAN000423,F108779,Andhra Pradesh,Anantapur,S8217,AP27280556,12.98,wet,joint,valid,agricultural,04-07-2018,,none,satellite_mapping
+LRRA000424,F740933,Rajasthan,Ajmer,47/241/6,RJ70701827,36.06,garden,owner,valid,agricultural,30-12-2023,,none,revenue_records
+LRWE000425,F596960,West Bengal,Howrah,922/1,,31.24,wet,joint,pending_verification,agricultural,29-09-2024,encroachment_on_government_land,none,manual_verification
+LRTA000426,F607964,Tamil Nadu,Chennai,711-A,TN61970016,35.42,wet,tenant,pending_verification,agricultural,20-12-2020,minor_heir_exploitation,active_litigation,manual_verification
+LRMA000427,F816461,Maharashtra,Pune,S5946,MH61252486,7.14,garden,tenant,pending_verification,agricultural,14-05-2018,minor_heir_exploitation,pending_mutation,manual_verification
+LRRA000428,F449415,Rajasthan,Bhilwara,735/56,RJ40569106,20,plantation,owner,valid,agricultural,19-02-2023,,none,satellite_mapping
+LRTA000429,F928898,Tamil Nadu,Coimbatore,441-E,TN45601622,2.23,garden,joint,valid,agricultural,30-08-2018,,none,revenue_records
+LRWE000430,F472445,West Bengal,Haldia,520-B,WB46074143,23.16,garden,owner,valid,agricultural,17-12-2019,,none,digitized_land_registry
+LRHA000431,F662795,Haryana,Sonipat,47/85,HR12820079,47.16,wet,inherited,valid,horticultural,07-04-2019,,none,satellite_mapping
+LRTA000432,F489335,Tamil Nadu,Coimbatore,417/58,TN66279922,31.97,plantation,joint,valid,agricultural,02-10-2021,,none,digitized_land_registry
+LRHA000433,F987857,Haryana,Panipat,S1637,HR45940604,43.85,wet,owner,pending_verification,agricultural,26-08-2024,fraudulent_mutation,active_litigation,unverified
+LRWE000434,F476374,West Bengal,Siliguri,72/698/2,WB51344134,34.66,dry,joint,valid,agricultural,27-06-2018,,none,digitized_land_registry
+LRMA000435,F824040,Maharashtra,Nagpur,41/181/6,MH26284416,22.72,dry,owner,valid,agricultural,23-04-2018,,none,digitized_land_registry
+LRHA000436,F410907,Haryana,Panipat,57/765/4,HR60031029,18.92,dry,inherited,invalid,horticultural,13-01-2022,benami_transaction,boundary_dispute,revenue_records
+LRMA000437,F130566,Madhya Pradesh,Dewas,71/299/5,MP15325095,13.62,plantation,tenant,valid,horticultural,25-05-2021,,none,revenue_records
+LRMA000438,F463374,Madhya Pradesh,Rewa,61/114/9,MP84693264,4.17,plantation,owner,pending_verification,agricultural,12-05-2024,land_grabbing_from_elderly,boundary_dispute,manual_verification
+LRGU000439,F862424,Gujarat,Ahmedabad,93/591/1,GJ57970918,0.3,garden,tenant,valid,agricultural,26-09-2021,,none,satellite_mapping
+LRMA000440,F849255,Madhya Pradesh,Indore,129-F,MP23312104,25.83,garden,owner,valid,horticultural,15-06-2024,,none,digitized_land_registry
+LRTE000441,F540954,Telangana,Mahbubnagar,S151,TS19658046,9.29,plantation,owner,valid,horticultural,03-08-2021,,none,satellite_mapping
+LRTA000442,F239375,Tamil Nadu,Coimbatore,86-A,TN81485105,7.67,dry,tenant,valid,horticultural,03-08-2019,,none,satellite_mapping
+LRGU000443,F143298,Gujarat,Anand,683/18,GJ74820986,36.05,plantation,joint,valid,agricultural,12-09-2023,,none,revenue_records
+LRUT000444,F688732,Uttar Pradesh,Varanasi,684-E,UP15798450,46.21,dry,joint,valid,agricultural,05-07-2020,,none,revenue_records
+LRHA000445,F693829,Haryana,Panipat,29/893/7,HR11844801,37.11,plantation,tenant,pending_verification,forest,16-03-2019,water_body_encroachment,none,manual_verification
+LRRA000446,F516111,Rajasthan,Kota,78/25,RJ37186350,23.46,dry,joint,valid,agricultural,24-03-2019,,none,digitized_land_registry
+LRHA000447,F190322,Haryana,Yamunanagar,S3463,HR20872583,38,dry,inherited,valid,agricultural,05-11-2018,,none,revenue_records
+LRUT000448,F658687,Uttar Pradesh,Gorakhpur,27/627/7,,46.93,wet,owner,pending_verification,horticultural,10-09-2024,encroachment_on_government_land,none,manual_verification
+LRTE000449,F910843,Telangana,Warangal,775/47,TS40059563,15,dry,joint,pending_verification,horticultural,14-07-2020,fraudulent_mutation,pending_mutation,revenue_records
+LRTE000450,F423572,Telangana,Suryapet,242/53,TS93398686,13.56,garden,tenant,valid,agricultural,23-08-2019,,none,satellite_mapping
+LRTE000451,F489313,Telangana,Hyderabad,S5740,,46.88,wet,inherited,missing,horticultural,13-04-2023,womens_inheritance_denial,inheritance_dispute,unverified
+LRMA000452,F731496,Maharashtra,Solapur,686/82,MH60493644,48.49,wet,inherited,valid,agricultural,01-03-2020,,none,digitized_land_registry
+LRGU000453,F343943,Gujarat,Rajkot,45/280/4,GJ14107661,18.24,plantation,inherited,pending_verification,horticultural,30-03-2019,fraudulent_mutation,boundary_dispute,manual_verification
+LRPU000454,F687825,Punjab,Bathinda,967-E,PB38760991,20.96,dry,tenant,valid,agricultural,26-03-2020,,none,satellite_mapping
+LRTE000455,F744404,Telangana,Khammam,18/457/5,TS67454882,39.4,dry,joint,valid,agricultural,16-06-2019,,none,revenue_records
+LRAN000456,F346695,Andhra Pradesh,Kurnool,46/650/6,AP23206107,7.08,garden,owner,expired,forest,24-03-2023,forest_land_encroachment,none,manual_verification
+LRMA000457,F877560,Madhya Pradesh,Gwalior,74/490/2,MP14388729,23.42,plantation,owner,pending_verification,horticultural,28-07-2019,land_grabbing_from_elderly,active_litigation,unverified
+LRPU000458,F512659,Punjab,Amritsar,46/975/5,PB63036875,8.84,garden,owner,valid,agricultural,09-06-2020,,none,digitized_land_registry
+LRTE000459,F543391,Telangana,Hyderabad,63/173/7,TS29536442,33.51,dry,inherited,valid,agricultural,30-12-2018,,none,satellite_mapping
+LRMA000460,F875279,Maharashtra,Nagpur,88-A,MH65430732,7.6,garden,owner,pending_verification,horticultural,26-07-2019,fraudulent_mutation,active_litigation,revenue_records
+LRRA000461,F711426,Rajasthan,Sikar,792-E,RJ68496930,10.25,dry,joint,pending_verification,agricultural,17-08-2020,fraudulent_mutation,boundary_dispute,unverified
+LRHA000462,F549242,Haryana,Panipat,S3222,HR25133773,35.64,plantation,inherited,valid,agricultural,29-12-2019,,none,digitized_land_registry
+LRTE000463,F836915,Telangana,Adilabad,286-C,TS67040080,34.54,garden,joint,pending_verification,agricultural,22-05-2021,ceiling_breach,none,manual_verification
+LRMA000464,F846647,Maharashtra,Nashik,S9499,MH75573292,28.33,wet,inherited,valid,forest,20-05-2018,wetland_conversion_violation,none,manual_verification
+LRKA000465,F588039,Karnataka,Belgaum,54/156/4,KA82749173,34.49,wet,inherited,valid,horticultural,14-01-2024,,none,satellite_mapping
+LRKA000466,F781735,Karnataka,Mangalore,48/983/6,KA27430406,11.8,dry,joint,valid,agricultural,17-10-2022,,none,revenue_records
+LRAN000467,F973712,Andhra Pradesh,Guntur,899-D,AP56201123,34.91,plantation,tenant,valid,agricultural,27-04-2018,,none,digitized_land_registry
+LRKA000468,F918170,Karnataka,Davanagere,3-F,KA98644140,7.23,plantation,tenant,valid,agricultural,24-10-2023,,none,satellite_mapping
+LRRA000469,F116684,Rajasthan,Jodhpur,76/122/5,RJ16593583,30.58,dry,inherited,valid,agricultural,24-06-2022,,none,digitized_land_registry
+LRWE000470,F365416,West Bengal,Asansol,129-B,WB72361733,39.47,plantation,inherited,pending_verification,fallow,25-07-2023,forest_land_encroachment,none,manual_verification
+LRKA000471,F191944,Karnataka,Gulbarga,299-E,KA20064662,33.52,plantation,joint,invalid,horticultural,25-12-2019,common_land_appropriation,pending_mutation,unverified
+LRGU000472,F371841,Gujarat,Anand,602-F,GJ43059206,25.38,plantation,owner,pending_verification,horticultural,17-02-2024,encroachment_on_government_land,active_litigation,unverified
+LRTA000473,F563534,Tamil Nadu,Tiruchirappalli,S2455,TN11714150,15.08,wet,inherited,valid,fallow,21-09-2024,wetland_conversion_violation,encroachment_case,manual_verification
+LRRA000474,F974262,Rajasthan,Bhilwara,631/18,RJ62248539,17.33,wet,joint,valid,agricultural,04-11-2021,,none,satellite_mapping
+LRPU000475,F878897,Punjab,Pathankot,117/91,PB77702723,16.47,plantation,joint,pending_verification,agricultural,19-03-2024,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRWE000476,F365159,West Bengal,Durgapur,35/601/5,WB65846480,27.17,plantation,joint,valid,horticultural,27-08-2019,,none,revenue_records
+LRMA000477,F344909,Maharashtra,Akola,645/16,MH50023182,10.43,garden,joint,valid,agricultural,09-11-2019,,none,revenue_records
+LRHA000478,F484644,Haryana,Panchkula,261-A,HR66190525,27.92,garden,tenant,valid,horticultural,29-12-2019,,none,satellite_mapping
+LRGU000479,F865163,Gujarat,Gandhinagar,750/15,GJ71062009,28.58,plantation,owner,invalid,agricultural,25-09-2020,fraudulent_mutation,pending_mutation,revenue_records
+LRRA000480,F264340,Rajasthan,Kota,109-A,RJ81240988,48.67,garden,owner,valid,agricultural,12-05-2018,,none,digitized_land_registry
+LRMA000481,F867004,Madhya Pradesh,Jabalpur,S5589,MP18573379,24.13,wet,joint,valid,agricultural,14-06-2024,,none,satellite_mapping
+LRPU000482,F226187,Punjab,Jalandhar,63/426/5,,35.47,wet,inherited,invalid,agricultural,15-04-2022,minor_heir_exploitation,active_litigation,revenue_records
+LRGU000483,F639766,Gujarat,Gandhinagar,961/27,GJ29075147,18.68,plantation,disputed,pending_verification,converted_non_agricultural,02-12-2023,forest_land_encroachment,encroachment_case,manual_verification
+LRKA000484,F614019,Karnataka,Davanagere,21/772/9,KA86384613,4.22,garden,tenant,valid,horticultural,31-03-2020,,none,digitized_land_registry
+LRAN000485,F997027,Andhra Pradesh,Tirupati,47/81,,44.69,garden,disputed,pending_verification,fallow,20-05-2018,forest_land_encroachment,none,manual_verification
+LRRA000486,F854961,Rajasthan,Ajmer,646/75,RJ64912131,31.98,dry,tenant,valid,agricultural,08-07-2020,,none,revenue_records
+LRHA000487,F994140,Haryana,Karnal,25-D,HR13334889,21.61,dry,owner,valid,agricultural,07-08-2019,,none,revenue_records
+LRAN000488,F625577,Andhra Pradesh,Kurnool,S9085,AP81943491,7.86,plantation,joint,valid,agricultural,08-09-2020,,none,satellite_mapping
+LRPU000489,F636913,Punjab,Ludhiana,S9864,PB72060808,34.52,dry,inherited,invalid,agricultural,23-02-2018,land_grabbing_from_elderly,boundary_dispute,manual_verification
+LRMA000490,F994582,Maharashtra,Ahmednagar,969-E,MH78586816,45.68,wet,government_lease,valid,fallow,25-07-2022,forest_land_encroachment,none,manual_verification
+LRTA000491,F968855,Tamil Nadu,Madurai,57/729/5,TN28646347,4.97,garden,inherited,valid,agricultural,05-03-2018,,none,digitized_land_registry
+LRMA000492,F583462,Madhya Pradesh,Indore,622-E,MP60169318,12.84,wet,owner,valid,horticultural,13-08-2021,,none,revenue_records
+LRKA000493,F658484,Karnataka,Bengaluru,651/9,KA20892968,22.98,wet,joint,valid,horticultural,16-04-2020,,none,revenue_records
+LRTE000494,F520362,Telangana,Karimnagar,482-D,TS87656430,24.31,dry,joint,valid,agricultural,15-02-2018,encroachment_on_government_land,active_litigation,revenue_records
+LRGU000495,F379792,Gujarat,Anand,35/232/4,GJ91680131,29.78,wet,owner,valid,converted_non_agricultural,17-11-2022,environmental_clearance_violation,encroachment_case,revenue_records
+LRHA000496,F540862,Haryana,Panipat,195-C,HR67353870,21.51,garden,owner,valid,horticultural,06-03-2023,,none,satellite_mapping
+LRGU000497,F501952,Gujarat,Surat,74-C,GJ18565108,13.15,plantation,joint,valid,agricultural,22-11-2022,,none,satellite_mapping
+LRMA000498,F177043,Maharashtra,Ahmednagar,S7896,MH32633634,14.2,dry,tenant,valid,agricultural,22-12-2023,,none,satellite_mapping
+LRGU000499,F884555,Gujarat,Bhavnagar,96-F,GJ30785340,10.97,dry,inherited,valid,horticultural,03-02-2019,,none,digitized_land_registry
+LRGU000500,F538703,Gujarat,Junagadh,14/854/5,GJ62442537,48.91,plantation,inherited,valid,horticultural,08-06-2024,,none,revenue_records
+LRHA000501,F998084,Haryana,Yamunanagar,S9362,HR50535279,19.38,plantation,owner,valid,converted_non_agricultural,04-07-2024,wetland_conversion_violation,encroachment_case,manual_verification
+LRGU000502,F708084,Gujarat,Mehsana,35/461/9,GJ98419442,33.15,plantation,owner,valid,agricultural,05-03-2019,tribal_land_violation,active_litigation,revenue_records
+LRPU000503,F552665,Punjab,Firozpur,S6394,PB75761457,23.53,plantation,owner,valid,agricultural,14-02-2024,,none,satellite_mapping
+LRGU000504,F641030,Gujarat,Bhavnagar,60/88/7,GJ19778404,46.84,plantation,inherited,missing,agricultural,27-01-2018,benami_transaction,active_litigation,unverified
+LRUT000505,F348535,Uttar Pradesh,Meerut,86-D,UP58584272,1.24,dry,joint,valid,agricultural,16-11-2021,,none,revenue_records
+LRMA000506,F989891,Maharashtra,Aurangabad,60/893/4,MH35959764,19.31,plantation,inherited,valid,horticultural,30-10-2024,,none,satellite_mapping
+LRMA000507,F363540,Maharashtra,Nagpur,23/502/3,MH68523608,27.41,garden,joint,valid,agricultural,08-11-2022,,none,revenue_records
+LRGU000508,F913642,Gujarat,Vadodara,444-D,GJ82042052,23.78,dry,owner,valid,horticultural,19-05-2019,,none,satellite_mapping
+LRAN000509,F658207,Andhra Pradesh,Guntur,S1891,AP78320861,40.63,plantation,tenant,expired,converted_non_agricultural,27-10-2018,environmental_clearance_violation,encroachment_case,unverified
+LRTE000510,F217804,Telangana,Suryapet,S3228,,32.4,wet,tenant,missing,agricultural,11-11-2022,womens_inheritance_denial,pending_mutation,manual_verification
+LRAN000511,F461094,Andhra Pradesh,Kurnool,719/85,,47.18,plantation,tenant,invalid,agricultural,16-07-2019,false_succession_claim,active_litigation,manual_verification
+LRTE000512,F825440,Telangana,Hyderabad,43/461/5,TS66798214,40.15,garden,joint,valid,agricultural,23-05-2022,,none,satellite_mapping
+LRKA000513,F643767,Karnataka,Bellary,45/853/3,KA59735276,7.44,garden,inherited,expired,agricultural,26-01-2019,false_succession_claim,active_litigation,unverified
+LRTE000514,F646591,Telangana,Nalgonda,S7895,TS51645924,47.68,garden,joint,pending_verification,agricultural,13-04-2023,benami_transaction,boundary_dispute,revenue_records
+LRTE000515,F583654,Telangana,Nalgonda,53/65,TS92819966,12.93,dry,tenant,valid,agricultural,09-10-2022,,none,digitized_land_registry
+LRTA000516,F337465,Tamil Nadu,Chennai,S8650,TN30393843,19.42,dry,joint,pending_verification,agricultural,14-02-2022,encroachment_on_government_land,none,manual_verification
+LRPU000517,F598403,Punjab,Firozpur,81/600/5,PB33493693,18.65,wet,owner,valid,agricultural,21-03-2020,,none,digitized_land_registry
+LRUT000518,F553976,Uttar Pradesh,Kanpur,80/984/1,UP51510947,20.64,dry,owner,valid,agricultural,10-02-2022,,none,digitized_land_registry
+LRMA000519,F317220,Maharashtra,Kolhapur,488-B,MH79015004,21.9,garden,joint,valid,agricultural,05-12-2024,,none,revenue_records
+LRGU000520,F404743,Gujarat,Ahmedabad,756/24,GJ38452769,48.85,plantation,inherited,valid,agricultural,01-01-2022,,none,digitized_land_registry
+LRMA000521,F176051,Maharashtra,Nagpur,512-E,,9.46,plantation,tenant,expired,forest,07-08-2021,environmental_clearance_violation,none,revenue_records
+LRUT000522,F573645,Uttar Pradesh,Moradabad,421-C,UP44900662,26.82,garden,inherited,pending_verification,agricultural,10-07-2021,false_succession_claim,active_litigation,revenue_records
+LRWE000523,F232037,West Bengal,Bardhaman,671/78,WB78579596,0.64,garden,joint,pending_verification,horticultural,11-12-2023,fraudulent_mutation,pending_mutation,revenue_records
+LRHA000524,F629795,Haryana,Sonipat,526/73,HR19925557,28.15,wet,owner,valid,horticultural,02-05-2021,,none,revenue_records
+LRWE000525,F373767,West Bengal,Siliguri,506/42,WB34511872,39.57,garden,inherited,valid,agricultural,01-10-2024,,none,revenue_records
+LRTE000526,F771935,Telangana,Ramagundam,40/374/9,TS54577335,35.99,wet,tenant,valid,agricultural,31-01-2018,,none,satellite_mapping
+LRMA000527,F380327,Maharashtra,Satara,101-F,MH27231652,49.62,garden,inherited,valid,agricultural,23-07-2020,,none,revenue_records
+LRMA000528,F199712,Madhya Pradesh,Satna,412/30,MP94041663,35.14,dry,inherited,expired,agricultural,08-07-2022,womens_inheritance_denial,inheritance_dispute,unverified
+LRUT000529,F548580,Uttar Pradesh,Kanpur,S701,UP39528057,6.47,wet,joint,valid,agricultural,04-10-2018,,none,satellite_mapping
+LRWE000530,F815267,West Bengal,Malda,18-D,WB88453305,20.07,garden,tenant,valid,agricultural,14-09-2021,,none,revenue_records
+LRWE000531,F640187,West Bengal,Kolkata,175-B,WB40898862,33.93,dry,joint,valid,agricultural,30-12-2019,,none,digitized_land_registry
+LRMA000532,F913119,Madhya Pradesh,Indore,536/96,MP15271478,44.85,dry,joint,valid,agricultural,21-04-2020,,none,digitized_land_registry
+LRWE000533,F190486,West Bengal,Bardhaman,S8237,WB76637781,29.14,dry,joint,pending_verification,horticultural,08-03-2020,encroachment_on_government_land,none,manual_verification
+LRMA000534,F778776,Maharashtra,Kolhapur,722/3,MH78498161,18.13,wet,tenant,valid,horticultural,02-06-2023,,none,digitized_land_registry
+LRKA000535,F380316,Karnataka,Gulbarga,S6816,KA15247323,10.11,wet,joint,valid,agricultural,09-01-2024,,none,revenue_records
+LRGU000536,F106670,Gujarat,Jamnagar,177-C,GJ53412215,25.71,garden,owner,pending_verification,horticultural,28-06-2024,ceiling_breach,none,unverified
+LRTA000537,F606735,Tamil Nadu,Tirunelveli,18/77,TN42345324,33.44,garden,joint,valid,agricultural,28-07-2021,,none,satellite_mapping
+LRUT000538,F876784,Uttar Pradesh,Aligarh,489/88,,36.34,wet,owner,pending_verification,agricultural,16-12-2018,common_land_appropriation,active_litigation,revenue_records
+LRMA000539,F224731,Madhya Pradesh,Dewas,471-D,MP67593988,1.81,wet,tenant,valid,agricultural,28-09-2020,,none,revenue_records
+LRGU000540,F944139,Gujarat,Mehsana,710/35,,35.64,dry,joint,invalid,horticultural,28-04-2019,land_grabbing_from_elderly,active_litigation,unverified
+LRKA000541,F981311,Karnataka,Bellary,S9573,,41.63,garden,tenant,missing,agricultural,04-12-2018,false_succession_claim,inheritance_dispute,manual_verification
+LRTA000542,F500191,Tamil Nadu,Tiruchirappalli,575/99,TN40712326,46.64,dry,tenant,valid,horticultural,18-08-2023,,none,revenue_records
+LRTA000543,F132513,Tamil Nadu,Coimbatore,54-D,TN39554907,12.25,plantation,inherited,valid,horticultural,11-03-2020,,none,satellite_mapping
+LRMA000544,F237908,Madhya Pradesh,Ratlam,S1902,MP76070025,9.9,dry,tenant,expired,agricultural,13-03-2019,minor_heir_exploitation,active_litigation,unverified
+LRHA000545,F650423,Haryana,Karnal,54/163/4,HR88638407,21.26,plantation,inherited,valid,agricultural,07-02-2018,,none,digitized_land_registry
+LRGU000546,F255095,Gujarat,Rajkot,716-C,GJ50471749,10.38,dry,inherited,missing,agricultural,16-08-2021,benami_transaction,active_litigation,manual_verification
+LRAN000547,F409042,Andhra Pradesh,Anantapur,73/226/1,,11.98,dry,inherited,pending_verification,fallow,04-02-2023,water_body_encroachment,encroachment_case,unverified
+LRMA000548,F407682,Maharashtra,Solapur,S8195,MH99449245,49.14,wet,owner,valid,agricultural,18-12-2020,,none,digitized_land_registry
+LRWE000549,F540362,West Bengal,Malda,S2223,WB26310878,16.2,dry,owner,invalid,agricultural,27-11-2021,fraudulent_mutation,active_litigation,revenue_records
+LRRA000550,F549299,Rajasthan,Kota,77/330/3,RJ93785754,19.52,dry,tenant,expired,forest,05-12-2024,environmental_clearance_violation,encroachment_case,manual_verification
+LRAN000551,F753829,Andhra Pradesh,Anantapur,S5617,AP10564241,45.77,dry,owner,valid,agricultural,25-01-2018,,none,revenue_records
+LRGU000552,F849507,Gujarat,Anand,180-C,GJ76824304,8.72,wet,inherited,valid,agricultural,04-01-2019,,none,revenue_records
+LRGU000553,F318293,Gujarat,Junagadh,568-F,GJ91988542,0.82,wet,owner,valid,horticultural,25-09-2022,,none,satellite_mapping
+LRMA000554,F262627,Maharashtra,Sangli,24/119/1,MH21698280,18.77,dry,inherited,pending_verification,horticultural,02-09-2021,benami_transaction,active_litigation,unverified
+LRRA000555,F710338,Rajasthan,Udaipur,373/80,RJ35583589,49.27,garden,owner,pending_verification,fallow,18-12-2023,forest_land_encroachment,encroachment_case,unverified
+LRPU000556,F502011,Punjab,Firozpur,909-A,PB42367575,41.72,dry,inherited,pending_verification,fallow,03-10-2018,water_body_encroachment,encroachment_case,unverified
+LRAN000557,F482154,Andhra Pradesh,Visakhapatnam,34/307/2,AP98226306,85.76,wet,joint,valid,agricultural,13-10-2018,ceiling_breach,none,unverified
+LRTE000558,F433342,Telangana,Mahbubnagar,538/62,TS72876300,47.64,wet,disputed,valid,fallow,14-09-2021,forest_land_encroachment,none,unverified
+LRHA000559,F603263,Haryana,Yamunanagar,72/948/5,HR20174950,41.23,wet,owner,valid,horticultural,11-04-2019,,none,digitized_land_registry
+LRTA000560,F482114,Tamil Nadu,Madurai,5/957/1,,16.36,wet,joint,valid,horticultural,02-12-2019,tribal_land_violation,none,revenue_records
+LRRA000561,F438401,Rajasthan,Kota,S4441,,8.13,plantation,disputed,pending_verification,forest,10-10-2019,wetland_conversion_violation,encroachment_case,manual_verification
+LRHA000562,F132250,Haryana,Sonipat,S1636,HR90687174,26.67,plantation,joint,valid,agricultural,30-08-2023,,none,revenue_records
+LRAN000563,F852521,Andhra Pradesh,Rajahmundry,171-D,AP28365420,31.24,garden,owner,valid,agricultural,05-01-2022,,none,revenue_records
+LRHA000564,F779408,Haryana,Hisar,S5749,HR41373807,11.78,plantation,owner,pending_verification,agricultural,18-05-2023,encroachment_on_government_land,none,manual_verification
+LRRA000565,F199992,Rajasthan,Alwar,827/44,RJ83826338,18.72,plantation,tenant,valid,agricultural,10-08-2024,,none,revenue_records
+LRKA000566,F209579,Karnataka,Shimoga,S7685,KA49692027,13.21,garden,joint,valid,horticultural,01-02-2019,,none,digitized_land_registry
+LRUT000567,F616359,Uttar Pradesh,Moradabad,33/927/8,UP29323925,62.37,dry,owner,valid,agricultural,08-02-2020,ceiling_breach,none,unverified
+LRPU000568,F459216,Punjab,Ludhiana,651/74,PB99932107,23.16,plantation,tenant,valid,agricultural,20-11-2020,,none,satellite_mapping
+LRUT000569,F777551,Uttar Pradesh,Lucknow,12/791/6,UP14154037,5.56,dry,inherited,valid,agricultural,18-09-2021,,none,revenue_records
+LRRA000570,F914586,Rajasthan,Bikaner,81-D,RJ94031378,15.11,wet,disputed,pending_verification,agricultural,23-03-2022,minor_heir_exploitation,active_litigation,revenue_records
+LRMA000571,F900585,Madhya Pradesh,Jabalpur,641-D,MP64776181,35.53,plantation,tenant,valid,agricultural,15-11-2021,,none,revenue_records
+LRGU000572,F368996,Gujarat,Ahmedabad,145-F,,45.36,plantation,owner,invalid,horticultural,18-12-2022,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRRA000573,F284575,Rajasthan,Pali,145/91,RJ69282379,7.55,garden,inherited,valid,agricultural,03-02-2018,,none,digitized_land_registry
+LRHA000574,F486912,Haryana,Rohtak,25/62,HR59106938,11.03,wet,owner,valid,agricultural,10-11-2022,,none,digitized_land_registry
+LRPU000575,F819356,Punjab,Firozpur,193-E,PB98321823,30.52,plantation,inherited,valid,horticultural,30-11-2020,,none,revenue_records
+LRWE000576,F241706,West Bengal,Asansol,80/19/2,WB33352197,28.75,garden,owner,valid,agricultural,09-02-2018,,none,digitized_land_registry
+LRPU000577,F911296,Punjab,Mohali,917/75,PB40860088,41.65,wet,inherited,valid,agricultural,27-11-2024,,none,revenue_records
+LRHA000578,F217989,Haryana,Panchkula,38/665/8,HR52984322,20.91,wet,owner,valid,fallow,13-12-2019,forest_land_encroachment,none,unverified
+LRUT000579,F148707,Uttar Pradesh,Aligarh,S5235,UP90152412,24.41,dry,joint,valid,agricultural,24-06-2018,,none,revenue_records
+LRUT000580,F633894,Uttar Pradesh,Meerut,807/43,UP54055843,27.61,dry,tenant,valid,agricultural,17-05-2020,,none,digitized_land_registry
+LRTA000581,F409946,Tamil Nadu,Coimbatore,496/83,TN44879164,28.86,wet,inherited,expired,agricultural,08-10-2020,womens_inheritance_denial,inheritance_dispute,manual_verification
+LRWE000582,F160926,West Bengal,Kolkata,59/744/5,WB89703937,22.13,dry,joint,valid,agricultural,09-03-2022,encroachment_on_government_land,none,revenue_records
+LRAN000583,F740482,Andhra Pradesh,Vijayawada,325-B,AP86749955,11.88,wet,owner,invalid,agricultural,03-09-2021,benami_transaction,boundary_dispute,revenue_records
+LRMA000584,F732494,Maharashtra,Nagpur,6/518/8,,28.07,wet,tenant,pending_verification,agricultural,12-11-2018,benami_transaction,active_litigation,revenue_records
+LRKA000585,F639151,Karnataka,Gulbarga,49/19,KA98466567,2.33,garden,owner,valid,horticultural,15-03-2020,,none,digitized_land_registry
+LRKA000586,F671682,Karnataka,Davanagere,26/50/9,KA19489580,4.09,garden,tenant,valid,agricultural,12-03-2023,,none,digitized_land_registry
+LRMA000587,F277725,Madhya Pradesh,Ujjain,S5463,MP55074731,14.15,garden,inherited,valid,agricultural,23-08-2020,,none,satellite_mapping
+LRTE000588,F583728,Telangana,Karimnagar,S7106,TS52315106,13.98,plantation,joint,valid,agricultural,08-07-2022,,none,revenue_records
+LRMA000589,F235448,Maharashtra,Kolhapur,S8938,MH83135286,45.11,wet,joint,valid,agricultural,03-04-2020,,none,revenue_records
+LRPU000590,F315725,Punjab,Moga,389-D,PB23697483,37.7,plantation,inherited,pending_verification,fallow,10-07-2021,forest_land_encroachment,none,revenue_records
+LRAN000591,F378074,Andhra Pradesh,Nellore,10/997/6,AP68664526,1.8,dry,inherited,valid,agricultural,15-03-2019,,none,revenue_records
+LRPU000592,F186725,Punjab,Mohali,625/26,,26.15,garden,disputed,invalid,agricultural,13-07-2024,sc_st_land_alienation,pending_mutation,unverified
+LRTE000593,F311229,Telangana,Khammam,858-E,TS29196159,43.84,plantation,inherited,expired,fallow,30-08-2023,environmental_clearance_violation,none,unverified
+LRAN000594,F751539,Andhra Pradesh,Kurnool,813-E,AP75837299,47.73,garden,owner,valid,horticultural,21-07-2020,encroachment_on_government_land,active_litigation,unverified
+LRWE000595,F753637,West Bengal,Kharagpur,939/74,,16.08,garden,owner,pending_verification,agricultural,21-06-2020,tribal_land_violation,active_litigation,unverified
+LRPU000596,F644989,Punjab,Moga,752/76,PB12085132,15.38,wet,owner,pending_verification,horticultural,16-08-2023,encroachment_on_government_land,none,manual_verification
+LRHA000597,F595614,Haryana,Gurugram,S1116,HR24379006,10.53,wet,owner,valid,agricultural,25-08-2020,,none,revenue_records
+LRRA000598,F326201,Rajasthan,Kota,695/97,RJ32176294,38.3,garden,joint,valid,agricultural,04-10-2024,,none,digitized_land_registry
+LRHA000599,F132656,Haryana,Panchkula,15-F,HR95987318,30.3,garden,tenant,pending_verification,agricultural,31-12-2020,womens_inheritance_denial,inheritance_dispute,unverified
+LRTE000600,F835348,Telangana,Warangal,S1727,TS34526522,12.72,plantation,owner,valid,horticultural,19-03-2020,,none,satellite_mapping
+LRGU000601,F264031,Gujarat,Gandhinagar,411/58,GJ69476949,4.35,wet,inherited,valid,agricultural,18-10-2019,,none,revenue_records
+LRMA000602,F914731,Madhya Pradesh,Jabalpur,410/85,MP18063848,12.96,dry,tenant,valid,agricultural,25-12-2022,,none,digitized_land_registry
+LRMA000603,F616024,Madhya Pradesh,Gwalior,4/143/4,MP54436517,16.55,plantation,disputed,pending_verification,horticultural,15-12-2018,minor_heir_exploitation,active_litigation,unverified
+LRRA000604,F759833,Rajasthan,Ajmer,307/97,RJ57279303,4.79,garden,joint,valid,agricultural,14-11-2024,,none,satellite_mapping
+LRPU000605,F280999,Punjab,Jalandhar,300-C,PB14526543,47.62,garden,owner,pending_verification,horticultural,18-02-2021,encroachment_on_government_land,none,revenue_records
+LRHA000606,F465386,Haryana,Hisar,S6729,HR68100779,13.22,dry,owner,valid,horticultural,05-05-2024,,none,digitized_land_registry
+LRTE000607,F326249,Telangana,Karimnagar,37/332/9,TS14923736,7.42,wet,disputed,pending_verification,fallow,25-08-2021,environmental_clearance_violation,none,manual_verification
+LRHA000608,F827603,Haryana,Rohtak,S7172,HR56802981,47.85,dry,tenant,valid,agricultural,29-06-2018,,none,satellite_mapping
+LRPU000609,F306045,Punjab,Patiala,59/269/9,PB46552224,27.13,dry,joint,valid,agricultural,21-08-2024,,none,revenue_records
+LRUT000610,F488365,Uttar Pradesh,Gorakhpur,S7997,UP14867376,10.16,plantation,tenant,valid,agricultural,11-03-2018,,none,revenue_records
+LRMA000611,F244229,Madhya Pradesh,Rewa,317/70,MP39678428,49.5,garden,owner,invalid,agricultural,20-06-2018,fraudulent_mutation,pending_mutation,manual_verification
+LRWE000612,F664441,West Bengal,Durgapur,145-A,WB92216919,37.84,dry,inherited,valid,agricultural,15-06-2019,,none,satellite_mapping
+LRTE000613,F234228,Telangana,Nizamabad,806/52,TS71684425,11.49,plantation,inherited,valid,agricultural,15-08-2020,,none,revenue_records
+LRGU000614,F186764,Gujarat,Gandhinagar,S1121,GJ51274184,4.36,garden,owner,valid,agricultural,08-08-2022,,none,satellite_mapping
+LRWE000615,F649585,West Bengal,Bardhaman,S7394,,4.85,wet,tenant,missing,agricultural,28-08-2022,minor_heir_exploitation,pending_mutation,unverified
+LRMA000616,F239240,Maharashtra,Aurangabad,S1306,MH71942245,9.15,garden,owner,valid,agricultural,16-06-2020,,none,satellite_mapping
+LRMA000617,F729597,Madhya Pradesh,Sagar,63/949/1,MP93617576,31.31,plantation,inherited,pending_verification,agricultural,09-09-2023,fraudulent_mutation,boundary_dispute,revenue_records
+LRGU000618,F517705,Gujarat,Anand,311-B,GJ18068740,20.61,dry,owner,valid,agricultural,11-09-2019,,none,satellite_mapping
+LRMA000619,F725701,Madhya Pradesh,Ratlam,513/10,MP16159884,33.03,plantation,inherited,pending_verification,agricultural,24-02-2021,benami_transaction,pending_mutation,manual_verification
+LRRA000620,F527252,Rajasthan,Jodhpur,94/135/2,,46.79,dry,joint,invalid,agricultural,30-12-2023,fraudulent_mutation,pending_mutation,manual_verification
+LRHA000621,F830596,Haryana,Rohtak,151/76,HR31039276,4.01,dry,tenant,valid,horticultural,10-07-2018,,none,revenue_records
+LRTE000622,F920905,Telangana,Ramagundam,S1914,TS46607320,48.92,wet,tenant,valid,agricultural,20-07-2024,,none,satellite_mapping
+LRPU000623,F280805,Punjab,Moga,S7749,,4.23,dry,joint,pending_verification,agricultural,20-01-2020,encroachment_on_government_land,none,manual_verification
+LRTA000624,F934235,Tamil Nadu,Erode,910-D,TN35949820,16.83,wet,inherited,valid,horticultural,07-03-2024,,none,digitized_land_registry
+LRUT000625,F182019,Uttar Pradesh,Moradabad,90/886/5,UP67733322,46.03,plantation,owner,invalid,agricultural,30-03-2022,fraudulent_mutation,pending_mutation,unverified
+LRPU000626,F645526,Punjab,Hoshiarpur,344-C,PB39641410,46.22,garden,owner,valid,agricultural,20-08-2024,,none,revenue_records
+LRPU000627,F258763,Punjab,Mohali,172-D,PB83986352,1.04,garden,owner,valid,horticultural,08-09-2019,,none,revenue_records
+LRHA000628,F864988,Haryana,Hisar,785-F,HR78915763,25.9,garden,tenant,valid,agricultural,14-09-2023,,none,satellite_mapping
+LRMA000629,F803603,Maharashtra,Sangli,3/876/9,MH28338764,7.18,wet,owner,valid,agricultural,30-05-2024,,none,digitized_land_registry
+LRWE000630,F998750,West Bengal,Kharagpur,58-E,WB28234299,40.88,dry,joint,valid,agricultural,26-09-2024,,none,digitized_land_registry
+LRTA000631,F861112,Tamil Nadu,Vellore,7/215/3,TN42981292,46.29,garden,inherited,pending_verification,agricultural,11-09-2019,benami_transaction,active_litigation,unverified
+LRTE000632,F669849,Telangana,Khammam,918/31,TS46525354,48.69,wet,joint,valid,agricultural,18-07-2023,,none,revenue_records
+LRPU000633,F376817,Punjab,Bathinda,887/18,PB80819590,29.42,garden,inherited,valid,agricultural,15-02-2024,,none,digitized_land_registry
+LRTE000634,F904672,Telangana,Nizamabad,868-D,TS64590384,36.85,plantation,joint,valid,agricultural,02-09-2018,,none,revenue_records
+LRUT000635,F368433,Uttar Pradesh,Bareilly,22/51,UP29155038,2.92,plantation,tenant,valid,agricultural,14-01-2018,,none,revenue_records
+LRMA000636,F937527,Madhya Pradesh,Ujjain,7/988/7,MP28451511,1.2,dry,owner,valid,agricultural,24-04-2022,,none,revenue_records
+LRPU000637,F262643,Punjab,Firozpur,546-D,PB83522121,10.39,plantation,owner,valid,agricultural,20-08-2021,,none,digitized_land_registry
+LRTE000638,F735685,Telangana,Ramagundam,87/877/7,TS69248597,48.44,plantation,owner,valid,agricultural,13-05-2021,,none,satellite_mapping
+LRGU000639,F931962,Gujarat,Junagadh,S7045,GJ85934068,2.55,dry,inherited,invalid,agricultural,28-03-2021,benami_transaction,active_litigation,manual_verification
+LRTE000640,F513839,Telangana,Nalgonda,371/70,TS94685339,35.02,garden,owner,valid,agricultural,22-02-2020,,none,satellite_mapping
+LRHA000641,F873895,Haryana,Panchkula,742-B,HR54842695,15.54,dry,tenant,valid,fallow,04-09-2020,environmental_clearance_violation,none,manual_verification
+LRAN000642,F496517,Andhra Pradesh,Eluru,897/63,AP14828927,38.05,plantation,owner,valid,horticultural,09-09-2023,,none,revenue_records
+LRRA000643,F119430,Rajasthan,Alwar,S129,RJ98734571,16.8,dry,tenant,valid,agricultural,08-12-2018,,none,revenue_records
+LRRA000644,F681544,Rajasthan,Kota,9/437/3,RJ24593907,25.62,wet,tenant,pending_verification,horticultural,04-07-2020,minor_heir_exploitation,active_litigation,revenue_records
+LRPU000645,F646700,Punjab,Bathinda,564/81,PB90860795,19.58,garden,joint,pending_verification,agricultural,18-10-2023,tribal_land_violation,none,manual_verification
+LRMA000646,F805836,Maharashtra,Solapur,S8081,MH65261055,38.09,dry,tenant,valid,agricultural,03-10-2021,,none,revenue_records
+LRPU000647,F870988,Punjab,Amritsar,S7968,PB36614296,16.36,garden,disputed,expired,agricultural,18-07-2021,false_succession_claim,active_litigation,unverified
+LRTE000648,F984231,Telangana,Hyderabad,57/780/3,TS27206844,38.32,plantation,inherited,valid,agricultural,01-02-2022,,none,satellite_mapping
+LRHA000649,F402225,Haryana,Yamunanagar,48/708/1,HR19974262,26.16,wet,tenant,valid,horticultural,06-05-2019,,none,revenue_records
+LRTA000650,F891333,Tamil Nadu,Thanjavur,633/23,TN34810394,45.68,wet,owner,valid,agricultural,26-05-2019,,none,digitized_land_registry
+LRRA000651,F535575,Rajasthan,Alwar,40/383/4,RJ33799830,19.38,wet,owner,valid,agricultural,21-07-2024,,none,satellite_mapping
+LRTE000652,F209797,Telangana,Nalgonda,5/888/5,TS34622171,28.49,plantation,owner,pending_verification,agricultural,09-03-2021,fraudulent_mutation,boundary_dispute,revenue_records
+LRTA000653,F881163,Tamil Nadu,Vellore,92/706/2,TN92842978,19.17,wet,owner,pending_verification,agricultural,17-09-2021,fraudulent_mutation,boundary_dispute,manual_verification
+LRTA000654,F734375,Tamil Nadu,Tiruchirappalli,820/16,TN10625897,7.62,plantation,tenant,valid,agricultural,20-09-2021,,none,satellite_mapping
+LRAN000655,F756598,Andhra Pradesh,Kurnool,S8698,AP30449025,39.25,wet,inherited,invalid,horticultural,25-06-2023,land_grabbing_from_elderly,boundary_dispute,unverified
+LRPU000656,F814577,Punjab,Hoshiarpur,11/565/9,PB15710134,49.77,garden,joint,valid,agricultural,03-05-2020,,none,satellite_mapping
+LRAN000657,F859569,Andhra Pradesh,Rajahmundry,S2531,,89.82,plantation,joint,pending_verification,agricultural,04-07-2021,ceiling_breach,none,manual_verification
+LRGU000658,F578057,Gujarat,Anand,957/33,GJ15476979,81.37,wet,owner,valid,agricultural,16-12-2024,ceiling_breach,none,manual_verification
+LRRA000659,F154459,Rajasthan,Udaipur,210-A,RJ24124722,20.28,dry,joint,valid,agricultural,02-10-2023,,none,satellite_mapping
+LRKA000660,F398732,Karnataka,Belgaum,91/916/1,KA55585956,43.03,plantation,joint,valid,agricultural,06-09-2018,,none,revenue_records
+LRHA000661,F469657,Haryana,Ambala,S3025,HR74645658,35.05,dry,inherited,valid,agricultural,16-11-2023,,none,revenue_records
+LRPU000662,F857839,Punjab,Moga,S8883,PB70927196,10.61,wet,tenant,valid,agricultural,28-08-2019,,none,digitized_land_registry
+LRTE000663,F622617,Telangana,Hyderabad,241-A,TS22509441,48.6,dry,owner,pending_verification,fallow,12-05-2019,environmental_clearance_violation,encroachment_case,revenue_records
+LRKA000664,F543821,Karnataka,Bellary,S2822,KA26028717,49.49,plantation,joint,pending_verification,fallow,12-08-2024,forest_land_encroachment,none,revenue_records
+LRUT000665,F536529,Uttar Pradesh,Kanpur,Apr-81,UP78546834,37.88,plantation,inherited,valid,agricultural,22-07-2024,,none,satellite_mapping
+LRKA000666,F483055,Karnataka,Hubli,204-F,KA26441950,18.29,plantation,tenant,valid,agricultural,21-12-2024,,none,satellite_mapping
+LRMA000667,F214826,Madhya Pradesh,Indore,58/6/5,MP44447894,30.16,dry,joint,valid,forest,05-07-2020,forest_land_encroachment,encroachment_case,revenue_records
+LRMA000668,F174606,Madhya Pradesh,Jabalpur,963/99,MP46378914,10.4,garden,owner,valid,horticultural,09-12-2021,,none,satellite_mapping
+LRGU000669,F282312,Gujarat,Bhavnagar,836-F,GJ12580419,39.11,garden,inherited,valid,agricultural,06-06-2023,,none,satellite_mapping
+LRAN000670,F490692,Andhra Pradesh,Kurnool,S2025,AP71782763,26.53,plantation,joint,valid,agricultural,28-04-2020,,none,digitized_land_registry
+LRGU000671,F590648,Gujarat,Anand,S4405,GJ34960250,32.61,wet,joint,invalid,horticultural,22-08-2021,benami_transaction,pending_mutation,unverified
+LRMA000672,F126726,Maharashtra,Ahmednagar,791/42,MH14787077,5.53,wet,inherited,valid,horticultural,14-03-2018,,none,revenue_records
+LRMA000673,F196490,Maharashtra,Kolhapur,575/74,MH53769349,9.12,wet,tenant,valid,agricultural,06-05-2021,,none,revenue_records
+LRGU000674,F683983,Gujarat,Ahmedabad,4/715/4,GJ37164770,37.77,plantation,joint,valid,agricultural,19-10-2023,ceiling_breach,none,manual_verification
+LRAN000675,F705079,Andhra Pradesh,Visakhapatnam,S5116,AP74489000,16.48,plantation,inherited,valid,agricultural,28-12-2023,,none,digitized_land_registry
+LRTA000676,F120170,Tamil Nadu,Madurai,542-E,TN21272579,43.41,wet,owner,valid,agricultural,17-07-2020,,none,revenue_records
+LRGU000677,F469813,Gujarat,Gandhinagar,196-B,GJ73896559,26.67,garden,joint,valid,agricultural,23-03-2021,,none,digitized_land_registry
+LRKA000678,F843299,Karnataka,Shimoga,91/452/9,KA33366649,45.46,plantation,joint,valid,horticultural,12-06-2019,,none,digitized_land_registry
+LRGU000679,F945464,Gujarat,Vadodara,941-B,GJ88836693,37.11,wet,joint,valid,agricultural,25-03-2022,,none,digitized_land_registry
+LRGU000680,F356057,Gujarat,Mehsana,32/415/9,GJ71591522,40.13,plantation,joint,valid,horticultural,26-10-2020,,none,digitized_land_registry
+LRGU000681,F565517,Gujarat,Vadodara,385-F,GJ11382361,28.18,plantation,inherited,missing,agricultural,27-03-2024,sc_st_land_alienation,active_litigation,revenue_records
+LRMA000682,F557885,Madhya Pradesh,Sagar,S3572,,38.71,dry,owner,pending_verification,agricultural,24-11-2022,fraudulent_mutation,active_litigation,revenue_records
+LRWE000683,F679833,West Bengal,Kharagpur,60/385/5,WB94884456,42.66,garden,joint,valid,agricultural,10-10-2024,,none,digitized_land_registry
+LRAN000684,F834355,Andhra Pradesh,Vijayawada,16/583/7,AP79210998,49.1,garden,joint,valid,agricultural,22-03-2022,,none,satellite_mapping
+LRGU000685,F288951,Gujarat,Gandhinagar,S9825,GJ76519877,4.1,garden,inherited,valid,agricultural,18-07-2019,,none,digitized_land_registry
+LRWE000686,F518126,West Bengal,Malda,25/768/5,WB42205002,38.06,plantation,owner,valid,agricultural,19-01-2023,,none,satellite_mapping
+LRHA000687,F859414,Haryana,Karnal,19/656/7,HR12301059,9.54,wet,inherited,pending_verification,agricultural,13-07-2023,benami_transaction,pending_mutation,unverified
+LRMA000688,F246525,Maharashtra,Sangli,882/68,MH56599620,2.11,plantation,owner,pending_verification,agricultural,08-07-2019,tribal_land_violation,active_litigation,unverified
+LRKA000689,F915484,Karnataka,Gulbarga,427-D,KA53868306,41.83,plantation,government_lease,expired,fallow,08-11-2022,water_body_encroachment,none,unverified
+LRUT000690,F638930,Uttar Pradesh,Bareilly,279-A,UP90544728,42.35,dry,tenant,invalid,agricultural,16-03-2024,false_succession_claim,active_litigation,revenue_records
+LRUT000691,F820798,Uttar Pradesh,Gorakhpur,96/721/5,UP66736208,3.97,wet,inherited,invalid,agricultural,07-10-2023,fraudulent_mutation,boundary_dispute,unverified
+LRMA000692,F458363,Maharashtra,Ahmednagar,S1984,MH44767942,34.76,garden,owner,valid,agricultural,07-03-2019,,none,digitized_land_registry
+LRPU000693,F779592,Punjab,Patiala,S3881,PB35949621,21.34,garden,joint,valid,agricultural,27-11-2024,,none,satellite_mapping
+LRTE000694,F430216,Telangana,Nizamabad,75/53/7,TS46152061,8.47,wet,joint,valid,horticultural,28-09-2021,,none,satellite_mapping
+LRGU000695,F561502,Gujarat,Anand,S2817,GJ71245332,13.3,plantation,owner,valid,agricultural,21-04-2019,,none,satellite_mapping
+LRUT000696,F654567,Uttar Pradesh,Moradabad,894-E,UP92484540,32.19,wet,owner,valid,horticultural,26-03-2021,,none,satellite_mapping
+LRTE000697,F608425,Telangana,Mahbubnagar,86/644/3,TS32208599,46.31,wet,joint,pending_verification,agricultural,11-08-2024,fraudulent_mutation,boundary_dispute,revenue_records
+LRHA000698,F992177,Haryana,Sonipat,558/68,HR11910592,32.16,wet,joint,expired,forest,23-07-2024,wetland_conversion_violation,encroachment_case,unverified
+LRTE000699,F178895,Telangana,Mahbubnagar,S8762,TS76041155,48.33,dry,owner,valid,agricultural,11-05-2022,,none,digitized_land_registry
+LRRA000700,F854575,Rajasthan,Jodhpur,54/525/6,RJ11824169,21.54,plantation,tenant,valid,agricultural,15-03-2020,,none,revenue_records
+LRTA000701,F322712,Tamil Nadu,Coimbatore,85/189/5,TN92493916,33.52,plantation,inherited,valid,horticultural,01-02-2019,,none,satellite_mapping
+LRPU000702,F225894,Punjab,Patiala,60/786/4,PB97149690,16.22,dry,owner,valid,agricultural,09-04-2023,,none,satellite_mapping
+LRGU000703,F645051,Gujarat,Vadodara,S2041,GJ44692802,41.16,dry,disputed,invalid,agricultural,21-04-2019,false_succession_claim,pending_mutation,manual_verification
+LRRA000704,F218509,Rajasthan,Udaipur,61/121/4,RJ46088608,15.44,plantation,joint,pending_verification,agricultural,25-11-2020,tribal_land_violation,none,manual_verification
+LRAN000705,F441004,Andhra Pradesh,Tirupati,653-C,AP16418533,7.81,garden,owner,valid,horticultural,06-09-2019,,none,satellite_mapping
+LRMA000706,F208082,Maharashtra,Nagpur,6/162/7,MH14385596,38.18,plantation,inherited,pending_verification,horticultural,13-06-2018,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRRA000707,F730492,Rajasthan,Bikaner,87/613/7,RJ36062806,14.33,wet,tenant,valid,horticultural,06-07-2023,,none,digitized_land_registry
+LRHA000708,F852533,Haryana,Faridabad,31/64,HR54691154,23.57,garden,inherited,valid,agricultural,27-04-2019,,none,satellite_mapping
+LRPU000709,F751486,Punjab,Mohali,702-E,PB86285727,90.13,wet,joint,valid,agricultural,20-12-2021,ceiling_breach,active_litigation,unverified
+LRTA000710,F891113,Tamil Nadu,Coimbatore,S7868,TN94827186,48.54,plantation,joint,valid,horticultural,26-12-2023,,none,revenue_records
+LRRA000711,F538306,Rajasthan,Sikar,436-D,RJ67906700,49.7,garden,disputed,missing,horticultural,18-09-2019,womens_inheritance_denial,inheritance_dispute,manual_verification
+LRHA000712,F448860,Haryana,Faridabad,S4800,HR72357697,40.76,plantation,inherited,valid,agricultural,28-01-2021,,none,satellite_mapping
+LRHA000713,F710314,Haryana,Ambala,495/94,HR10322466,34.23,wet,joint,valid,agricultural,02-11-2023,,none,revenue_records
+LRPU000714,F501950,Punjab,Ludhiana,64/413/7,PB47219023,36.44,dry,owner,valid,agricultural,13-12-2020,encroachment_on_government_land,none,unverified
+LRMA000715,F279647,Madhya Pradesh,Ujjain,S4838,MP36991870,4.39,plantation,owner,valid,agricultural,26-10-2018,,none,satellite_mapping
+LRMA000716,F983952,Madhya Pradesh,Sagar,281-C,MP44890008,1.86,dry,owner,valid,agricultural,11-12-2018,,none,satellite_mapping
+LRUT000717,F135030,Uttar Pradesh,Lucknow,63/323/9,UP88917831,46.06,plantation,joint,valid,fallow,27-02-2021,water_body_encroachment,encroachment_case,manual_verification
+LRWE000718,F692011,West Bengal,Haldia,208/98,WB55958261,5.67,dry,joint,invalid,agricultural,27-08-2018,land_grabbing_from_elderly,pending_mutation,revenue_records
+LRWE000719,F389459,West Bengal,Kharagpur,556-B,WB14935133,36.61,wet,owner,valid,horticultural,12-10-2021,,none,satellite_mapping
+LRTE000720,F916208,Telangana,Nizamabad,37/229/3,TS86259886,42.06,wet,owner,pending_verification,agricultural,30-04-2020,tribal_land_violation,none,unverified
+LRUT000721,F885436,Uttar Pradesh,Gorakhpur,233-A,,29.24,wet,government_lease,pending_verification,converted_non_agricultural,11-07-2019,water_body_encroachment,encroachment_case,revenue_records
+LRTA000722,F653479,Tamil Nadu,Coimbatore,S9811,TN76830665,34.52,dry,joint,valid,horticultural,24-04-2018,,none,revenue_records
+LRWE000723,F338887,West Bengal,Haldia,111/59,WB89413551,43.79,dry,tenant,valid,agricultural,01-01-2019,,none,digitized_land_registry
+LRKA000724,F285578,Karnataka,Bengaluru,60/780/4,KA60988629,26.54,dry,disputed,pending_verification,horticultural,24-11-2019,sc_st_land_alienation,inheritance_dispute,manual_verification
+LRMA000725,F860807,Madhya Pradesh,Bhopal,S4820,MP42351926,15.73,wet,owner,valid,agricultural,06-08-2021,,none,satellite_mapping
+LRTA000726,F681919,Tamil Nadu,Dindigul,91/279/3,TN64505463,1.02,dry,disputed,missing,horticultural,06-04-2024,benami_transaction,inheritance_dispute,unverified
+LRAN000727,F894802,Andhra Pradesh,Tirupati,43/897/4,AP50406909,19.59,garden,tenant,pending_verification,agricultural,16-05-2022,minor_heir_exploitation,inheritance_dispute,unverified
+LRKA000728,F596616,Karnataka,Mysuru,S3821,KA34570744,34.43,plantation,joint,valid,horticultural,01-02-2019,,none,satellite_mapping
+LRUT000729,F706368,Uttar Pradesh,Lucknow,775/20,UP75431830,21.42,garden,tenant,valid,agricultural,26-12-2022,,none,satellite_mapping
+LRTA000730,F174719,Tamil Nadu,Madurai,40/480/6,TN63290822,37.42,garden,owner,valid,agricultural,18-10-2024,,none,satellite_mapping
+LRAN000731,F878622,Andhra Pradesh,Nellore,20/366/2,,13.78,wet,disputed,pending_verification,fallow,27-04-2022,wetland_conversion_violation,none,unverified
+LRHA000732,F770931,Haryana,Hisar,601/16,HR84154316,32.72,plantation,joint,valid,horticultural,11-11-2023,,none,satellite_mapping
+LRAN000733,F401193,Andhra Pradesh,Tirupati,721-F,AP76132842,17.46,garden,owner,pending_verification,agricultural,02-06-2022,encroachment_on_government_land,none,unverified
+LRGU000734,F620803,Gujarat,Mehsana,S2205,GJ17460003,11.31,garden,inherited,valid,agricultural,15-04-2024,,none,revenue_records
+LRGU000735,F990149,Gujarat,Mehsana,55/454/6,GJ38561474,49.06,garden,owner,pending_verification,fallow,30-10-2020,environmental_clearance_violation,encroachment_case,revenue_records
+LRPU000736,F798021,Punjab,Ludhiana,S9898,PB78229064,5.03,garden,tenant,valid,agricultural,07-03-2023,,none,digitized_land_registry
+LRMA000737,F157410,Madhya Pradesh,Gwalior,212-E,MP62935461,44.11,garden,owner,valid,horticultural,15-11-2019,,none,satellite_mapping
+LRTA000738,F516015,Tamil Nadu,Erode,S5959,TN30134806,25.57,wet,inherited,valid,agricultural,06-12-2021,,none,satellite_mapping
+LRRA000739,F387917,Rajasthan,Jodhpur,S8212,RJ63599221,29.46,dry,joint,valid,agricultural,24-05-2022,ceiling_breach,none,unverified
+LRUT000740,F553205,Uttar Pradesh,Lucknow,S4678,UP92937294,21.99,dry,tenant,valid,agricultural,04-12-2018,,none,satellite_mapping
+LRTE000741,F655562,Telangana,Warangal,S8027,TS95561244,1.02,garden,tenant,invalid,horticultural,01-04-2024,womens_inheritance_denial,inheritance_dispute,manual_verification
+LRAN000742,F743910,Andhra Pradesh,Kurnool,933-B,AP24057046,1.42,plantation,owner,valid,agricultural,24-03-2022,,none,revenue_records
+LRMA000743,F113311,Madhya Pradesh,Sagar,684/6,MP91322057,19.62,wet,joint,valid,agricultural,19-10-2020,encroachment_on_government_land,none,unverified
+LRPU000744,F910027,Punjab,Ludhiana,161-A,PB17369115,32.73,dry,joint,valid,agricultural,28-02-2023,,none,digitized_land_registry
+LRUT000745,F733579,Uttar Pradesh,Bareilly,374-E,UP17387826,10.7,dry,owner,valid,agricultural,25-07-2023,,none,satellite_mapping
+LRKA000746,F797003,Karnataka,Tumkur,95/891/6,KA90582420,4.78,dry,inherited,pending_verification,horticultural,07-08-2022,benami_transaction,boundary_dispute,manual_verification
+LRGU000747,F698262,Gujarat,Gandhinagar,215/91,GJ19767519,23.83,garden,joint,valid,agricultural,05-01-2024,tribal_land_violation,active_litigation,manual_verification
+LRPU000748,F506098,Punjab,Pathankot,S5990,PB76325495,3.61,garden,inherited,valid,agricultural,23-05-2023,,none,satellite_mapping
+LRMA000749,F706495,Maharashtra,Solapur,S9513,MH72671645,49.16,garden,tenant,valid,agricultural,27-07-2024,,none,revenue_records
+LRMA000750,F371922,Madhya Pradesh,Gwalior,13/990/6,MP62020206,28.18,dry,tenant,valid,agricultural,24-03-2020,,none,digitized_land_registry
+LRWE000751,F864743,West Bengal,Asansol,738/84,WB15647290,39.88,garden,owner,valid,agricultural,19-09-2024,,none,revenue_records
+LRUT000752,F868246,Uttar Pradesh,Prayagraj,19/291/8,UP34104393,35.44,wet,tenant,valid,agricultural,01-05-2018,,none,revenue_records
+LRGU000753,F149646,Gujarat,Rajkot,928-A,GJ96714303,34.08,wet,inherited,valid,agricultural,18-04-2020,,none,satellite_mapping
+LRWE000754,F780938,West Bengal,Baharampur,S6757,WB16597288,21.37,garden,inherited,valid,agricultural,16-06-2020,,none,satellite_mapping
+LRMA000755,F874975,Maharashtra,Satara,21/366/2,MH67823698,27.87,garden,joint,valid,agricultural,25-05-2024,,none,satellite_mapping
+LRKA000756,F792378,Karnataka,Mysuru,30-D,KA38047644,44.35,plantation,inherited,invalid,agricultural,19-04-2023,benami_transaction,boundary_dispute,unverified
+LRTA000757,F564661,Tamil Nadu,Thanjavur,668-D,TN88115124,29.46,dry,owner,valid,agricultural,22-03-2018,,none,revenue_records
+LRRA000758,F752390,Rajasthan,Jodhpur,70/774/7,RJ58911404,45.87,dry,owner,valid,horticultural,20-09-2021,,none,revenue_records
+LRWE000759,F504698,West Bengal,Durgapur,S6296,WB55605882,17.69,dry,tenant,valid,agricultural,10-06-2019,,none,digitized_land_registry
+LRHA000760,F441604,Haryana,Ambala,83/536/6,HR41520062,49.16,wet,joint,pending_verification,horticultural,05-07-2022,fraudulent_mutation,active_litigation,revenue_records
+LRPU000761,F939733,Punjab,Moga,95/597/5,PB19959041,19.72,garden,inherited,pending_verification,horticultural,28-08-2021,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRWE000762,F809424,West Bengal,Howrah,637-E,WB17805808,41.59,wet,tenant,valid,converted_non_agricultural,25-06-2020,water_body_encroachment,none,manual_verification
+LRGU000763,F541693,Gujarat,Rajkot,620-A,GJ55836213,43.45,garden,inherited,valid,agricultural,29-08-2020,,none,digitized_land_registry
+LRAN000764,F907488,Andhra Pradesh,Anantapur,43/152/4,AP19690086,41.6,dry,inherited,valid,agricultural,23-05-2024,,none,digitized_land_registry
+LRUT000765,F670330,Uttar Pradesh,Kanpur,S2569,UP53276899,48.99,plantation,owner,pending_verification,agricultural,11-11-2023,ceiling_breach,none,manual_verification
+LRGU000766,F391136,Gujarat,Mehsana,181-C,GJ20292405,17.08,dry,owner,valid,agricultural,04-02-2021,,none,revenue_records
+LRMA000767,F590340,Madhya Pradesh,Indore,May-69,,41.37,garden,joint,valid,horticultural,13-05-2024,ceiling_breach,active_litigation,manual_verification
+LRMA000768,F549186,Maharashtra,Akola,14/675/1,MH15774451,23.41,dry,owner,valid,horticultural,29-03-2020,,none,satellite_mapping
+LRKA000769,F516845,Karnataka,Hubli,S1973,KA31100408,9.45,garden,tenant,valid,agricultural,05-11-2024,,none,digitized_land_registry
+LRPU000770,F357781,Punjab,Pathankot,266/75,PB50779694,19.33,plantation,joint,invalid,agricultural,02-12-2020,land_grabbing_from_elderly,pending_mutation,unverified
+LRWE000771,F146309,West Bengal,Haldia,780/70,WB17885558,20.53,garden,joint,valid,horticultural,10-06-2020,,none,satellite_mapping
+LRWE000772,F564986,West Bengal,Haldia,80/904/9,WB25517447,16.09,wet,joint,valid,agricultural,10-04-2020,,none,digitized_land_registry
+LRHA000773,F791811,Haryana,Sonipat,528/50,HR73113155,33.91,dry,tenant,pending_verification,fallow,19-01-2018,forest_land_encroachment,none,manual_verification
+LRTE000774,F943115,Telangana,Nizamabad,65/967/3,TS87380786,40.1,dry,inherited,valid,agricultural,06-04-2019,,none,revenue_records
+LRMA000775,F935719,Madhya Pradesh,Jabalpur,97/705/3,MP88230388,37.48,wet,joint,valid,agricultural,09-08-2024,,none,satellite_mapping
+LRRA000776,F165366,Rajasthan,Alwar,305-A,RJ18550675,24.66,garden,joint,invalid,agricultural,07-02-2024,common_land_appropriation,pending_mutation,revenue_records
+LRUT000777,F710206,Uttar Pradesh,Varanasi,S8584,UP65305714,17.49,wet,government_lease,valid,forest,23-08-2019,water_body_encroachment,none,manual_verification
+LRPU000778,F569745,Punjab,Firozpur,37/622/7,PB32858096,49.02,plantation,inherited,valid,agricultural,16-06-2021,,none,satellite_mapping
+LRRA000779,F321929,Rajasthan,Bikaner,145-F,RJ60851073,15.32,dry,joint,valid,agricultural,15-06-2019,,none,revenue_records
+LRMA000780,F376361,Madhya Pradesh,Sagar,96/983/1,MP99074487,27.52,plantation,owner,valid,agricultural,21-03-2022,,none,digitized_land_registry
+LRTE000781,F166576,Telangana,Karimnagar,456-F,TS48209740,0.73,dry,joint,valid,agricultural,20-11-2023,,none,satellite_mapping
+LRAN000782,F413527,Andhra Pradesh,Anantapur,711-B,AP98930078,19.78,dry,tenant,valid,agricultural,14-05-2018,,none,satellite_mapping
+LRMA000783,F148010,Madhya Pradesh,Dewas,87/101/6,MP93962677,48.71,garden,owner,valid,agricultural,22-03-2022,,none,revenue_records
+LRTA000784,F479920,Tamil Nadu,Tirunelveli,S8336,TN21900522,36.38,wet,inherited,valid,horticultural,14-12-2020,,none,satellite_mapping
+LRMA000785,F616538,Maharashtra,Aurangabad,837-B,MH21512399,19.69,plantation,joint,valid,agricultural,15-03-2018,,none,satellite_mapping
+LRGU000786,F523407,Gujarat,Bhavnagar,S4882,GJ63775416,23.69,dry,owner,invalid,agricultural,19-04-2019,benami_transaction,active_litigation,manual_verification
+LRAN000787,F911412,Andhra Pradesh,Visakhapatnam,697-A,AP41662163,29.19,wet,inherited,valid,agricultural,21-03-2021,,none,satellite_mapping
+LRUT000788,F423718,Uttar Pradesh,Varanasi,860/52,UP53428490,24.1,dry,tenant,valid,agricultural,10-12-2023,,none,digitized_land_registry
+LRAN000789,F979266,Andhra Pradesh,Rajahmundry,952-D,AP92757002,32.77,dry,owner,valid,agricultural,29-06-2023,,none,digitized_land_registry
+LRTE000790,F973765,Telangana,Nizamabad,918/3,TS24866430,5.77,dry,owner,valid,agricultural,11-10-2024,,none,revenue_records
+LRHA000791,F518376,Haryana,Panchkula,57/692/2,HR88537349,37.69,dry,tenant,valid,horticultural,12-09-2023,,none,revenue_records
+LRGU000792,F888225,Gujarat,Vadodara,2/656/5,GJ98597999,1.08,plantation,owner,pending_verification,converted_non_agricultural,09-12-2018,environmental_clearance_violation,none,manual_verification
+LRHA000793,F173150,Haryana,Karnal,827-E,HR46645318,8.97,wet,disputed,expired,horticultural,12-08-2022,false_succession_claim,active_litigation,unverified
+LRMA000794,F671925,Madhya Pradesh,Ratlam,64/912/9,MP32074647,38.41,plantation,inherited,pending_verification,fallow,09-02-2019,forest_land_encroachment,encroachment_case,unverified
+LRWE000795,F494873,West Bengal,Kolkata,93/908/5,WB66856211,31.31,garden,tenant,valid,agricultural,04-05-2022,,none,satellite_mapping
+LRKA000796,F104667,Karnataka,Mysuru,150-E,KA98654587,15.37,garden,joint,valid,agricultural,25-03-2019,,none,revenue_records
+LRRA000797,F915952,Rajasthan,Kota,S9963,RJ29993621,21.54,wet,joint,valid,agricultural,17-01-2023,,none,satellite_mapping
+LRKA000798,F489486,Karnataka,Davanagere,S4903,KA85051281,1.63,dry,tenant,valid,agricultural,25-07-2019,,none,revenue_records
+LRPU000799,F344047,Punjab,Mohali,132-C,PB94389375,5.65,garden,inherited,valid,agricultural,09-01-2024,,none,revenue_records
+LRWE000800,F939056,West Bengal,Howrah,302-B,,47.59,wet,owner,pending_verification,agricultural,16-12-2021,encroachment_on_government_land,none,unverified
+LRRA000801,F869202,Rajasthan,Udaipur,233-C,RJ16080606,4.44,garden,owner,valid,agricultural,18-01-2021,,none,digitized_land_registry
+LRTE000802,F776598,Telangana,Nalgonda,S6965,TS24985361,20.79,plantation,owner,valid,agricultural,04-11-2023,,none,revenue_records
+LRRA000803,F999538,Rajasthan,Bikaner,773-F,RJ35935605,32.8,wet,inherited,expired,agricultural,24-05-2020,sc_st_land_alienation,inheritance_dispute,revenue_records
+LRPU000804,F686021,Punjab,Hoshiarpur,S4155,PB77147155,26.84,plantation,owner,valid,agricultural,28-02-2021,tribal_land_violation,none,manual_verification
+LRAN000805,F145732,Andhra Pradesh,Kurnool,S9390,AP55808483,47.04,plantation,tenant,valid,horticultural,10-11-2022,,none,digitized_land_registry
+LRTA000806,F798192,Tamil Nadu,Tiruchirappalli,392-D,TN19064834,9.19,plantation,joint,pending_verification,agricultural,25-12-2018,tribal_land_violation,active_litigation,revenue_records
+LRGU000807,F126509,Gujarat,Surat,99/238/2,GJ50971420,7.46,dry,tenant,valid,agricultural,18-12-2022,,none,digitized_land_registry
+LRMA000808,F457871,Madhya Pradesh,Ujjain,60/956/6,MP50673445,34.77,dry,inherited,valid,horticultural,13-09-2021,,none,digitized_land_registry
+LRHA000809,F793925,Haryana,Gurugram,99/937/6,HR55571810,31.53,wet,joint,valid,agricultural,23-07-2023,,none,revenue_records
+LRKA000810,F560928,Karnataka,Davanagere,57/185/6,KA39846080,4.55,wet,disputed,pending_verification,fallow,19-06-2024,wetland_conversion_violation,none,revenue_records
+LRRA000811,F909678,Rajasthan,Jaipur,S409,RJ10071774,32.68,plantation,owner,pending_verification,agricultural,16-09-2023,fraudulent_mutation,boundary_dispute,manual_verification
+LRWE000812,F232011,West Bengal,Baharampur,63/884/4,WB67620125,31.14,plantation,tenant,valid,agricultural,10-09-2024,,none,revenue_records
+LRTA000813,F618821,Tamil Nadu,Coimbatore,07-Sep,TN48630745,21.63,dry,inherited,valid,agricultural,30-01-2023,,none,satellite_mapping
+LRTE000814,F915308,Telangana,Warangal,26/524/1,TS95442750,30.87,garden,owner,valid,agricultural,26-06-2021,,none,revenue_records
+LRKA000815,F945631,Karnataka,Gulbarga,836-D,KA79417190,1.49,dry,tenant,valid,agricultural,16-05-2022,,none,digitized_land_registry
+LRTE000816,F195093,Telangana,Warangal,10/736/1,TS66381093,28.87,dry,inherited,valid,horticultural,26-06-2023,,none,revenue_records
+LRTA000817,F307460,Tamil Nadu,Erode,S6230,TN31657888,6.46,wet,inherited,pending_verification,agricultural,22-12-2021,benami_transaction,boundary_dispute,revenue_records
+LRKA000818,F544145,Karnataka,Belgaum,57/85,KA88819674,41.95,wet,inherited,pending_verification,horticultural,28-05-2019,common_land_appropriation,boundary_dispute,manual_verification
+LRAN000819,F736808,Andhra Pradesh,Nellore,893-A,AP52602348,48.6,garden,tenant,expired,forest,07-05-2024,environmental_clearance_violation,none,unverified
+LRPU000820,F977926,Punjab,Bathinda,S4593,PB97331341,4.33,dry,inherited,valid,horticultural,28-12-2022,,none,digitized_land_registry
+LRPU000821,F316704,Punjab,Jalandhar,645/78,PB35614719,43.77,dry,inherited,valid,horticultural,23-07-2023,,none,digitized_land_registry
+LRGU000822,F222647,Gujarat,Mehsana,39/211/3,GJ98162183,41.3,garden,disputed,expired,converted_non_agricultural,03-04-2020,environmental_clearance_violation,none,manual_verification
+LRTE000823,F778825,Telangana,Warangal,S8442,,30.84,garden,inherited,pending_verification,agricultural,07-12-2018,common_land_appropriation,boundary_dispute,unverified
+LRTE000824,F922046,Telangana,Hyderabad,74/892/5,TS84504642,24.91,wet,tenant,expired,agricultural,03-01-2018,womens_inheritance_denial,active_litigation,revenue_records
+LRPU000825,F204463,Punjab,Hoshiarpur,376/64,PB52222179,18.17,wet,inherited,invalid,agricultural,25-01-2022,minor_heir_exploitation,inheritance_dispute,manual_verification
+LRHA000826,F218463,Haryana,Rohtak,S8465,,18.57,garden,inherited,expired,forest,21-02-2023,environmental_clearance_violation,none,manual_verification
+LRUT000827,F683338,Uttar Pradesh,Gorakhpur,235/77,UP27437640,38.75,garden,inherited,valid,horticultural,15-04-2022,,none,revenue_records
+LRPU000828,F866138,Punjab,Jalandhar,660-A,PB20458768,12.42,wet,owner,valid,agricultural,11-08-2019,,none,digitized_land_registry
+LRRA000829,F478968,Rajasthan,Pali,663-D,RJ78808986,43,plantation,tenant,valid,horticultural,03-04-2024,,none,satellite_mapping
+LRAN000830,F652053,Andhra Pradesh,Visakhapatnam,407/26,AP56565851,29.56,garden,owner,valid,agricultural,08-07-2018,,none,satellite_mapping
+LRWE000831,F154818,West Bengal,Durgapur,882/98,WB23994213,0.31,plantation,inherited,valid,agricultural,23-09-2022,,none,revenue_records
+LRMA000832,F664831,Madhya Pradesh,Rewa,S4216,MP80004983,43.42,plantation,owner,valid,agricultural,25-11-2018,,none,satellite_mapping
+LRMA000833,F668073,Maharashtra,Nagpur,436-C,MH10977510,18.32,garden,tenant,expired,forest,10-03-2018,water_body_encroachment,none,revenue_records
+LRGU000834,F496848,Gujarat,Ahmedabad,S8764,GJ41454340,9.04,wet,joint,valid,forest,05-03-2019,water_body_encroachment,encroachment_case,revenue_records
+LRMA000835,F996099,Madhya Pradesh,Ujjain,515-A,,7.35,plantation,tenant,expired,horticultural,31-10-2023,false_succession_claim,inheritance_dispute,unverified
+LRAN000836,F903476,Andhra Pradesh,Guntur,S3937,AP98681877,38.67,garden,disputed,expired,agricultural,31-07-2022,false_succession_claim,pending_mutation,revenue_records
+LRKA000837,F941913,Karnataka,Mysuru,31/401/8,KA90689517,10.49,dry,inherited,pending_verification,horticultural,23-11-2020,false_succession_claim,pending_mutation,manual_verification
+LRHA000838,F719951,Haryana,Karnal,218/97,HR80461765,40.12,garden,inherited,valid,horticultural,15-01-2021,,none,satellite_mapping
+LRMA000839,F185943,Maharashtra,Solapur,86/9/2,MH17129127,12.47,garden,tenant,valid,agricultural,04-03-2021,,none,satellite_mapping
+LRGU000840,F319369,Gujarat,Junagadh,79/926/9,GJ88814737,47.64,plantation,disputed,invalid,agricultural,22-10-2024,sc_st_land_alienation,pending_mutation,revenue_records
+LRRA000841,F235972,Rajasthan,Bhilwara,659/44,RJ14772695,10.14,garden,joint,pending_verification,agricultural,13-07-2023,tribal_land_violation,active_litigation,manual_verification
+LRRA000842,F784223,Rajasthan,Pali,172/51,RJ10142440,23.34,plantation,disputed,invalid,agricultural,19-02-2019,false_succession_claim,inheritance_dispute,unverified
+LRMA000843,F676323,Madhya Pradesh,Ratlam,S5140,MP22152085,26.28,dry,owner,valid,agricultural,21-08-2020,,none,revenue_records
+LRWE000844,F327638,West Bengal,Bardhaman,548/11,WB74014700,44,dry,owner,pending_verification,agricultural,25-02-2018,fraudulent_mutation,pending_mutation,manual_verification
+LRUT000845,F659520,Uttar Pradesh,Gorakhpur,S5147,UP69350700,4.62,wet,tenant,expired,agricultural,21-03-2021,womens_inheritance_denial,inheritance_dispute,manual_verification
+LRAN000846,F553186,Andhra Pradesh,Eluru,850/96,AP38704299,11.15,dry,joint,valid,agricultural,08-07-2024,,none,digitized_land_registry
+LRWE000847,F127178,West Bengal,Bardhaman,S4954,WB47680385,6.27,garden,joint,valid,agricultural,03-03-2024,tribal_land_violation,none,unverified
+LRPU000848,F859410,Punjab,Hoshiarpur,52/692/4,PB23741176,40.21,wet,owner,valid,agricultural,15-09-2020,,none,digitized_land_registry
+LRMA000849,F719162,Maharashtra,Satara,S6194,MH99630822,9.53,plantation,inherited,pending_verification,agricultural,21-02-2024,fraudulent_mutation,active_litigation,revenue_records
+LRAN000850,F463371,Andhra Pradesh,Anantapur,S9941,AP75898842,24.38,garden,owner,valid,agricultural,18-05-2022,,none,satellite_mapping
+LRGU000851,F265924,Gujarat,Junagadh,15/197/7,GJ11624466,11.73,garden,joint,valid,horticultural,05-11-2018,,none,digitized_land_registry
+LRTA000852,F392371,Tamil Nadu,Coimbatore,901-C,TN43821947,7.8,plantation,inherited,valid,horticultural,26-06-2023,,none,revenue_records
+LRPU000853,F832128,Punjab,Firozpur,S8948,,9.17,garden,joint,pending_verification,agricultural,29-04-2024,fraudulent_mutation,active_litigation,revenue_records
+LRTA000854,F127565,Tamil Nadu,Coimbatore,86/975/5,TN50063721,24.7,wet,owner,valid,agricultural,26-09-2024,,none,digitized_land_registry
+LRKA000855,F554718,Karnataka,Bengaluru,73/455/3,KA67793712,10.65,garden,owner,valid,agricultural,24-04-2020,,none,revenue_records
+LRHA000856,F352305,Haryana,Rohtak,34-D,HR22083259,13.8,plantation,joint,pending_verification,agricultural,09-01-2018,fraudulent_mutation,boundary_dispute,manual_verification
+LRTE000857,F991853,Telangana,Adilabad,960/69,TS92650776,37.16,wet,joint,valid,agricultural,08-12-2024,,none,satellite_mapping
+LRWE000858,F955281,West Bengal,Kolkata,S9984,WB55380588,12.69,wet,owner,valid,horticultural,25-02-2020,,none,digitized_land_registry
+LRWE000859,F444240,West Bengal,Baharampur,622-D,,31.48,garden,tenant,missing,horticultural,13-04-2022,benami_transaction,active_litigation,revenue_records
+LRMA000860,F435443,Madhya Pradesh,Ratlam,127-C,MP36000540,36.57,plantation,inherited,valid,agricultural,26-09-2019,,none,digitized_land_registry
+LRUT000861,F144722,Uttar Pradesh,Lucknow,839-F,UP60111545,37.42,dry,owner,expired,converted_non_agricultural,09-05-2023,water_body_encroachment,encroachment_case,manual_verification
+LRKA000862,F382911,Karnataka,Belgaum,384-A,,11.89,dry,inherited,pending_verification,horticultural,21-01-2018,land_grabbing_from_elderly,active_litigation,unverified
+LRRA000863,F142139,Rajasthan,Alwar,360-C,RJ36966743,30.9,garden,owner,valid,agricultural,28-10-2021,,none,revenue_records
+LRPU000864,F525657,Punjab,Jalandhar,S7924,PB88119982,47.81,wet,tenant,valid,agricultural,10-11-2023,,none,satellite_mapping
+LRTA000865,F627336,Tamil Nadu,Vellore,S9267,TN18509347,46.97,garden,joint,valid,agricultural,02-08-2021,,none,revenue_records
+LRMA000866,F212981,Maharashtra,Sangli,71/909/8,MH56111578,25.87,plantation,tenant,pending_verification,horticultural,11-12-2020,benami_transaction,active_litigation,manual_verification
+LRMA000867,F807227,Maharashtra,Satara,129-C,MH13588747,34.74,garden,inherited,missing,horticultural,06-01-2023,minor_heir_exploitation,pending_mutation,manual_verification
+LRUT000868,F558612,Uttar Pradesh,Varanasi,322/94,UP82326820,33.19,wet,government_lease,expired,forest,12-07-2018,water_body_encroachment,encroachment_case,unverified
+LRWE000869,F473702,West Bengal,Kolkata,186/90,WB65142037,2.68,plantation,inherited,expired,agricultural,19-12-2022,womens_inheritance_denial,active_litigation,unverified
+LRHA000870,F573196,Haryana,Sonipat,71/651/1,HR15967152,15.32,wet,owner,valid,agricultural,01-01-2019,,none,satellite_mapping
+LRWE000871,F839928,West Bengal,Bardhaman,732-B,WB62384680,8.23,garden,tenant,valid,agricultural,03-02-2022,,none,satellite_mapping
+LRHA000872,F410857,Haryana,Karnal,286/75,HR16353975,17.65,plantation,inherited,expired,forest,06-05-2020,water_body_encroachment,encroachment_case,revenue_records
+LRPU000873,F875878,Punjab,Ludhiana,586/25,PB73295984,5.73,wet,tenant,valid,agricultural,14-05-2019,,none,digitized_land_registry
+LRAN000874,F579467,Andhra Pradesh,Kurnool,358/74,AP85455695,39.47,wet,tenant,valid,fallow,08-04-2019,wetland_conversion_violation,encroachment_case,manual_verification
+LRPU000875,F562834,Punjab,Mohali,59/77,PB36185583,36.6,dry,tenant,valid,agricultural,01-07-2024,,none,digitized_land_registry
+LRTA000876,F284933,Tamil Nadu,Chennai,54/572/7,TN58760886,44.35,dry,tenant,pending_verification,fallow,23-12-2022,forest_land_encroachment,none,revenue_records
+LRTE000877,F220912,Telangana,Nalgonda,999-F,TS50083618,35.16,dry,inherited,valid,agricultural,29-05-2020,,none,satellite_mapping
+LRGU000878,F639232,Gujarat,Gandhinagar,S3183,GJ41021217,9.4,wet,tenant,valid,horticultural,02-06-2021,,none,digitized_land_registry
+LRHA000879,F782919,Haryana,Panchkula,293-A,HR69136347,9.2,plantation,inherited,valid,agricultural,28-02-2018,,none,satellite_mapping
+LRKA000880,F395638,Karnataka,Hubli,1/638/6,KA21114397,30.13,dry,inherited,valid,horticultural,19-06-2020,,none,satellite_mapping
+LRGU000881,F482640,Gujarat,Bhavnagar,290/44,GJ15125152,20.57,plantation,owner,valid,agricultural,15-08-2024,tribal_land_violation,none,manual_verification
+LRMA000882,F389955,Maharashtra,Pune,S3804,MH86670372,28.17,dry,owner,pending_verification,agricultural,30-12-2020,tribal_land_violation,none,unverified
+LRUT000883,F759596,Uttar Pradesh,Varanasi,796/29,UP68620648,20.34,plantation,inherited,valid,agricultural,04-08-2024,,none,digitized_land_registry
+LRWE000884,F294227,West Bengal,Malda,S1320,WB18724460,20.7,plantation,inherited,valid,horticultural,08-09-2021,,none,revenue_records
+LRTA000885,F669320,Tamil Nadu,Salem,S8413,TN84879891,35.79,wet,disputed,missing,agricultural,19-03-2022,benami_transaction,inheritance_dispute,manual_verification
+LRGU000886,F751977,Gujarat,Anand,46/905/2,GJ74154915,24.55,plantation,tenant,valid,horticultural,04-04-2022,,none,satellite_mapping
+LRWE000887,F241318,West Bengal,Bardhaman,S3715,WB99434935,43.18,dry,inherited,valid,agricultural,16-11-2024,,none,digitized_land_registry
+LRMA000888,F817730,Maharashtra,Pune,S3428,MH20418007,22.08,garden,owner,valid,agricultural,18-01-2021,tribal_land_violation,active_litigation,revenue_records
+LRUT000889,F436680,Uttar Pradesh,Agra,5/117/2,UP54301090,27.5,dry,inherited,valid,horticultural,22-11-2020,,none,digitized_land_registry
+LRTA000890,F910001,Tamil Nadu,Madurai,513-A,TN27923734,46.57,wet,owner,valid,agricultural,14-03-2019,,none,satellite_mapping
+LRHA000891,F877812,Haryana,Karnal,251/73,HR60430903,43.06,wet,tenant,valid,converted_non_agricultural,24-05-2022,wetland_conversion_violation,none,revenue_records
+LRTE000892,F473112,Telangana,Mahbubnagar,700/73,TS22890938,39.59,dry,government_lease,pending_verification,fallow,22-11-2020,forest_land_encroachment,encroachment_case,revenue_records
+LRGU000893,F819305,Gujarat,Ahmedabad,149/85,GJ36962719,36.97,plantation,owner,valid,agricultural,05-06-2018,,none,satellite_mapping
+LRRA000894,F675786,Rajasthan,Ajmer,S7616,RJ86532550,6.67,dry,inherited,valid,horticultural,02-01-2018,,none,satellite_mapping
+LRUT000895,F209346,Uttar Pradesh,Aligarh,25/547/6,UP29862781,23.08,garden,owner,pending_verification,agricultural,16-07-2019,tribal_land_violation,active_litigation,manual_verification
+LRAN000896,F569763,Andhra Pradesh,Guntur,166-B,AP93269104,34.81,dry,tenant,pending_verification,agricultural,17-05-2019,sc_st_land_alienation,inheritance_dispute,manual_verification
+LRHA000897,F237675,Haryana,Panchkula,S3171,HR15623126,9.04,dry,owner,valid,agricultural,27-02-2018,,none,digitized_land_registry
+LRMA000898,F898885,Maharashtra,Solapur,563/77,,81.42,plantation,owner,pending_verification,agricultural,06-06-2024,ceiling_breach,none,manual_verification
+LRMA000899,F537510,Maharashtra,Kolhapur,647/4,MH90368493,27.69,garden,inherited,valid,horticultural,14-11-2020,,none,revenue_records
+LRPU000900,F678941,Punjab,Mohali,73/721/8,PB58348142,45.46,wet,owner,pending_verification,agricultural,02-09-2023,land_grabbing_from_elderly,active_litigation,revenue_records
+LRTE000901,F968839,Telangana,Ramagundam,S7075,TS11941609,27.1,dry,owner,valid,agricultural,27-05-2020,,none,revenue_records
+LRWE000902,F473126,West Bengal,Howrah,50/926/7,WB23965058,40.27,plantation,inherited,valid,agricultural,27-09-2024,,none,revenue_records
+LRAN000903,F598711,Andhra Pradesh,Tirupati,396-A,AP40851521,44.67,garden,joint,valid,forest,19-05-2020,water_body_encroachment,encroachment_case,unverified
+LRTE000904,F141433,Telangana,Warangal,58/451/4,TS44468171,33.97,wet,inherited,valid,agricultural,13-05-2018,,none,satellite_mapping
+LRTA000905,F259938,Tamil Nadu,Tirunelveli,43-C,TN86823715,8.08,dry,joint,valid,agricultural,03-08-2024,,none,digitized_land_registry
+LRGU000906,F119902,Gujarat,Anand,365-A,GJ57958328,33.82,plantation,tenant,valid,horticultural,14-04-2024,,none,satellite_mapping
+LRPU000907,F936281,Punjab,Pathankot,200/46,PB43307459,41.86,plantation,owner,valid,agricultural,08-08-2020,,none,revenue_records
+LRWE000908,F741188,West Bengal,Malda,516-B,WB42989199,36.51,dry,inherited,valid,horticultural,29-04-2020,,none,revenue_records
+LRWE000909,F600820,West Bengal,Howrah,733/12,,34.98,wet,owner,pending_verification,converted_non_agricultural,13-06-2022,water_body_encroachment,none,revenue_records
+LRGU000910,F621509,Gujarat,Mehsana,71-F,GJ92285023,7.04,wet,owner,pending_verification,horticultural,04-10-2018,encroachment_on_government_land,none,unverified
+LRUT000911,F219308,Uttar Pradesh,Lucknow,41-A,UP67201972,34.03,garden,owner,valid,agricultural,29-12-2020,,none,satellite_mapping
+LRKA000912,F768638,Karnataka,Mysuru,246-D,KA62646907,45.67,garden,tenant,valid,agricultural,25-05-2024,,none,satellite_mapping
+LRMA000913,F259074,Maharashtra,Nagpur,S1974,MH50351056,24.78,wet,inherited,expired,forest,26-01-2022,wetland_conversion_violation,encroachment_case,revenue_records
+LRAN000914,F621960,Andhra Pradesh,Vijayawada,275-B,AP66801537,43.04,garden,inherited,pending_verification,fallow,06-07-2024,forest_land_encroachment,encroachment_case,revenue_records
+LRMA000915,F457553,Maharashtra,Aurangabad,74/906/6,MH63912015,16.86,wet,tenant,valid,agricultural,09-09-2020,,none,satellite_mapping
+LRMA000916,F801606,Maharashtra,Pune,804-C,MH61320487,39.05,garden,joint,expired,converted_non_agricultural,30-10-2018,wetland_conversion_violation,none,revenue_records
+LRUT000917,F119675,Uttar Pradesh,Moradabad,S1997,UP32222686,25.42,wet,joint,valid,agricultural,15-06-2020,,none,digitized_land_registry
+LRWE000918,F314158,West Bengal,Siliguri,S4969,WB87862268,4.93,wet,joint,valid,agricultural,30-01-2021,,none,digitized_land_registry
+LRWE000919,F893745,West Bengal,Bardhaman,80-D,WB71373546,4.39,dry,joint,valid,agricultural,05-06-2020,,none,revenue_records
+LRUT000920,F423292,Uttar Pradesh,Lucknow,252/79,UP93323738,35.05,wet,joint,pending_verification,converted_non_agricultural,20-08-2020,water_body_encroachment,none,unverified
+LRMA000921,F277166,Maharashtra,Nagpur,S6227,MH48046846,33.58,dry,inherited,valid,agricultural,25-08-2024,,none,digitized_land_registry
+LRMA000922,F714257,Maharashtra,Akola,62/122/2,MH83055488,19.11,wet,joint,valid,horticultural,27-04-2020,,none,revenue_records
+LRUT000923,F236612,Uttar Pradesh,Moradabad,72/850/2,UP22646503,13.06,garden,owner,valid,agricultural,21-02-2023,,none,satellite_mapping
+LRHA000924,F882690,Haryana,Karnal,S4985,HR51662111,28.99,plantation,joint,valid,horticultural,14-05-2023,,none,satellite_mapping
+LRWE000925,F806567,West Bengal,Howrah,304-C,WB31709620,20.66,plantation,tenant,valid,agricultural,25-11-2023,,none,revenue_records
+LRRA000926,F539637,Rajasthan,Jaipur,S2553,,25.38,garden,joint,valid,agricultural,24-07-2021,tribal_land_violation,none,unverified
+LRTA000927,F426598,Tamil Nadu,Tiruchirappalli,864/5,TN48274610,8.45,plantation,owner,valid,agricultural,05-02-2021,,none,satellite_mapping
+LRTA000928,F236199,Tamil Nadu,Tiruchirappalli,574-E,TN51948245,13.67,plantation,owner,valid,agricultural,14-07-2018,,none,revenue_records
+LRGU000929,F510827,Gujarat,Anand,S5356,GJ97073647,35.81,wet,inherited,valid,agricultural,04-09-2023,,none,revenue_records
+LRUT000930,F644708,Uttar Pradesh,Bareilly,134/18,UP53550687,25.43,wet,tenant,valid,agricultural,19-07-2020,,none,satellite_mapping
+LRKA000931,F801257,Karnataka,Shimoga,S1207,KA50373138,33.38,plantation,joint,pending_verification,agricultural,23-03-2020,tribal_land_violation,active_litigation,unverified
+LRMA000932,F163555,Maharashtra,Kolhapur,S5482,MH46100479,20.22,garden,inherited,missing,agricultural,18-09-2023,false_succession_claim,inheritance_dispute,unverified
+LRUT000933,F834531,Uttar Pradesh,Meerut,19-F,UP20422030,33.54,wet,tenant,valid,horticultural,28-10-2020,,none,revenue_records
+LRKA000934,F468683,Karnataka,Gulbarga,969-B,KA82696336,33.71,garden,joint,expired,fallow,03-05-2021,environmental_clearance_violation,encroachment_case,unverified
+LRGU000935,F816068,Gujarat,Rajkot,973/70,GJ21380383,20.25,garden,tenant,valid,agricultural,20-04-2024,,none,digitized_land_registry
+LRUT000936,F700239,Uttar Pradesh,Meerut,S9046,UP84307914,16.54,dry,inherited,valid,agricultural,25-05-2019,,none,digitized_land_registry
+LRRA000937,F642409,Rajasthan,Bikaner,92/984/4,RJ33689279,46.57,plantation,inherited,pending_verification,agricultural,04-01-2021,land_grabbing_from_elderly,pending_mutation,unverified
+LRRA000938,F162178,Rajasthan,Alwar,304-D,RJ70865339,34.81,wet,owner,valid,agricultural,03-09-2022,,none,digitized_land_registry
+LRGU000939,F220777,Gujarat,Jamnagar,365-C,GJ67381895,7.25,wet,joint,valid,agricultural,26-12-2024,,none,digitized_land_registry
+LRRA000940,F122268,Rajasthan,Alwar,106/20,RJ46495890,30.42,wet,joint,valid,agricultural,31-05-2021,,none,satellite_mapping
+LRKA000941,F792305,Karnataka,Hubli,51/28,KA89239111,28.56,plantation,inherited,valid,agricultural,02-07-2018,,none,digitized_land_registry
+LRMA000942,F694141,Maharashtra,Ahmednagar,39/979/5,MH67772202,20.69,wet,inherited,valid,agricultural,22-03-2022,,none,revenue_records
+LRAN000943,F174322,Andhra Pradesh,Visakhapatnam,881-F,AP46707740,29.24,plantation,owner,valid,horticultural,09-01-2019,,none,satellite_mapping
+LRMA000944,F648708,Maharashtra,Sangli,28/563/7,MH12145503,32.19,garden,joint,invalid,horticultural,16-08-2024,benami_transaction,active_litigation,revenue_records
+LRMA000945,F913860,Maharashtra,Pune,20/486/5,MH19829699,41.34,plantation,owner,valid,agricultural,07-05-2018,ceiling_breach,active_litigation,manual_verification
+LRRA000946,F293388,Rajasthan,Sikar,35-F,RJ26145592,21.17,plantation,tenant,valid,agricultural,05-01-2024,,none,revenue_records
+LRUT000947,F562223,Uttar Pradesh,Bareilly,670/36,UP94333267,24.08,plantation,owner,valid,agricultural,03-02-2023,encroachment_on_government_land,active_litigation,manual_verification
+LRAN000948,F950906,Andhra Pradesh,Vijayawada,104/86,AP43519126,5.23,garden,inherited,valid,agricultural,18-03-2024,,none,digitized_land_registry
+LRUT000949,F604076,Uttar Pradesh,Prayagraj,683-E,UP38070611,39.98,wet,tenant,valid,horticultural,29-03-2018,,none,digitized_land_registry
+LRTA000950,F943122,Tamil Nadu,Dindigul,87/415/7,TN60656225,8.41,garden,joint,valid,agricultural,28-02-2023,,none,digitized_land_registry
+LRMA000951,F981481,Maharashtra,Ahmednagar,78/393/2,MH75617057,14.76,dry,owner,valid,agricultural,18-08-2019,,none,digitized_land_registry
+LRTA000952,F191038,Tamil Nadu,Erode,S9217,,28.43,dry,tenant,missing,agricultural,07-12-2020,sc_st_land_alienation,pending_mutation,manual_verification
+LRRA000953,F570303,Rajasthan,Bhilwara,S2365,RJ87678627,42.09,plantation,tenant,valid,agricultural,11-06-2019,,none,revenue_records
+LRMA000954,F555220,Maharashtra,Kolhapur,727-E,,39.27,plantation,owner,valid,agricultural,07-08-2023,encroachment_on_government_land,active_litigation,revenue_records
+LRWE000955,F453052,West Bengal,Howrah,864/1,,29.75,wet,inherited,pending_verification,agricultural,28-04-2021,fraudulent_mutation,active_litigation,manual_verification
+LRRA000956,F994962,Rajasthan,Ajmer,S8494,RJ49257765,29.69,dry,owner,valid,agricultural,07-01-2018,,none,revenue_records
+LRTE000957,F546878,Telangana,Nizamabad,S5807,TS13447349,29.88,plantation,owner,pending_verification,fallow,31-10-2020,forest_land_encroachment,none,manual_verification
+LRGU000958,F323512,Gujarat,Junagadh,240-B,GJ65404834,35.38,garden,inherited,valid,agricultural,16-02-2019,,none,revenue_records
+LRTE000959,F797800,Telangana,Hyderabad,65-F,TS49638702,4.41,garden,inherited,valid,agricultural,07-05-2020,,none,revenue_records
+LRMA000960,F769278,Madhya Pradesh,Satna,S2145,MP40915979,5.28,dry,inherited,valid,horticultural,06-04-2019,,none,revenue_records
+LRAN000961,F327536,Andhra Pradesh,Visakhapatnam,S5716,AP46390987,46.53,plantation,owner,valid,agricultural,12-02-2021,,none,revenue_records
+LRGU000962,F113804,Gujarat,Junagadh,S5082,GJ64909251,24.53,plantation,joint,valid,agricultural,02-10-2018,,none,revenue_records
+LRGU000963,F158729,Gujarat,Junagadh,S2908,GJ62928043,25.46,wet,joint,valid,horticultural,03-04-2020,,none,satellite_mapping
+LRRA000964,F769133,Rajasthan,Bhilwara,41/532/3,RJ70160090,30.52,garden,disputed,pending_verification,agricultural,25-12-2021,womens_inheritance_denial,pending_mutation,unverified
+LRPU000965,F673659,Punjab,Pathankot,S8984,PB35234724,41.38,garden,inherited,valid,agricultural,16-05-2018,,none,satellite_mapping
+LRGU000966,F800003,Gujarat,Jamnagar,1/318/3,GJ33067191,29.24,garden,owner,valid,agricultural,21-07-2021,,none,revenue_records
+LRUT000967,F494036,Uttar Pradesh,Moradabad,27/598/5,UP83761192,41.61,wet,tenant,valid,agricultural,23-04-2022,,none,revenue_records
+LRHA000968,F642451,Haryana,Sonipat,147-E,HR24674869,36.44,dry,owner,pending_verification,agricultural,27-02-2023,ceiling_breach,none,unverified
+LRPU000969,F389431,Punjab,Patiala,21-B,PB69233371,41.93,plantation,joint,valid,agricultural,04-08-2022,tribal_land_violation,none,unverified
+LRHA000970,F735797,Haryana,Rohtak,253-E,HR75642958,44.52,plantation,inherited,pending_verification,agricultural,18-08-2024,land_grabbing_from_elderly,boundary_dispute,unverified
+LRHA000971,F586033,Haryana,Ambala,112-B,HR98635204,21.55,plantation,tenant,valid,agricultural,19-08-2018,,none,revenue_records
+LRTE000972,F330222,Telangana,Warangal,757-E,TS20345674,15.27,plantation,owner,valid,agricultural,26-01-2022,,none,satellite_mapping
+LRTA000973,F790048,Tamil Nadu,Coimbatore,S515,TN57076855,12.08,dry,inherited,valid,agricultural,13-01-2023,,none,satellite_mapping
+LRRA000974,F909808,Rajasthan,Sikar,962-B,RJ33632206,33.17,garden,tenant,valid,agricultural,12-09-2020,,none,revenue_records
+LRAN000975,F545905,Andhra Pradesh,Vijayawada,905/47,AP19858418,48.15,plantation,disputed,missing,agricultural,26-06-2020,minor_heir_exploitation,pending_mutation,unverified
+LRMA000976,F438227,Maharashtra,Kolhapur,S667,MH91653718,5.9,dry,joint,expired,forest,28-01-2018,forest_land_encroachment,encroachment_case,revenue_records
+LRMA000977,F222940,Maharashtra,Sangli,91/48,MH91482997,38.1,garden,owner,valid,agricultural,13-04-2018,ceiling_breach,active_litigation,manual_verification
+LRMA000978,F888571,Maharashtra,Ahmednagar,459-D,MH51986787,23.88,wet,owner,valid,horticultural,30-01-2018,,none,satellite_mapping
+LRPU000979,F305852,Punjab,Jalandhar,S8619,PB84741584,46.81,dry,joint,valid,agricultural,27-11-2021,,none,digitized_land_registry
+LRHA000980,F404759,Haryana,Panchkula,9-E,HR32656027,36.02,garden,inherited,invalid,agricultural,15-06-2021,benami_transaction,pending_mutation,revenue_records
+LRTE000981,F755341,Telangana,Mahbubnagar,S4836,TS19232904,39.86,dry,owner,invalid,agricultural,24-04-2022,land_grabbing_from_elderly,boundary_dispute,revenue_records
+LRAN000982,F127828,Andhra Pradesh,Nellore,S8661,AP82588336,25.36,wet,disputed,expired,agricultural,12-08-2018,sc_st_land_alienation,pending_mutation,unverified
+LRRA000983,F773300,Rajasthan,Jodhpur,S2004,RJ48465752,13.24,dry,owner,pending_verification,forest,13-10-2021,environmental_clearance_violation,encroachment_case,revenue_records
+LRRA000984,F542763,Rajasthan,Bikaner,740/56,RJ99277267,33.64,dry,joint,valid,agricultural,08-04-2023,tribal_land_violation,none,unverified
+LRKA000985,F809113,Karnataka,Davanagere,719-A,,62.47,dry,joint,pending_verification,agricultural,27-02-2019,ceiling_breach,none,unverified
+LRTA000986,F817301,Tamil Nadu,Salem,533/48,TN89545560,39.93,plantation,disputed,valid,converted_non_agricultural,12-04-2018,wetland_conversion_violation,encroachment_case,manual_verification
+LRPU000987,F531896,Punjab,Firozpur,12-C,PB53143069,41.37,dry,tenant,valid,agricultural,06-06-2024,,none,satellite_mapping
+LRUT000988,F173878,Uttar Pradesh,Kanpur,27/407/3,UP33150310,48.49,dry,inherited,valid,agricultural,09-12-2018,,none,digitized_land_registry
+LRWE000989,F555493,West Bengal,Bardhaman,79/354/6,WB72417361,43.33,garden,inherited,valid,horticultural,28-06-2020,,none,revenue_records
+LRTE000990,F328152,Telangana,Warangal,905/5,TS39175761,22.39,plantation,tenant,valid,agricultural,13-12-2021,,none,digitized_land_registry
+LRTE000991,F877573,Telangana,Ramagundam,236-D,TS58949799,10.63,dry,owner,pending_verification,agricultural,14-12-2024,common_land_appropriation,active_litigation,manual_verification
+LRGU000992,F610237,Gujarat,Surat,455-D,GJ91548815,1.57,dry,inherited,valid,horticultural,11-07-2022,,none,digitized_land_registry
+LRPU000993,F477281,Punjab,Jalandhar,40/85/1,PB68792492,5.36,garden,tenant,valid,agricultural,25-11-2024,,none,satellite_mapping
+LRTE000994,F398045,Telangana,Suryapet,63/938/2,TS14120349,33.28,garden,inherited,invalid,horticultural,08-10-2020,common_land_appropriation,boundary_dispute,manual_verification
+LRMA000995,F411308,Madhya Pradesh,Dewas,584-B,MP37465963,30.47,plantation,joint,valid,horticultural,08-03-2024,,none,satellite_mapping
+LRGU000996,F794843,Gujarat,Surat,91/372/9,GJ79712041,44.91,garden,inherited,valid,agricultural,16-02-2023,,none,revenue_records
+LRHA000997,F245581,Haryana,Faridabad,348/3,HR54042288,10.66,plantation,inherited,valid,agricultural,04-11-2020,,none,revenue_records
+LRPU000998,F994774,Punjab,Moga,661/45,PB92415630,24.38,garden,inherited,valid,agricultural,02-09-2018,,none,revenue_records
+LRUT000999,F263452,Uttar Pradesh,Bareilly,805-E,UP56391582,38.1,plantation,tenant,pending_verification,horticultural,18-03-2022,false_succession_claim,active_litigation,unverified
+LRTE001000,F372289,Telangana,Karimnagar,341-E,TS33189196,17.91,wet,owner,valid,horticultural,28-06-2024,,none,satellite_mapping

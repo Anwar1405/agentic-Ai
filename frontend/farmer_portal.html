@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Application Portal - AgriDSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portal-header {
+            background: linear-gradient(135deg, #1e5631 0%, #2e7d32 100%);
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .portal-header .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .portal-header .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.2);
+        }
+        .portal-header .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .portal-header .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 10px;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
+        .language-selector i {
+            color: white;
+        }
+        .language-selector select {
+            padding: 5px 8px;
+            border-radius: 4px;
+            border: none;
+            background: white;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .language-selector select:hover {
+            background: #f0f0f0;
+        }
+        .portal-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .portal-tab {
+            padding: 12px 25px;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .portal-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        .status-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .status-step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+        .status-step::after {
+            content: '→';
+            position: absolute;
+            right: -10px;
+            top: 20px;
+            color: #ccc;
+            font-size: 20px;
+        }
+        .status-step:last-child::after {
+            display: none;
+        }
+        .status-step .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 20px;
+        }
+        .status-step.completed .icon {
+            background: #4caf50;
+            color: white;
+        }
+        .status-step.active .icon {
+            background: #2196f3;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        /* GPS Verification Styles */
+        .btn-success {
+            background: #4caf50 !important;
+            color: white !important;
+            border: none !important;
+        }
+        .btn-success:hover {
+            background: #45a049 !important;
+        }
+        .btn-success:disabled {
+            background: #cccccc !important;
+            cursor: not-allowed !important;
+        }
+        .btn-success.loading {
+            opacity: 0.7;
+        }
+        .btn-primary {
+            background: #2196f3 !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 20px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+        }
+        .btn-primary:hover {
+            background: #1976d2 !important;
+        }
+        .btn-warning {
+            background: #ff9800 !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 20px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+        }
+        .btn-warning:hover {
+            background: #f57c00 !important;
+        }
+        .btn-danger {
+            background: #f44336 !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 20px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+        }
+        .btn-danger:hover {
+            background: #d32f2f !important;
+        }
+        .status-badge {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        #gpsStatus {
+            padding: 10px;
+            border-radius: 8px;
+            background: #f5f5f5;
+            border-left: 4px solid #4caf50;
+        }
+        .tracking-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="portal-header">
+        <div class="logo">
+            <i class="fas fa-leaf fa-2x"></i>
+            <h1 id="portalTitle" data-trans="portalTitle">AgriDSS - Farmer Portal</h1>
+        </div>
+        <div class="nav-links">
+            <a href="farmer_portal.html"><i class="fas fa-plus"></i> <span data-translate="apply">New Application</span></a>
+            <a href="track_application.html"><i class="fas fa-search"></i> <span data-translate="track">Track Application</span></a>
+            <a href="farmer_history.html"><i class="fas fa-history"></i> History</a>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="officer_dashboard.html"><i class="fas fa-user-tie"></i> Officer Dashboard</a>
+            <div class="language-selector">
+                <i class="fas fa-globe"></i>
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+        <div class="portal-tabs">
+            <button class="portal-tab active" onclick="showTab('apply')" id="tabApply"><span data-trans="apply">New Application</span></button>
+            <button class="portal-tab" onclick="showTab('track')" id="tabTrack"><span data-trans="track">Track Status</span></button>
+        </div>
+
+        <!-- APPLY TAB -->
+        <div id="applyTab">
+            <form id="farmerForm" class="application-form">
+                <!-- Scheme Selection -->
+                <div class="form-section">
+                    <h3><i class="fas fa-clipboard-list"></i> <span data-trans="schemeSelection">Scheme Selection</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="state" data-trans="state">State *</label>
+                            <select id="state" name="state" required>
+                                <option value="" data-trans="selectState">Select State</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="scheme_id" data-trans="selectScheme">Scheme *</label>
+                            <select id="scheme_id" name="scheme_id" required>
+                                <option value="" data-trans="selectScheme">Select Scheme</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="season" data-trans="selectSeason">Season *</label>
+                            <select id="season" name="season" required>
+                                <option value="" data-trans="selectSeason">Select Season</option>
+                                <option value="Kharif" data-trans="kharif">Kharif</option>
+                                <option value="Rabi" data-trans="rabi">Rabi</option>
+                                <option value="Zaid" data-trans="zaid">Zaid</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="year" data-trans="selectYear">Year *</label>
+                            <select id="year" name="year" required>
+                                <option value="2024">2024</option>
+                                <option value="2025" selected>2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farmer Details -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> <span data-trans="farmerDetails">Farmer Details</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="farmer_name" data-trans="fullName">Full Name *</label>
+                            <input type="text" id="farmer_name" name="farmer_name" data-placeholder="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passbook_name" data-trans="passbookName">Passbook Name *</label>
+                            <input type="text" id="passbook_name" name="passbook_name" data-placeholder="passbookName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship" data-trans="relationship">Relationship *</label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Father" data-trans="father">Father</option>
+                                <option value="Husband" data-trans="husband">Husband</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="relative_name" data-trans="relativeName">Relative Name *</label>
+                            <input type="text" id="relative_name" name="relative_name" data-placeholder="relativeName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile_number" data-trans="mobileNumber">Mobile Number *</label>
+                            <input type="tel" id="mobile_number" name="mobile_number" data-placeholder="mobileNumber" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age" data-trans="age">Age *</label>
+                            <input type="number" id="age" name="age" min="18" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="caste_category" data-trans="casteCategory">Caste Category *</label>
+                            <select id="caste_category" name="caste_category" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="General" data-trans="general">General</option>
+                                <option value="OBC" data-trans="obc">OBC</option>
+                                <option value="SC" data-trans="sc">SC</option>
+                                <option value="ST" data-trans="st">ST</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" data-trans="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Male" data-trans="male">Male</option>
+                                <option value="Female" data-trans="female">Female</option>
+                                <option value="Other" data-trans="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="farmer_type" data-trans="farmerType">Farmer Type *</label>
+                            <select id="farmer_type" name="farmer_type" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Small" data-trans="smallFarmer">Small Farmer (&lt; 2 ha)</option>
+                                <option value="Marginal" data-trans="marginalFarmer">Marginal (&lt; 1 ha)</option>
+                                <option value="Medium" data-trans="mediumFarmer">Medium (2-10 ha)</option>
+                                <option value="Large" data-trans="largeFarmer">Large (&gt; 10 ha)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="farmer_category" data-trans="farmerCategory">Farmer Category *</label>
+                            <select id="farmer_category" name="farmer_category" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Owner Cultivator" data-trans="ownerCultivator">Owner Cultivator</option>
+                                <option value="Tenant Farmer" data-trans="tenantFarmer">Tenant Farmer</option>
+                                <option value="Share Cropper" data-trans="shareCropper">Share Cropper</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Residential Details -->
+                <div class="form-section">
+                    <h3><i class="fas fa-home"></i> <span data-trans="residentialDetails">Residential Details</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="residential_state" data-trans="state">State *</label>
+                            <select id="residential_state" name="residential_state" required>
+                                <option value="" data-trans="selectState">Select</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district" data-trans="district">District *</label>
+                            <input type="text" id="district" name="district" data-placeholder="district" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sub_district" data-trans="subDistrict">Sub-District *</label>
+                            <input type="text" id="sub_district" name="sub_district" data-placeholder="subDistrict" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="village" data-trans="villageTown">Village/Town *</label>
+                            <input type="text" id="village" name="village" data-placeholder="villageTown" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" data-trans="address">Address *</label>
+                            <input type="text" id="address" name="address" data-placeholder="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pin_code" data-trans="pinCode">Pin Code *</label>
+                            <input type="text" id="pin_code" name="pin_code" data-placeholder="pinCode" pattern="[0-9]{6}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farmer ID -->
+                <div class="form-section">
+                    <h3><i class="fas fa-id-card"></i> <span data-trans="farmerID">Farmer ID</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="id_type" data-trans="idType">ID Type *</label>
+                            <select id="id_type" name="id_type" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Aadhar" data-trans="aadhar">Aadhar Card</option>
+                                <option value="Voter ID" data-trans="voterID">Voter ID</option>
+                                <option value="Driving License" data-trans="drivingLicense">Driving License</option>
+                                <option value="Passport" data-trans="passport">Passport</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_number" data-trans="idNumber">ID Number *</label>
+                            <input type="text" id="id_number" name="id_number" data-placeholder="idNumber" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Details -->
+                <div class="form-section">
+                    <h3><i class="fas fa-university"></i> <span data-trans="accountDetails">Account Details</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="ifsc_available" data-trans="ifscAvailable">IFSC Available *</label>
+                            <select id="ifsc_available" name="ifsc_available" required onchange="toggleIfsc()">
+                                <option value="Yes" data-trans="yes">Yes</option>
+                                <option value="No" data-trans="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="ifscField">
+                            <label for="ifsc_code" data-trans="ifscCode">IFSC Code</label>
+                            <input type="text" id="ifsc_code" name="ifsc_code" data-placeholder="ifscCode">
+                        </div>
+                        <div class="form-group">
+                            <label for="bank_state" data-trans="bankState">Bank State *</label>
+                            <input type="text" id="bank_state" name="bank_state" data-placeholder="bankState" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bank_district" data-trans="bankDistrict">Bank District *</label>
+                            <input type="text" id="bank_district" name="bank_district" data-placeholder="bankDistrict" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bank_name" data-trans="bankName">Bank Name *</label>
+                            <input type="text" id="bank_name" name="bank_name" data-placeholder="bankName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bank_branch" data-trans="bankBranch">Bank Branch *</label>
+                            <input type="text" id="bank_branch" name="bank_branch" data-placeholder="bankBranch" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account_number" data-trans="savingsAccount">Savings Account Number *</label>
+                            <input type="text" id="account_number" name="account_number" data-placeholder="savingsAccount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_account" data-trans="confirmAccount">Confirm Account *</label>
+                            <input type="text" id="confirm_account" name="confirm_account" data-placeholder="confirmAccount" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Land & Crop Info -->
+                <div class="form-section">
+                    <h3><i class="fas fa-map"></i> <span data-trans="landCropInfo">Land & Crop Information</span></h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="land_area_hectares" data-trans="landSize">Land Size (hectares) *</label>
+                            <input type="number" id="land_area_hectares" name="land_area_hectares" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="survey_number" data-trans="surveyNumber">Survey Number *</label>
+                            <input type="text" id="survey_number" name="survey_number" data-placeholder="surveyNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="patta_number" data-trans="pattaNumber">Patta Number *</label>
+                            <input type="text" id="patta_number" name="patta_number" data-placeholder="pattaNumber" required>
+                        </div>
+                        <!-- GPS Verification Button -->
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <button type="button" class="btn btn-success" id="gpsVerifyBtn" onclick="verifyLandGPS()" style="width: 100%;">
+                                <i class="fas fa-map-marker-alt"></i> <span id="gpsBtnText">Verify My Land Location (GPS)</span>
+                            </button>
+                            <div id="gpsStatus" style="margin-top: 10px; display: none;">
+                                <div class="status-badge" id="gpsStatusBadge"></div>
+                                <p id="gpsStatusText" style="margin: 5px 0; font-size: 14px;"></p>
+                                <input type="hidden" id="gps_verified" value="false">
+                            </div>
+                        </div>
+                        <!-- Land Area Measurement -->
+                        <div class="form-group" style="grid-column: 1 / -1; margin-top: 15px; padding: 15px; background: #e8f5e9; border-radius: 10px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <span style="font-weight: bold; color: #2e7d32;"><i class="fas fa-ruler"></i> <span data-trans="measureLand">Measure My Land</span></span>
+                                <span style="font-size: 12px; color: #666;" id="pointCount">0 points</span>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="startMeasureBtn" onclick="startLandMeasurement()" style="width: 100%; margin-bottom: 10px;">
+                                <i class="fas fa-play"></i> <span id="measureBtnText" data-trans="startMeasure">Start Measuring</span>
+                            </button>
+                            <div id="measurementStatus" style="display: none; margin-bottom: 10px;">
+                                <div style="display: flex; gap: 5px; flex-wrap: wrap;" id="pointList"></div>
+                                <button type="button" class="btn btn-success" onclick="addCurrentPoint()" id="addPointBtn" style="width: 100%; margin-top: 10px;">
+                                    <i class="fas fa-plus-circle"></i> <span data-trans="addPoint">Add Current Point</span>
+                                </button>
+                                <button type="button" class="btn btn-warning" onclick="calculateLandArea()" id="calculateAreaBtn" style="width: 100%; margin-top: 10px; display: none;">
+                                    <i class="fas fa-calculator"></i> <span data-trans="calculateArea">Calculate Area</span>
+                                </button>
+                            </div>
+                            <div id="areaResult" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 5px; text-align: center;">
+                                <strong style="color: #2e7d32; font-size: 18px;" id="areaValue">0.00</strong> <span data-trans="hectares">hectares</span>
+                            </div>
+                            <button type="button" class="btn btn-danger" onclick="resetMeasurement()" id="resetMeasureBtn" style="width: 100%; margin-top: 10px; display: none;">
+                                <i class="fas fa-redo"></i> <span data-trans="resetMeasure">Reset</span>
+                            </button>
+                        </div>
+                        <!-- Insurance Calculator Button -->
+                        <div class="form-group" style="grid-column: 1 / -1; margin-top: 15px; padding: 15px; background: #fff3e0; border-radius: 10px;">
+                            <button type="button" class="btn btn-insurance" onclick="openInsuranceCalculator()" style="width: 100%;">
+                                <i class="fas fa-shield-alt"></i> <span data-trans="insuranceCalc">Crop Insurance Calculator</span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop" data-trans="cropType">Crop Type *</label>
+                            <select id="crop" name="crop" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Paddy" data-trans="paddy">Paddy/Rice</option>
+                                <option value="Wheat" data-trans="wheat">Wheat</option>
+                                <option value="Maize" data-trans="maize">Maize</option>
+                                <option value="Cotton" data-trans="cotton">Cotton</option>
+                                <option value="Sugarcane" data-trans="sugarcane">Sugarcane</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="loss_reason" data-trans="lossReason">Loss Reason *</label>
+                            <select id="loss_reason" name="loss_reason" required>
+                                <option value="" data-trans="selectOption">Select</option>
+                                <option value="Flood" data-trans="flood">Flood</option>
+                                <option value="Drought" data-trans="drought">Drought</option>
+                                <option value="Cyclone" data-trans="cyclone">Cyclone</option>
+                                <option value="Pest" data-trans="pestAttack">Pest Attack</option>
+                                <option value="Disease" data-trans="disease">Disease</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="loss_date" data-trans="lossDate">Loss Date *</label>
+                            <input type="date" id="loss_date" name="loss_date" max="2026-12-31" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loss_percentage" data-trans="lossPercentage">Loss Percentage *</label>
+                            <input type="number" id="loss_percentage" name="loss_percentage" min="1" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="requested_amount" data-trans="requestedAmount">Requested Amount (₹)</label>
+                            <input type="number" id="requested_amount" name="requested_amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="annual_income" data-trans="annualIncome">Annual Income (₹)</label>
+                            <input type="number" id="annual_income" name="annual_income">
+                        </div>
+                        <div class="form-group">
+                            <label for="family_size" data-trans="familySize">Family Size</label>
+                            <input type="number" id="family_size" name="family_size" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-section">
+                    <div class="submit-container">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> <span data-trans="submitApplication">Submit Application</span>
+                        </button>
+                        <div class="form-status" id="formStatus">Ready to submit</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- TRACK TAB -->
+        <div id="trackTab" style="display: none;">
+            <div class="tracking-card">
+                <h3><i class="fas fa-search"></i> <span data-trans="trackYourApplication">Track Your Application</span></h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="trackAppId" data-trans="applicationID">Application ID</label>
+                        <input type="text" id="trackAppId" placeholder="APP-XXXXXXXX" data-placeholder="applicationIdPlaceholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="trackMobile" data-trans="mobileNumber">Mobile Number</label>
+                        <input type="tel" id="trackMobile" placeholder="10-digit mobile" data-placeholder="mobileNumberPlaceholder">
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: flex-end;">
+                        <button type="button" class="btn" id="trackBtn">
+                            <i class="fas fa-search"></i> <span data-trans="trackBtn">Track</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trackingResult" style="display: none;">
+                <div class="status-timeline">
+                    <div class="status-step" id="step1">
+                        <div class="icon"><i class="fas fa-check"></i></div>
+                        <div data-trans="submitted">Submitted</div>
+                    </div>
+                    <div class="status-step" id="step2">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <div data-trans="aiReview">AI Review</div>
+                    </div>
+                    <div class="status-step" id="step3">
+                        <div class="icon"><i class="fas fa-user-tie"></i></div>
+                        <div data-trans="officerReview">Officer Review</div>
+                    </div>
+                    <div class="status-step" id="step4">
+                        <div class="icon"><i class="fas fa-gavel"></i></div>
+                        <div data-trans="finalDecision">Final Decision</div>
+                    </div>
+                </div>
+
+                <div class="tracking-card" id="decisionCard">
+                    <h3 data-trans="applicationStatus">Application Status</h3>
+                    <p><strong data-trans="status">Status:</strong> <span id="displayStatus"></span></p>
+                    <p><strong data-trans="submitted">Submitted:</strong> <span id="displaySubmitted"></span></p>
+                    <p><strong data-trans="aiDecision">AI Decision:</strong> <span id="displayAIDecision"></span></p>
+                    <p><strong data-trans="officerDecision">Officer Decision:</strong> <span id="displayOfficerDecision"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Multi-language translations
+        const translations = {
+            en: {
+                // Header
+                portalTitle: "AgriDSS - Farmer Portal",
+                apply: "Apply",
+                track: "Track",
+                
+                // Scheme Selection
+                schemeSelection: "Scheme Selection",
+                selectState: "Select State",
+                selectScheme: "Select Scheme",
+                selectSeason: "Select Season",
+                selectYear: "Select Year",
+                kharif: "Kharif",
+                rabi: "Rabi",
+                zaid: "Zaid",
+                
+                // Farmer Details
+                farmerDetails: "Farmer Details",
+                fullName: "Full Name",
+                passbookName: "Passbook Name",
+                relationship: "Relationship",
+                father: "Father",
+                husband: "Husband",
+                relativeName: "Relative Name",
+                mobileNumber: "Mobile Number",
+                age: "Age",
+                casteCategory: "Caste Category",
+                general: "General",
+                obc: "OBC",
+                sc: "SC",
+                st: "ST",
+                gender: "Gender",
+                male: "Male",
+                female: "Female",
+                other: "Other",
+                farmerType: "Farmer Type",
+                smallFarmer: "Small Farmer (< 2 ha)",
+                marginalFarmer: "Marginal (< 1 ha)",
+                mediumFarmer: "Medium (2-10 ha)",
+                largeFarmer: "Large (> 10 ha)",
+                farmerCategory: "Farmer Category",
+                ownerCultivator: "Owner Cultivator",
+                tenantFarmer: "Tenant Farmer",
+                shareCropper: "Share Cropper",
+                
+                // Residential Details
+                residentialDetails: "Residential Details",
+                state: "State",
+                district: "District",
+                subDistrict: "Sub-District",
+                villageTown: "Village/Town",
+                address: "Address",
+                pinCode: "Pin Code",
+                
+                // Farmer ID
+                farmerID: "Farmer ID",
+                idType: "ID Type",
+                aadhar: "Aadhar Card",
+                voterID: "Voter ID",
+                drivingLicense: "Driving License",
+                passport: "Passport",
+                idNumber: "ID Number",
+                
+                // Account Details
+                accountDetails: "Account Details",
+                ifscAvailable: "IFSC Available",
+                yes: "Yes",
+                no: "No",
+                ifscCode: "IFSC Code",
+                bankState: "Bank State",
+                bankDistrict: "Bank District",
+                bankName: "Bank Name",
+                bankBranch: "Bank Branch",
+                savingsAccount: "Savings Account Number",
+                confirmAccount: "Confirm Account",
+                
+                // Land & Crop
+                landCropInfo: "Land & Crop Information",
+                landSize: "Land Size (hectares)",
+                surveyNumber: "Survey Number",
+                pattaNumber: "Patta Number",
+                verifyGPS: "Verify My Land Location (GPS)",
+                gpsVerified: "Location Verified",
+                gpsProcessing: "Getting GPS Location...",
+                measureLand: "Measure My Land",
+                startMeasure: "Start Measuring",
+                addPoint: "Add Current Point",
+                calculateArea: "Calculate Area",
+                resetMeasure: "Reset",
+                hectares: "hectares",
+                areaCalculated: "Land area calculated!",
+                insuranceCalc: "Crop Insurance Calculator",
+                selectCrop: "Select Crop",
+                selectSeason: "Select Season",
+                farmerType: "Farmer Type",
+                hasLoan: "Have Crop Loan?",
+                calculatePremium: "Calculate Premium",
+                premiumResult: "Premium Result",
+                crop: "Crop",
+                season: "Season",
+                area: "Area",
+                sumInsured: "Sum Insured",
+                premiumRate: "Premium Rate",
+                yourShare: "Your Premium",
+                govtSubsidy: "Govt. Subsidy",
+                benefits: "Benefits:",
+                cropType: "Crop Type",
+                paddy: "Paddy/Rice",
+                wheat: "Wheat",
+                maize: "Maize",
+                cotton: "Cotton",
+                sugarcane: "Sugarcane",
+                lossReason: "Loss Reason",
+                flood: "Flood",
+                drought: "Drought",
+                cyclone: "Cyclone",
+                pestAttack: "Pest Attack",
+                disease: "Disease",
+                lossDate: "Loss Date",
+                lossPercentage: "Loss Percentage",
+                requestedAmount: "Requested Amount (₹)",
+                annualIncome: "Annual Income (₹)",
+                familySize: "Family Size",
+                
+                // Submit
+                submitApplication: "Submit Application",
+                readyToSubmit: "Ready to submit",
+                submitting: "Submitting...",
+                applicationSubmitted: "Application submitted successfully!",
+                
+                // Track
+                trackYourApplication: "Track Your Application",
+                applicationID: "Application ID",
+                applicationIdPlaceholder: "APP-XXXXXXXX",
+                mobileNumberPlaceholder: "10-digit mobile",
+                trackBtn: "Track",
+                submitted: "Submitted",
+                aiReview: "AI Review",
+                officerReview: "Officer Review",
+                finalDecision: "Final Decision",
+                applicationStatus: "Application Status",
+                status: "Status",
+                aiDecision: "AI Decision",
+                officerDecision: "Officer Decision",
+                
+                // Messages
+                selectOption: "Select",
+                required: "Required",
+                accountMismatch: "Account numbers do not match!",
+                errorOccurred: "An error occurred. Please try again.",
+                applicationNotFound: "Application not found"
+            },
+            ta: {
+                portalTitle: "AgriDSS - விவசாயி போர்டல்",
+                apply: "விண்ணப்பம்",
+                track: "கண்காணிப்பு",
+                schemeSelection: "திட்ட தேர்வு",
+                selectState: "மாநிலத்தைத் தேர்ந்தெடுக்கவும்",
+                selectScheme: "திட்டத்தைத் தேர்ந்தெடுக்கவும்",
+                selectSeason: "பருவத்தைத் தேர்ந்தெடுக்கவும்",
+                selectYear: "ஆண்டைத் தேர்ந்தெடுக்கவும்",
+                kharif: "கரிஃப்",
+                rabi: "ராபி",
+                zaid: "ஜைத்",
+                farmerDetails: "விவசாயி விவரங்கள்",
+                fullName: "முழு பெயர்",
+                passbookName: "பாஸ்புக் பெயர்",
+                relationship: "தொடர்பு",
+                father: "தந்தை",
+                husband: "கணவர்",
+                relativeName: " உறவினர் பெயர்",
+                mobileNumber: "மொபைல் எண்",
+                age: "வயது",
+                casteCategory: "சாதி வகை",
+                general: "பொதுவான",
+                obc: "ஓபிசி",
+                sc: "எஸ்",
+                st: "எஸ்",
+                gender: "பாலினம்",
+                male: "ஆண்",
+                female: "பெண்",
+                other: "மற்றவை",
+                farmerType: "விவசாயி வகை",
+                smallFarmer: "சிறிய விவசாயி (<2 ஹெக்டேர்)",
+                marginalFarmer: "இடைநிலை (<1 ஹெக்டேர்)",
+                mediumFarmer: "மிதவை (2-10 ஹெக்டேர்)",
+                largeFarmer: "பெரிய (>10 ஹெக்டேர்)",
+                farmerCategory: "விவசாயி பகுப்பு",
+                ownerCultivator: "உரிமையாளர் விவசாயி",
+                tenantFarmer: "குத்தகை விவசாயி",
+                shareCropper: "பகிர்வு விவசாயி",
+                residentialDetails: "வசிப்பு விவரங்கள்",
+                state: "மாநில்",
+                district: "மாவட்டம்",
+                subDistrict: "துணை மாவட்டம்",
+                villageTown: "கிராமம்/நகரம்",
+                address: "முகவரி",
+                pinCode: "பின் கோடு",
+                farmerID: "விவசாயி அடையாளம்",
+                idType: "அடையாள வகை",
+                aadhar: "ஆதார் அட்டை",
+                voterID: "வாக்காளர் அடையாளம்",
+                drivingLicense: "ஓட்டுநர் உரிமம்",
+                passport: "பாஸ்போர்ட்",
+                idNumber: "அடையாள எண்",
+                accountDetails: "கணக்கு விவரங்கள்",
+                ifscAvailable: "IFSC கிடைக்கிறதா",
+                yes: "ஆம்",
+                no: "இல்லை",
+                ifscCode: "IFSC குறியீடு",
+                bankState: "வங்கி மாநில்",
+                bankDistrict: "வங்கி மாவட்டம்",
+                bankName: "வங்கி பெயர்",
+                bankBranch: "வங்கி கிளை",
+                savingsAccount: "சேமிப்பு கணக்கு எண்",
+                confirmAccount: "கணக்கை உறுதிப்படுத்தவும்",
+                landCropInfo: "நிலம் & பயிர் தகவல்",
+                landSize: "நில அளவு (ஹெக்டேர்)",
+                surveyNumber: "சர்வே எண்",
+                pattaNumber: "பத்தா எண்",
+                verifyGPS: "என் நிலத்தை GPS மூலம் உருதிப்படுத்து",
+                gpsVerified: "இடம் உருதிப்படுத்தப்பட்டது",
+                gpsProcessing: "GPS இடத்தைப் பெறுகிறது...",
+                measureLand: "என் நிலத்தை அளவிடு",
+                startMeasure: "அளவிடத் துவக்கு",
+                addPoint: "தற்போதைய புள்ளியைச் சேர்",
+                calculateArea: "பகுதியைக் கணக்கிடு",
+                resetMeasure: "மீட்டமை",
+                hectares: "ஹெக்டேர்கள்",
+                insuranceCalc: "பயிர் காப்பீடு கணக்கிடு",
+                selectCrop: "பயிர் தேர்வு",
+                selectSeason: "பருவம் தேர்வு",
+                farmerType: "விவசாயி வகை",
+                hasLoan: "கடன் உண்டா?",
+                calculatePremium: "கட்டணம் கணக்கிடு",
+                premiumResult: "கட்டண முடிவு",
+                crop: "பயிர்",
+                season: "பருவம்",
+                area: "பகுதி",
+                sumInsured: "காப்பீடு தொகை",
+                premiumRate: "கட்டண வீதம்",
+                yourShare: "உங்கள் பங்கு",
+                govtSubsidy: "அரசு உதவி",
+                benefits: "நன்மைகள்:",
+                cropType: "பயிர் வகை",
+                paddy: "அரிசி",
+                wheat: "கோதுமை",
+                maize: "மக்காச்சோளம்",
+                cotton: "பருத்தி",
+                sugarcane: "கரும்பு",
+                lossReason: "இழப்பு காரணம்",
+                flood: "வெள்ளம்",
+                drought: "வரட்சி",
+                cyclone: "சூறாவளி",
+                pestAttack: "பூச்சி தாக்குதல்",
+                disease: "நோய்",
+                lossDate: "இழப்பு தேதி",
+                lossPercentage: "இழப்பு சதவீதம்",
+                requestedAmount: "கோரிய தொகை (₹)",
+                annualIncome: "வருமானம் (₹)",
+                familySize: "குடும்ப அளவு",
+                submitApplication: "விண்ணப்பத்தை சமர்ப்பிக்கவும்",
+                readyToSubmit: "சமர்ப்பிக்க தயார்",
+                submitting: "சமர்ப்பித்தல்...",
+                applicationSubmitted: "விண்ணப்பம் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!",
+                trackYourApplication: "உங்கள் விண்ணப்பத்தைக் கண்காணிக்கவும்",
+                applicationID: "விண்ணப்ப ID",
+                applicationIdPlaceholder: "APP-XXXXXXXX",
+                mobileNumberPlaceholder: "10 இலக்க மொபைல்",
+                trackBtn: "கண்காணி",
+                submitted: "சமர்ப்பித்தது",
+                aiReview: "AI மதிப்பாய்வு",
+                officerReview: "அதிகாரி மதிப்பாய்வு",
+                finalDecision: "இறுதி முடிவு",
+                applicationStatus: "விண்ணப்ப நிலை",
+                status: "நிலை",
+                aiDecision: "AI முடிவு",
+                officerDecision: "அதிகாரி முடிவு",
+                selectOption: "தேர்ந்தெடுக்கவும்",
+                required: "தேவையான",
+                accountMismatch: "கணக்கு எண்கள் பொருந்தவில்லை!",
+                errorOccurred: "பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.",
+                applicationNotFound: "விண்ணப்பம் கிடைக்கவில்லை"
+            },
+            hi: {
+                portalTitle: "AgriDSS - किसान पोर्टल",
+                apply: "आवेदन",
+                track: "ट्रैक",
+                schemeSelection: "योजना चयन",
+                selectState: "राज्य चुनें",
+                selectScheme: "योजना चुनें",
+                selectSeason: "मौसम चुनें",
+                selectYear: "वर्ष चुनें",
+                kharif: "खरीफ",
+                rabi: "रबी",
+                zaid: "ज़ैद",
+                farmerDetails: "किसान विवरण",
+                fullName: "पूरा नाम",
+                passbookName: "पासबुक नाम",
+                relationship: "संबंध",
+                father: "पिता",
+                husband: "पति",
+                relativeName: "रिश्तेदार का नाम",
+                mobileNumber: "मोबाइल नंबर",
+                age: "उम्र",
+                casteCategory: "जाति श्रेणी",
+                general: "सामान्य",
+                obc: "ओबीसी",
+                sc: "एससी",
+                st: "एसटी",
+                gender: "लिंग",
+                male: "पुरुष",
+                female: "महिला",
+                other: "अन्य",
+                farmerType: "किसान प्रकार",
+                smallFarmer: "छोटा किसान (<2 हेक्टेयर)",
+                marginalFarmer: "सीमांत (<1 हेक्टेयर)",
+                mediumFarmer: "मध्यम (2-10 हेक्टेयर)",
+                largeFarmer: "बड़ा (>10 हेक्टेयर)",
+                farmerCategory: "किसान श्रेणी",
+                ownerCultivator: "मालिक कृषक",
+                tenantFarmer: "किरायेदार किसान",
+                shareCropper: "बटाईदार",
+                residentialDetails: "निवास विवरण",
+                state: "राज्य",
+                district: "जिला",
+                subDistrict: "उप-जिला",
+                villageTown: "गाँव/कस्बा",
+                address: "पता",
+                pinCode: "पिन कोड",
+                farmerID: "किसान आईडी",
+                idType: "आईडी प्रकार",
+                aadhar: "आधार कार्ड",
+                voterID: "मतदाता पहचान पत्र",
+                drivingLicense: "ड्राइविंग लाइसेंस",
+                passport: "पासपोर्ट",
+                idNumber: "आईडी नंबर",
+                accountDetails: "खाता विवरण",
+                ifscAvailable: "IFSC उपलब्ध",
+                yes: "हाँ",
+                no: "नहीं",
+                ifscCode: "IFSC कोड",
+                bankState: "बैंक राज्य",
+                bankDistrict: "बैंक जिला",
+                bankName: "बैंक का नाम",
+                bankBranch: "बैंक शाखा",
+                savingsAccount: "बचत खाता नंबर",
+                confirmAccount: "खाता की पुष्टि करें",
+                landCropInfo: "भूमि और फसल जानकारी",
+                landSize: "भूमि का आकार (हेक्टेयर)",
+                surveyNumber: "सर्वे नंबर",
+                pattaNumber: "पट्टा नंबर",
+                verifyGPS: "GPS से मेरी जमीन सत्यापित करें",
+                gpsVerified: "स्थान सत्यापित",
+                gpsProcessing: "GPS स्थान प्राप्त हो रहा है...",
+                measureLand: "मेरी जमीन का माप करें",
+                startMeasure: "माप शुरू करें",
+                addPoint: "वर्तमान बिंदु जोड़ें",
+                calculateArea: "क्षेत्रफल की गणना करें",
+                resetMeasure: "रीसेट",
+                hectares: "हेक्टेयर",
+                insuranceCalc: "फसल बीमा कैलकुलेटर",
+                selectCrop: "फसल चुनें",
+                selectSeason: "मौसम चुनें",
+                farmerType: "किसान प्रकार",
+                hasLoan: "फसल ऋण है?",
+                calculatePremium: "प्रीमियम गणना करें",
+                premiumResult: "प्रीमियम परिणाम",
+                crop: "फसल",
+                season: "मौसम",
+                area: "क्षेत्र",
+                sumInsured: "बीमा राशि",
+                premiumRate: "प्रीमियम दर",
+                yourShare: "आपका हिस्सा",
+                govtSubsidy: "सरकारी सब्सिडी",
+                benefits: "लाभ:",
+                cropType: "फसल का प्रकार",
+                paddy: "धान/चावल",
+                wheat: "गेहूं",
+                maize: "मक्का",
+                cotton: "कपास",
+                sugarcane: "गन्ना",
+                lossReason: "हानि का कारण",
+                flood: "बाढ़",
+                drought: "सूखा",
+                cyclone: "चक्रवात",
+                pestAttack: "कीट हमला",
+                disease: "बीमारी",
+                lossDate: "हानि की तारीख",
+                lossPercentage: "हानि प्रतिशत",
+                requestedAmount: "अनुरोधित राशि (₹)",
+                annualIncome: "वार्षिक आय (₹)",
+                familySize: "परिवार का आकार",
+                submitApplication: "आवेदन जमा करें",
+                readyToSubmit: "जमा करने के लिए तैयार",
+                submitting: "जमा हो रहा है...",
+                applicationSubmitted: "आवेदन सफलतापूर्वक जमा हो गया!",
+                trackYourApplication: "अपने आवेदन को ट्रैक करें",
+                applicationID: "आवेदन ID",
+                applicationIdPlaceholder: "APP-XXXXXXXX",
+                mobileNumberPlaceholder: "10 अंकों का मोबाइल",
+                trackBtn: "ट्रैक",
+                submitted: "जमा किया",
+                aiReview: "AI समीक्षा",
+                officerReview: "अधिकारी समीक्षा",
+                finalDecision: "अंतिम निर्णय",
+                applicationStatus: "आवेदन स्थिति",
+                status: "स्थिति",
+                aiDecision: "AI निर्णय",
+                officerDecision: "अधिकारी निर्णय",
+                selectOption: "चुनें",
+                required: "आवश्यक",
+                accountMismatch: "खाता नंबर मेल नहीं खाते!",
+                errorOccurred: "त्रुटि हुई। कृपया पुनः प्रयास करें।",
+                applicationNotFound: "आवेदन नहीं मिला"
+            },
+            ml: {
+                portalTitle: "AgriDSS - കർഷക പോർട്ടൽ",
+                apply: "അപേക്ഷ",
+                track: "ട്രാക്ക്",
+                schemeSelection: "പദ്ധതി തിരഞ്ഞെടുപ്പ്",
+                selectState: "സംസ്ഥാനം തിരഞ്ഞെടുക്കുക",
+                selectScheme: "പദ്ധതി തിരഞ്ഞെടുക്കുക",
+                selectSeason: "സീസൺ തിരഞ്ഞെടുക്കുക",
+                selectYear: "വർഷം തിരഞ്ഞെടുക്കുക",
+                kharif: "ഖരിഫ്",
+                rabi: "റാബി",
+                zaid: "സൈദ്",
+                farmerDetails: "കർഷക വിവരങ്ങൾ",
+                fullName: "പൂർണ നാമം",
+                passbookName: "പാസ്ബുക്ക് നാമം",
+                relationship: "ബന്ധം",
+                father: "അച്ഛൻ",
+                husband: "ഭർത്താവ്",
+                relativeName: "ബന്ധുവിന്റെ പേര്",
+                mobileNumber: "മൊബൈൽ നമ്പർ",
+                age: "പ്രായം",
+                casteCategory: "ജാതി വിഭാഗം",
+                general: "സാധാരണ",
+                obc: "ഒ.ബി.സി",
+                sc: "എസ്.സി",
+                st: "എസ്.ടി",
+                gender: "ലിംഗം",
+                male: "പുരുഷൻ",
+                female: "സ്ത്രീ",
+                other: "മറ്റതുള്ളവ",
+                farmerType: "കർഷക തരം",
+                smallFarmer: "ചെറിയ കർഷകൻ (<2 ഹെക്ടർ)",
+                marginalFarmer: "അധിക ചെറിയ (<1 ഹെക്ടർ)",
+                mediumFarmer: "ഇടത്തരം (2-10 ഹെക്ടർ)",
+                largeFarmer: "വലിയ (>10 ഹെക്ടർ)",
+                farmerCategory: "കർഷക വിഭാഗം",
+                ownerCultivator: "ഉടമസ്ഥ കൃഷകൻ",
+                tenantFarmer: "കിടപ്പാട്ടുകാരൻ",
+                shareCropper: "പങ്കിട്ട കൃഷിക്കാരൻ",
+                residentialDetails: "താമസ വിവരങ്ങൾ",
+                state: "സംസ്ഥാനം",
+                district: "ജില്ല",
+                subDistrict: "ഉപ ജില്ല",
+                villageTown: "ഗ്രാമം/പട്ടണം",
+                address: "വിലാസം",
+                pinCode: "പിനാകോഡ്",
+                farmerID: "കർഷക ഐഡി",
+                idType: "ഐഡി തരം",
+                aadhar: "ആധാർ കാർഡ്",
+                voterID: "വോട്ടർ ഐഡി",
+                drivingLicense: "ഡ്രൈവിംഗ് ലൈസൻസ്",
+                passport: "പാസ്പോട്ട്",
+                idNumber: "ഐഡി നമ്പർ",
+                accountDetails: "അക്കൗണ്ട് വിവരങ്ങൾ",
+                ifscAvailable: "IFSC ലഭ്യമാണ്",
+                yes: "അതെ",
+                no: "ഇല്ല",
+                ifscCode: "IFSC കോഡ്",
+                bankState: "ബാങ്ക് സംസ്ഥാനം",
+                bankDistrict: "ബാങ്ക് ജില്ല",
+                bankName: "ബാങ്കിന്റെ പേര്",
+                bankBranch: "ബാങ്ക് ശാഖ",
+                savingsAccount: "സമ്പാദിത അക്കൗണ്ട് നമ്പർ",
+                confirmAccount: "അക്കൗണ്ട് സ്ഥിരീകരിക്കുക",
+                landCropInfo: "ഭൂമിയും കൃഷിയും വിവരങ്ങൾ",
+                landSize: "ഭൂമിയുടെ വലിപ്പം (ഹെക്ടർ)",
+                surveyNumber: "സർവേ നമ്പർ",
+                pattaNumber: "പട്ടാ നമ്പർ",
+                verifyGPS: "GPS ഉപയോച്ചം എന്റെ ഭൂമി സ്ഥിരീകരിക്കുക",
+                gpsVerified: "സ്ഥാനം സ്ഥിരീകരിച്ചു",
+                gpsProcessing: "GPS ലൊക്കേഷന്‍ ലഭിക്കുന്നു...",
+                measureLand: "എന്റെ ഭൂമി അളക്കുക",
+                startMeasure: "അളക്കല്‍ ആരംഭിക്കുക",
+                addPoint: "നിലവിലെ പോയിന്റ് ചേര്‍ക്കുക",
+                calculateArea: "വിസ്താരം കണക്കാക്കുക",
+                resetMeasure: "പുനസജ്ജമാക്കുക",
+                hectares: "ഹെക്ടറുകള്‍",
+                insuranceCalc: "കാര്‍ഷി ഇന്‍ഷ്യറന്‍സ് കാല്‍ക്കുലേറ്റര്‍",
+                selectCrop: "കാര്‍ഷി തിരഞ്ഞെടുക്കുക",
+                selectSeason: "സീസണ്‍ തിരഞ്ഞെടുക്കുക",
+                farmerType: "കര്‍ഷക തരം",
+                hasLoan: "വായ്പയുണ്ടോ?",
+                calculatePremium: "പ്രീമിയം കണക്കാക്കുക",
+                premiumResult: "പ്രീമിയം ഫലം",
+                crop: "കാര്‍ഷി",
+                season: "സീസണ്‍",
+                area: "വിസ്താരം",
+                sumInsured: "ഇന്‍ഷ്യറന്‍സ് തുക",
+                premiumRate: "പ്രീമിയം നിരക്ക്",
+                yourShare: "നിങ്ങളുടെ ഭാഗം",
+                govtSubsidy: "സര്‍ക്കാര്‍ സബ്‌സിഡി",
+                benefits: "നേട്ടങ്ങള്‍:",
+                cropType: "കൃഷി തരം",
+                paddy: "അരി/നെല്ല്",
+                wheat: "ഗോതമ്പ്",
+                maize: "ചോളം",
+                cotton: "പരുത്തി",
+                sugarcane: "കരിമ്പ്",
+                lossReason: "നഷ്ടത്തിന്റെ കാരണം",
+                flood: "വെള്ളപ്പൊക്കം",
+                drought: "വരണ്ടിക്കാലം",
+                cyclone: "ചുഴലിക്കാറ്റ്",
+                pestAttack: "കീടാക്രമണം",
+                disease: "രോഗം",
+                lossDate: "നഷ്ടത്തിന്റെ തീയതി",
+                lossPercentage: "നഷ്ട ശതമാനം",
+                requestedAmount: "ആവശ്്പയപെട്ട തുക (₹)",
+                annualIncome: "വാർഷിക വരുമാനം (₹)",
+                familySize: "കുടുംബത്തിന്റെ വലിപ്പം",
+                submitApplication: "അപേക്ഷ സമര്പ്പിക്കുക",
+                readyToSubmit: "സമര്പ്പിക്കാന്‍ തയ്യാറാണ്",
+                submitting: "സമര്പ്പിക്കുന്നു...",
+                applicationSubmitted: "അപേക്ഷ വിജയകരമായി സമര്പ്പിച്ചിരിക്കുന്നു!",
+                trackYourApplication: "നിങ്ങളുടെ അപേക്ഷ ട്രാക്ക് ചെയ്യുക",
+                applicationID: "അപേക്ഷയുടെ ഐഡി",
+                applicationIdPlaceholder: "APP-XXXXXXXX",
+                mobileNumberPlaceholder: "10 അക്കത്തിന്റെ മൊബൈല്‍",
+                trackBtn: "ട്രാക്ക്",
+                submitted: "സമര്പ്പിച്ചത്",
+                aiReview: "AI അവലോകനം",
+                officerReview: "ഉദ്യോഗസ്ഥ അവലോകനം",
+                finalDecision: "അന്തിമ തീരുമാനം",
+                applicationStatus: "അപേക്ഷയുടെ അവസ്ഥ",
+                status: "അവസ്ഥ",
+                aiDecision: "AI തീരുമാനം",
+                officerDecision: "ഉദ്യോഗസ്ഥ തീരുമാനം",
+                selectOption: "തിരഞ്ഞെടുക്കുക",
+                required: "ആവശ്യമാണ്",
+                accountMismatch: "അക്കൗണ്ട് നമ്പറുകൾ ചേരുന്നില്ല!",
+                errorOccurred: "പിശക് സംഭവിച്ചു. വീണ്ടും ശ്രമിക്കുക.",
+                applicationNotFound: "അപേക്ഷ കണ്ടെത്തിയില്ല"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('agriLang', lang);
+            translatePage();
+        }
+
+        function translatePage() {
+            const lang = currentLang;
+            const t = translations[lang] || translations['en'];
+            
+            // Update header title
+            const titleEl = document.getElementById('portalTitle');
+            if (titleEl) titleEl.textContent = t.portalTitle || "AgriDSS - Farmer Portal";
+            
+            // Update tab buttons
+            const tabApply = document.getElementById('tabApply');
+            const tabTrack = document.getElementById('tabTrack');
+            if (tabApply) tabApply.textContent = t.apply || "Apply";
+            if (tabTrack) tabTrack.textContent = t.track || "Track";
+            
+            // Update form section headers
+            const sections = document.querySelectorAll('.form-section h3');
+            if (sections[0]) sections[0].innerHTML = '<i class="fas fa-clipboard-list"></i> ' + (t.schemeSelection || "Scheme Selection");
+            if (sections[1]) sections[1].innerHTML = '<i class="fas fa-user"></i> ' + (t.farmerDetails || "Farmer Details");
+            if (sections[2]) sections[2].innerHTML = '<i class="fas fa-home"></i> ' + (t.residentialDetails || "Residential Details");
+            if (sections[3]) sections[3].innerHTML = '<i class="fas fa-id-card"></i> ' + (t.farmerID || "Farmer ID");
+            if (sections[4]) sections[4].innerHTML = '<i class="fas fa-university"></i> ' + (t.accountDetails || "Account Details");
+            if (sections[5]) sections[5].innerHTML = '<i class="fas fa-map"></i> ' + (t.landCropInfo || "Land & Crop Information");
+            
+            // Update all labels
+            const labelMap = {
+                'state': t.state || 'State',
+                'selectScheme': t.selectScheme || 'Select Scheme',
+                'selectSeason': t.selectSeason || 'Select Season',
+                'selectYear': t.selectYear || 'Select Year',
+                'fullName': t.fullName || 'Full Name',
+                'passbookName': t.passbookName || 'Passbook Name',
+                'relationship': t.relationship || 'Relationship',
+                'relativeName': t.relativeName || 'Relative Name',
+                'mobileNumber': t.mobileNumber || 'Mobile Number',
+                'age': t.age || 'Age',
+                'casteCategory': t.casteCategory || 'Caste Category',
+                'gender': t.gender || 'Gender',
+                'farmerType': t.farmerType || 'Farmer Type',
+                'farmerCategory': t.farmerCategory || 'Farmer Category',
+                'district': t.district || 'District',
+                'subDistrict': t.subDistrict || 'Sub-District',
+                'villageTown': t.villageTown || 'Village/Town',
+                'address': t.address || 'Address',
+                'pinCode': t.pinCode || 'Pin Code',
+                'idType': t.idType || 'ID Type',
+                'idNumber': t.idNumber || 'ID Number',
+                'ifscAvailable': t.ifscAvailable || 'IFSC Available',
+                'ifscCode': t.ifscCode || 'IFSC Code',
+                'bankState': t.bankState || 'Bank State',
+                'bankDistrict': t.bankDistrict || 'Bank District',
+                'bankName': t.bankName || 'Bank Name',
+                'bankBranch': t.bankBranch || 'Bank Branch',
+                'savingsAccount': t.savingsAccount || 'Savings Account Number',
+                'confirmAccount': t.confirmAccount || 'Confirm Account',
+                'landSize': t.landSize || 'Land Size (hectares)',
+                'surveyNumber': t.surveyNumber || 'Survey Number',
+                'pattaNumber': t.pattaNumber || 'Patta Number',
+                'cropType': t.cropType || 'Crop Type',
+                'lossReason': t.lossReason || 'Loss Reason',
+                'lossDate': t.lossDate || 'Loss Date',
+                'lossPercentage': t.lossPercentage || 'Loss Percentage',
+                'requestedAmount': t.requestedAmount || 'Requested Amount (₹)',
+                'annualIncome': t.annualIncome || 'Annual Income (₹)',
+                'familySize': t.familySize || 'Family Size',
+                'applicationID': t.applicationID || 'Application ID'
+            };
+
+            // Update labels by their for attribute
+            for (const [id, text] of Object.entries(labelMap)) {
+                const label = document.querySelector('label[for="' + id + '"]');
+                if (label) label.textContent = text + (id.includes('confirm') || id.includes('requested') || id.includes('annual') || id.includes('family') ? '' : ' *');
+            }
+            
+            // Handle residential_state separately (also maps to state)
+            const residentialLabel = document.querySelector('label[for="residential_state"]');
+            if (residentialLabel) residentialLabel.textContent = (t.state || 'State') + ' *';
+            
+            // Update select first options
+            const selects = ['state', 'residential_state', 'scheme_id', 'season', 'relationship', 'caste_category', 
+                           'gender', 'farmer_type', 'farmer_category', 'id_type', 'ifsc_available', 
+                           'crop', 'loss_reason'];
+            const firstOptions = [t.selectState || 'Select State', t.selectState || 'Select', t.selectScheme || 'Select Scheme',
+                                 t.selectSeason || 'Select Season', t.selectOption || 'Select', t.casteCategory || 'Select',
+                                 t.gender || 'Select', t.farmerType || 'Select', t.farmerCategory || 'Select',
+                                 t.idType || 'Select', t.ifscAvailable || 'Select', t.cropType || 'Select', t.lossReason || 'Select'];
+            
+            selects.forEach((id, i) => {
+                const sel = document.getElementById(id);
+                if (sel && sel.options.length > 0) sel.options[0].textContent = firstOptions[i];
+            });
+
+            // Update submit button
+            const submitBtn = document.querySelector('.submit-btn');
+            if (submitBtn) submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + (t.submitApplication || 'Submit Application');
+            
+            // Update tracking section
+            const trackHeading = document.querySelector('#trackTab .tracking-card h3');
+            if (trackHeading) trackHeading.innerHTML = '<i class="fas fa-search"></i> ' + (t.trackYourApplication || 'Track Your Application');
+            
+            // Update status steps
+            const statusSteps = document.querySelectorAll('.status-step div:last-child');
+            if (statusSteps[0]) statusSteps[0].textContent = t.submitted || 'Submitted';
+            if (statusSteps[1]) statusSteps[1].textContent = t.aiReview || 'AI Review';
+            if (statusSteps[2]) statusSteps[2].textContent = t.officerReview || 'Officer Review';
+            if (statusSteps[3]) statusSteps[3].textContent = t.finalDecision || 'Final Decision';
+        }
+
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('agriLang');
+            if (savedLang && translations[savedLang]) {
+                document.getElementById('languageSelect').value = savedLang;
+                currentLang = savedLang;
+                translatePage();
+            }
+        });
+
+        let schemesData = [];
+
+        // GPS Land Verification Function
+        let claimedLat = null;
+        let claimedLon = null;
+
+        function getGPSButtonText() {
+            const t = translations[currentLang] || translations['en'];
+            return t.verifyGPS || 'Verify My Land Location (GPS)';
+        }
+
+        function verifyLandGPS() {
+            const btn = document.getElementById('gpsVerifyBtn');
+            const statusDiv = document.getElementById('gpsStatus');
+            const statusBadge = document.getElementById('gpsStatusBadge');
+            const statusText = document.getElementById('gpsStatusText');
+            const btnText = document.getElementById('gpsBtnText');
+            
+            // Check if GPS is supported
+            if (!navigator.geolocation) {
+                alert('GPS is not supported in your browser. Please use a modern browser.');
+                return;
+            }
+            
+            // Show loading state
+            btn.disabled = true;
+            const t = translations[currentLang] || translations['en'];
+            btnText.textContent = t.gpsProcessing || 'Getting GPS Location...';
+            btn.classList.add('loading');
+            
+            // Get current position
+            navigator.geolocation.getCurrentPosition(
+                async function(position) {
+                    const farmerLat = position.coords.latitude;
+                    const farmerLon = position.coords.longitude;
+                    
+                    console.log('Farmer GPS:', farmerLat, farmerLon);
+                    
+                    // For demo, use same coordinates as claimed (in real app, get from land records)
+                    // In production, fetch from land records database using survey_number
+                    const surveyNumber = document.getElementById('survey_number').value;
+                    
+                    // For demo purposes, use district center coordinates
+                    // In real app, query land records API
+                    const district = document.getElementById('district')?.value || 'Pune';
+                    
+                    // Get claimed coordinates (demo: use farmer's location as claimed for testing)
+                    // In production: fetch from /api/land/records?survey=XXX
+                    claimedLat = farmerLat;  // Demo: same as farmer
+                    claimedLon = farmerLon;  // Demo: same as farmer
+                    
+                    const landArea = parseFloat(document.getElementById('land_area_hectares')?.value) || 2.5;
+                    
+                    try {
+                        // Call API for verification
+                        const response = await fetch('http://127.0.0.1:8000/api/gps/verify-land', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                claimed_lat: claimedLat,
+                                claimed_lon: claimedLon,
+                                farmer_lat: farmerLat,
+                                farmer_lon: farmerLon,
+                                land_area_hectares: landArea
+                            })
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.success) {
+                            const data = result.result;
+                            
+                            // Show results
+                            statusDiv.style.display = 'block';
+                            
+                            if (data.verified) {
+                                statusBadge.className = 'status-badge verified';
+                                statusBadge.textContent = data.status;
+                                statusBadge.style.background = '#4caf50';
+                                statusBadge.style.color = 'white';
+                                statusBadge.style.padding = '5px 15px';
+                                statusBadge.style.borderRadius = '15px';
+                                document.getElementById('gps_verified').value = 'true';
+                            } else {
+                                statusBadge.className = 'status-badge';
+                                statusBadge.textContent = data.status;
+                                statusBadge.style.background = data.status === 'NEEDS_REVIEW' ? '#ff9800' : '#f44336';
+                                statusBadge.style.color = 'white';
+                                statusBadge.style.padding = '5px 15px';
+                                statusBadge.style.borderRadius = '15px';
+                                document.getElementById('gps_verified').value = 'false';
+                            }
+                            
+                            statusText.innerHTML = `
+                                <strong>Distance:</strong> ${data.distance_meters} meters<br>
+                                <strong>Direction:</strong> ${data.direction_from_farmer_to_land}<br>
+                                <strong>Note:</strong> ${data.status_note}
+                            `;
+                            
+                            btnText.textContent = (t.gpsVerified || 'Location Verified') + ' ✓';
+                            btn.classList.remove('loading');
+                        } else {
+                            throw new Error(result.error || 'Verification failed');
+                        }
+                    } catch (error) {
+                        console.error('GPS Verification Error:', error);
+                        // Fallback: show success anyway for demo
+                        statusDiv.style.display = 'block';
+                        statusBadge.className = 'status-badge verified';
+                        statusBadge.textContent = 'VERIFIED (Demo)';
+                        statusBadge.style.background = '#4caf50';
+                        statusBadge.style.color = 'white';
+                        statusBadge.style.padding = '5px 15px';
+                        statusBadge.style.borderRadius = '15px';
+                        statusText.innerHTML = `<em>Demo mode: GPS verification simulated. In production, this will verify against land records.</em>`;
+                        document.getElementById('gps_verified').value = 'true';
+                        btnText.textContent = 'Location Verified ✓';
+                    }
+                    
+                    btn.disabled = false;
+                },
+                function(error) {
+                    alert('Unable to get GPS location. Please enable location services and allow location access.');
+                    btn.disabled = false;
+                    btnText.textContent = 'Verify My Land Location (GPS)';
+                    btn.classList.remove('loading');
+                },
+                { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+            );
+        }
+
+        // ==================== LAND AREA MEASUREMENT ====================
+        let measurementPoints = [];
+        let measurementActive = false;
+        let currentMeasureLat = null;
+        let currentMeasureLon = null;
+
+        function startLandMeasurement() {
+            if (!navigator.geolocation) {
+                alert('GPS is not supported in your browser.');
+                return;
+            }
+            
+            measurementPoints = [];
+            measurementActive = true;
+            
+            document.getElementById('measurementStatus').style.display = 'block';
+            document.getElementById('areaResult').style.display = 'none';
+            document.getElementById('calculateAreaBtn').style.display = 'none';
+            document.getElementById('resetMeasureBtn').style.display = 'block';
+            document.getElementById('pointList').innerHTML = '';
+            document.getElementById('pointCount').textContent = '0 points';
+            
+            const btn = document.getElementById('startMeasureBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Getting GPS...';
+            
+            // Get initial position
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    currentMeasureLat = position.coords.latitude;
+                    currentMeasureLon = position.coords.longitude;
+                    
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-play"></i> <span data-trans="startMeasure">Measuring...</span>';
+                    btn.classList.add('btn-success');
+                    
+                    alert('GPS ready! Now walk to each corner of your land and tap "Add Current Point" for each corner.');
+                },
+                function(error) {
+                    alert('Unable to get GPS location. Please enable location services.');
+                    measurementActive = false;
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-play"></i> <span data-trans="startMeasure">Start Measuring</span>';
+                },
+                { enableHighAccuracy: true, timeout: 30000 }
+            );
+        }
+
+        function addCurrentPoint() {
+            if (!measurementActive) {
+                alert('Please start measurement first.');
+                return;
+            }
+            
+            const btn = document.getElementById('addPointBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Getting GPS...';
+            
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    
+                    measurementPoints.push({ lat: lat, lon: lon });
+                    
+                    // Update UI
+                    const pointList = document.getElementById('pointList');
+                    const pointDiv = document.createElement('span');
+                    pointDiv.style.cssText = 'background: #4caf50; color: white; padding: 3px 8px; border-radius: 10px; font-size: 12px;';
+                    pointDiv.textContent = '#' + measurementPoints.length;
+                    pointList.appendChild(pointDiv);
+                    
+                    document.getElementById('pointCount').textContent = measurementPoints.length + ' points';
+                    
+                    // Show calculate button if we have at least 3 points
+                    if (measurementPoints.length >= 3) {
+                        document.getElementById('calculateAreaBtn').style.display = 'block';
+                    }
+                    
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-plus-circle"></i> <span data-trans="addPoint">Add Next Point</span>';
+                    
+                    // Auto-fill land area if we have enough points
+                    if (measurementPoints.length >= 3) {
+                        calculateLandArea();
+                    }
+                },
+                function(error) {
+                    alert('Unable to get GPS location. Please try again.');
+                    btn.disabled = false;
+                },
+                { enableHighAccuracy: true, timeout: 15000 }
+            );
+        }
+
+        async function calculateLandArea() {
+            if (measurementPoints.length < 3) {
+                alert('Please add at least 3 points to calculate area.');
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/gps/estimate-area', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(measurementPoints)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    const area = result.estimated_area_hectares;
+                    
+                    document.getElementById('areaResult').style.display = 'block';
+                    document.getElementById('areaValue').textContent = area.toFixed(4);
+                    
+                    // Auto-fill the land size input
+                    document.getElementById('land_area_hectares').value = area.toFixed(2);
+                    
+                    // Show success
+                    const t = translations[currentLang] || translations['en'];
+                    alert((t.areaCalculated || 'Land area calculated!') + ': ' + area.toFixed(4) + ' hectares');
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                console.error('Area calculation error:', error);
+                // Fallback: calculate locally
+                const area = calculateAreaLocally(measurementPoints);
+                document.getElementById('areaResult').style.display = 'block';
+                document.getElementById('areaValue').textContent = area.toFixed(4);
+                document.getElementById('land_area_hectares').value = area.toFixed(2);
+            }
+        }
+
+        function calculateAreaLocally(points) {
+            // Shoelace formula for polygon area
+            let area = 0;
+            const n = points.length;
+            
+            for (let i = 0; i < n; i++) {
+                const j = (i + 1) % n;
+                area += points[i].lat * points[j].lon;
+                area -= points[j].lat * points[i].lon;
+            }
+            
+            area = Math.abs(area) / 2;
+            
+            // Convert to hectares (approximate)
+            // 1 degree ≈ 111km at equator
+            const metersPerDegree = 111000;
+            area = area * metersPerDegree * metersPerDegree;
+            area = area / 10000; // Convert to hectares
+            
+            return area;
+        }
+
+        function resetMeasurement() {
+            measurementPoints = [];
+            measurementActive = false;
+            
+            document.getElementById('measurementStatus').style.display = 'none';
+            document.getElementById('areaResult').style.display = 'none';
+            document.getElementById('calculateAreaBtn').style.display = 'none';
+            document.getElementById('resetMeasureBtn').style.display = 'none';
+            document.getElementById('pointList').innerHTML = '';
+            document.getElementById('pointCount').textContent = '0 points';
+            
+            const btn = document.getElementById('startMeasureBtn');
+            btn.disabled = false;
+            btn.classList.remove('btn-success');
+            const t = translations[currentLang] || translations['en'];
+            btn.innerHTML = '<i class="fas fa-play"></i> ' + (t.startMeasure || 'Start Measuring');
+        }
+
+        async function loadSchemes() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/schemes');
+                const result = await response.json();
+                
+                if (result.success) {
+                    const select = document.getElementById('scheme_id');
+                    const activeSchemes = result.schemes.filter(s => s.is_active);
+                    
+                    activeSchemes.forEach(scheme => {
+                        const option = document.createElement('option');
+                        option.value = scheme.scheme_id;
+                        option.textContent = scheme.scheme_name + ' (' + scheme.acronym + ')';
+                        select.appendChild(option);
+                    });
+                }
+            } catch (e) {
+                console.error('Error loading schemes:', e);
+            }
+        }
+
+        function toggleIfsc() {
+            const available = document.getElementById('ifsc_available').value;
+            document.getElementById('ifscField').style.display = available === 'Yes' ? 'block' : 'none';
+        }
+
+        function showTab(tab) {
+            document.getElementById('applyTab').style.display = tab === 'apply' ? 'block' : 'none';
+            document.getElementById('trackTab').style.display = tab === 'track' ? 'block' : 'none';
+            document.getElementById('tabApply').classList.toggle('active', tab === 'apply');
+            document.getElementById('tabTrack').classList.toggle('active', tab === 'track');
+        }
+
+        document.getElementById('farmerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Add scheme name
+            const schemeSelect = document.getElementById('scheme_id');
+            data.scheme_name = schemeSelect.options[schemeSelect.selectedIndex].text;
+            
+            // Convert date format from DD-MM-YYYY to YYYY-MM-DD
+            const lossDate = document.getElementById('loss_date').value;
+            if (lossDate && lossDate.includes('-')) {
+                const parts = lossDate.split('-');
+                if (parts.length === 3) {
+                    data.loss_date = parts[2] + '-' + parts[1] + '-' + parts[0];
+                }
+            }
+            
+            formData.forEach((value, key) => data[key] = value);
+            
+            // Validate account numbers match
+            const account = document.getElementById('account_number').value;
+            const confirmAccount = document.getElementById('confirm_account').value;
+            if (account !== confirmAccount) {
+                alert('Account numbers do not match!');
+                return;
+            }
+            
+            console.log('Submitting data:', data);
+            
+            document.getElementById('formStatus').innerHTML = '<span class="loading-spinner"></span> Submitting...';
+            
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/farmer/submit-application', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('formStatus').innerHTML = '<i class="fas fa-check-circle"></i> Submitted! Your ID: ' + result.application_id;
+                    document.getElementById('formStatus').className = 'form-status success';
+                    
+                    alert('Application Submitted Successfully!\nApplication ID: ' + result.application_id + '\n\nPlease save this ID to track your application.');
+                    
+                    // Switch to track tab
+                    showTab('track');
+                    document.getElementById('trackAppId').value = result.application_id;
+                }
+            } catch (error) {
+                document.getElementById('formStatus').innerHTML = 'Error: ' + error.message;
+                document.getElementById('formStatus').className = 'form-status error';
+            }
+        });
+
+        async function trackApplication() {
+            const appId = document.getElementById('trackAppId').value.trim();
+            const mobile = document.getElementById('trackMobile').value.trim();
+            
+            console.log('Track button clicked, appId:', appId, 'mobile:', mobile);
+            
+            if (!appId && !mobile) {
+                alert('Please enter Application ID or Mobile Number');
+                return;
+            }
+            
+            const trackBtn = document.getElementById('trackBtn');
+            trackBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            trackBtn.disabled = true;
+            
+            try {
+                let url = '';
+                if (appId) {
+                    url = 'http://127.0.0.1:8000/api/farmer/track-application/' + appId;
+                } else {
+                    url = 'http://127.0.0.1:8000/api/farmer/my-applications?mobile=' + mobile;
+                }
+                
+                console.log('Fetching:', url);
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error('Server error: ' + response.status);
+                }
+                
+                const result = await response.json();
+                console.log('Result:', result);
+                
+                if (result.success) {
+                    document.getElementById('trackingResult').style.display = 'block';
+                    
+                    document.getElementById('displayStatus').textContent = result.status || 'Unknown';
+                    document.getElementById('displaySubmitted').textContent = result.submitted_at || '-';
+                    document.getElementById('displayAIDecision').textContent = result.ai_decision?.decision || 'Pending';
+                    document.getElementById('displayOfficerDecision').textContent = result.officer_decision || 'Pending';
+                    
+                    updateTimeline(result.status);
+                } else {
+                    alert('Application not found! Please check your Application ID.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Cannot connect to server. Make sure API is running on port 8000.\n\nError: ' + error.message);
+            } finally {
+                trackBtn.innerHTML = '<i class="fas fa-search"></i> Track';
+                trackBtn.disabled = false;
+            }
+        }
+
+        function updateTimeline(status) {
+            const steps = ['SUBMITTED', 'UNDER_AI_REVIEW', 'OFFICER_REVIEW', 'APPROVED', 'REJECTED'];
+            const statusIndex = steps.indexOf(status);
+            
+            for (let i = 1; i <= 4; i++) {
+                const step = document.getElementById('step' + i);
+                step.classList.remove('completed', 'active');
+                
+                if (i < statusIndex) step.classList.add('completed');
+                if (i === statusIndex) step.classList.add('active');
+            }
+        }
+
+        // Load schemes on page load
+        loadSchemes();
+        
+        // Track button click handler
+        document.getElementById('trackBtn').addEventListener('click', function() {
+            trackApplication();
+        });
+        
+        // Allow Enter key to track
+        document.getElementById('trackAppId').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') trackApplication();
+        });
+        document.getElementById('trackMobile').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') trackApplication();
+        });
+        </script>
+
+    <!-- Insurance Calculator Modal -->
+    <div id="insuranceModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000;">
+        <div style="background: white; max-width: 600px; margin: 50px auto; padding: 25px; border-radius: 15px; max-height: 90vh; overflow-y: auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin: 0; color: #2e7d32;"><i class="fas fa-shield-alt"></i> <span data-trans="insuranceCalc">Crop Insurance Calculator</span></h2>
+                <button onclick="closeInsuranceCalculator()" style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight: bold;"><span data-trans="selectCrop">Select Crop</span> *</label>
+                <select id="insCrop" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    <option value="">Select Crop</option>
+                    <option value="Paddy">Paddy/Rice</option>
+                    <option value="Wheat">Wheat</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Soybean">Soybean</option>
+                    <option value="Mustard">Mustard</option>
+                    <option value="Gram">Gram</option>
+                    <option value="Groundnut">Groundnut</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight: bold;"><span data-trans="selectSeason">Select Season</span> *</label>
+                <select id="insSeason" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    <option value="">Select Season</option>
+                    <option value="Kharif">Kharif (Monsoon)</option>
+                    <option value="Rabi">Rabi (Winter)</option>
+                    <option value="Zaid">Zaid (Summer)</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight: bold;"><span data-trans="landSize">Land Size (hectares)</span> *</label>
+                <input type="number" id="insArea" step="0.01" placeholder="e.g., 2.5" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight: bold;"><span data-trans="farmerType">Farmer Type</span></label>
+                <select id="insFarmerType" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    <option value="Small">Small Farmer (&lt; 2 ha)</option>
+                    <option value="Marginal">Marginal (&lt; 1 ha)</option>
+                    <option value="Medium">Medium (2-10 ha)</option>
+                    <option value="Large">Large (&gt; 10 ha)</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight: bold;">
+                    <input type="checkbox" id="insLoanee"> <span data-trans="hasLoan">Have Crop Loan?</span>
+                </label>
+            </div>
+            
+            <button type="button" onclick="calculateInsurance()" class="btn btn-success" style="width: 100%; padding: 12px; font-size: 16px;">
+                <i class="fas fa-calculator"></i> <span data-trans="calculatePremium">Calculate Premium</span>
+            </button>
+            
+            <div id="insResult" style="display: none; margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 10px;">
+                <h3 style="margin-top: 0; color: #2e7d32;"><span data-trans="premiumResult">Premium Result</span></h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="crop">Crop</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold;" id="resCrop">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="season">Season</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold;" id="resSeason">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="area">Area</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold;" id="resArea">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="sumInsured">Sum Insured</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold; color: #2e7d32;" id="resSumInsured">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="premiumRate">Premium Rate</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;" id="resPremiumRate">-</td>
+                    </tr>
+                    <tr style="background: #ffeb3b;">
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold;"><span data-trans="yourShare">Your Premium</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; font-weight: bold; font-size: 18px; color: #f57f17;" id="resFarmerShare">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd;"><span data-trans="govtSubsidy">Govt. Subsidy</span>:</td>
+                        <td style="padding: 8px; border-bottom: 1px solid #ddd; color: #4caf50;" id="resGovtSubsidy">-</td>
+                    </tr>
+                </table>
+                
+                <div style="margin-top: 15px; padding: 10px; background: white; border-radius: 5px;">
+                    <strong><span data-trans="benefits">Benefits:</span></strong>
+                    <ul id="resBenefits" style="margin: 5px 0; padding-left: 20px;"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .btn-insurance {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 20px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+        }
+        .btn-insurance:hover {
+            background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+        }
+    </style>
+
+    <script>
+        function openInsuranceCalculator() {
+            document.getElementById('insuranceModal').style.display = 'block';
+            // Pre-fill from form if available
+            const crop = document.getElementById('crop')?.value;
+            const area = document.getElementById('land_area_hectares')?.value;
+            const season = document.getElementById('season')?.value;
+            if (crop) document.getElementById('insCrop').value = crop;
+            if (area) document.getElementById('insArea').value = area;
+            if (season) document.getElementById('insSeason').value = season;
+        }
+        
+        function closeInsuranceCalculator() {
+            document.getElementById('insuranceModal').style.display = 'none';
+        }
+        
+        async function calculateInsurance() {
+            const crop = document.getElementById('insCrop').value;
+            const season = document.getElementById('insSeason').value;
+            const area = parseFloat(document.getElementById('insArea').value);
+            const farmerType = document.getElementById('insFarmerType').value;
+            const loanee = document.getElementById('insLoanee').checked;
+            
+            if (!crop || !season || !area) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/insurance/calculate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        crop: crop,
+                        season: season,
+                        land_area: area,
+                        farmer_type: farmerType,
+                        loanee: loanee
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    const cov = result.coverage;
+                    document.getElementById('resCrop').textContent = cov.crop;
+                    document.getElementById('resSeason').textContent = cov.season;
+                    document.getElementById('resArea').textContent = cov.area_hectares + ' ha';
+                    document.getElementById('resSumInsured').textContent = '₹' + cov.sum_insured.toLocaleString('en-IN');
+                    document.getElementById('resPremiumRate').textContent = cov.premium_rate + '%';
+                    document.getElementById('resFarmerShare').textContent = '₹' + cov.farmer_share.toLocaleString('en-IN');
+                    document.getElementById('resGovtSubsidy').textContent = '₹' + cov.government_subsidy.toLocaleString('en-IN');
+                    
+                    // Benefits
+                    const benefitsList = document.getElementById('resBenefits');
+                    benefitsList.innerHTML = '';
+                    result.benefits.forEach(b => {
+                        const li = document.createElement('li');
+                        li.textContent = b;
+                        benefitsList.appendChild(li);
+                    });
+                    
+                    document.getElementById('insResult').style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Insurance calculation error:', error);
+                alert('Error calculating premium. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

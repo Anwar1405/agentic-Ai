@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Application - AgriDSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #1e5631 0%, #2e7d32 100%); min-height: 100vh; }
+        
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 { color: #1e5631; font-size: 1.5rem; margin-bottom: 5px; }
+        .header p { color: #666; }
+        
+        .track-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .form-group input:focus { outline: none; border-color: #1e5631; }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #1e5631;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { background: #145222; }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
+        
+        .btn-secondary {
+            background: #666;
+            margin-top: 10px;
+        }
+        
+        .status-card {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .status-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            position: relative;
+        }
+        .status-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #ddd;
+            z-index: 0;
+        }
+        .status-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+        .status-step .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            color: white;
+            font-size: 16px;
+        }
+        .status-step.completed .icon { background: #4caf50; }
+        .status-step.active .icon { background: #2196f3; animation: pulse 2s infinite; }
+        .status-step .label { font-size: 0.75rem; color: #666; }
+        
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        
+        .result-details {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .result-details h3 { color: #1e5631; margin-bottom: 15px; }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .result-row:last-child { border-bottom: none; }
+        .result-row .label { color: #666; }
+        .result-row .value { font-weight: 600; color: #333; }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .status-SUBMITTED { background: #e3f2fd; color: #1976d2; }
+        .status-UNDER_AI_REVIEW { background: #fff3e0; color: #f57c00; }
+        .status-OFFICER_REVIEW { background: #f3e5f5; color: #7b1fa2; }
+        .status-APPROVED { background: #e8f5e9; color: #388e3c; }
+        .status-REJECTED { background: #ffebee; color: #d32f2f; }
+        
+        .loading { text-align: center; padding: 20px; display: none; }
+        .loading i { font-size: 30px; color: #1e5631; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .error-msg {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-leaf"></i> AgriDSS</h1>
+            <p>Track Your Application Status</p>
+        </div>
+        
+        <div class="track-card">
+            <div class="form-group">
+                <label>Application ID</label>
+                <input type="text" id="appId" placeholder="Enter APP-XXXXXXXX">
+            </div>
+            
+            <div style="text-align: center; margin: 15px 0; color: #666;">- OR -</div>
+            
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number">
+            </div>
+            
+            <button class="btn" id="trackBtn" onclick="trackApplication()">
+                <i class="fas fa-search"></i> Track Application
+            </button>
+            
+            <button class="btn btn-secondary" onclick="window.location.href='farmer_portal.html'">
+                <i class="fas fa-plus"></i> New Application
+            </button>
+            
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner"></i>
+                <p>Loading...</p>
+            </div>
+            
+            <div class="error-msg" id="errorMsg"></div>
+            
+            <div class="status-card" id="resultCard">
+                <div class="status-timeline">
+                    <div class="status-step" id="step1">
+                        <div class="icon"><i class="fas fa-check"></i></div>
+                        <div class="label">Submitted</div>
+                    </div>
+                    <div class="status-step" id="step2">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <div class="label">AI Review</div>
+                    </div>
+                    <div class="status-step" id="step3">
+                        <div class="icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="label">Officer Review</div>
+                    </div>
+                    <div class="status-step" id="step4">
+                        <div class="icon"><i class="fas fa-gavel"></i></div>
+                        <div class="label">Final</div>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <h3>Application Details</h3>
+                    <div class="result-row">
+                        <span class="label">Application ID:</span>
+                        <span class="value" id="displayAppId"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Status:</span>
+                        <span class="value"><span class="status-badge" id="displayStatus"></span></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Submitted On:</span>
+                        <span class="value" id="displaySubmitted"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">AI Decision:</span>
+                        <span class="value" id="displayAIDecision"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Officer Decision:</span>
+                        <span class="value" id="displayOfficerDecision"></span>
+                    </div>
+                </div>
+
+                <div class="result-details" style="margin-top: 15px;">
+                    <h3><i class="fas fa-bell"></i> Notifications</h3>
+                    <div id="notifList" style="color:#555; font-size:0.9rem;">
+                        <div style="padding:8px 0;">No notifications loaded.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function trackApplication() {
+            const appId = document.getElementById('appId').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            
+            // Hide previous results
+            document.getElementById('resultCard').style.display = 'none';
+            document.getElementById('errorMsg').style.display = 'none';
+            
+            if (!appId && !mobile) {
+                showError('Please enter Application ID or Mobile Number');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('trackBtn').disabled = true;
+            
+            try {
+                let url = '';
+                if (appId) {
+                    url = 'http://127.0.0.1:8000/api/farmer/track-application/' + appId;
+                } else {
+                    url = 'http://127.0.0.1:8000/api/farmer/my-applications?mobile=' + mobile;
+                }
+                
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('trackBtn').disabled = false;
+                
+                if (result.success) {
+                    showResult(result);
+                } else {
+                    showError('Application not found. Please check your Application ID.');
+                }
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('trackBtn').disabled = false;
+                showError('Cannot connect to server. Please make sure the API server is running.');
+            }
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMsg');
+            errorDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + message;
+            errorDiv.style.display = 'block';
+        }
+        
+        function showResult(result) {
+            document.getElementById('resultCard').style.display = 'block';
+            
+            document.getElementById('displayAppId').textContent = result.application_id || '-';
+            
+            const statusEl = document.getElementById('displayStatus');
+            statusEl.textContent = result.status ? result.status.replace(/_/g, ' ') : 'Unknown';
+            statusEl.className = 'status-badge status-' + result.status;
+            
+            document.getElementById('displaySubmitted').textContent = result.submitted_at ? new Date(result.submitted_at).toLocaleString() : '-';
+            document.getElementById('displayAIDecision').textContent = result.ai_decision?.decision || 'Pending';
+            document.getElementById('displayOfficerDecision').textContent = result.officer_decision || 'Pending';
+
+            // Load notifications
+            if (result.application_id) {
+                loadNotifications(result.application_id);
+            }
+            
+            // Update timeline
+            const steps = ['SUBMITTED', 'UNDER_AI_REVIEW', 'OFFICER_REVIEW', 'APPROVED', 'REJECTED'];
+            const statusIndex = steps.indexOf(result.status);
+            
+            for (let i = 1; i <= 4; i++) {
+                const step = document.getElementById('step' + i);
+                step.classList.remove('completed', 'active');
+                
+                if (i < statusIndex) step.classList.add('completed');
+                if (i === statusIndex) step.classList.add('active');
+            }
+        }
+
+        async function loadNotifications(appId) {
+            const list = document.getElementById('notifList');
+            list.innerHTML = '<div style="padding:8px 0;">Loading notifications...</div>';
+            try {
+                const res = await fetch('http://127.0.0.1:8000/api/notifications/' + encodeURIComponent(appId));
+                const data = await res.json();
+                if (!data.success) throw new Error('Failed');
+                const notifs = data.notifications || [];
+                if (notifs.length === 0) {
+                    list.innerHTML = '<div style="padding:8px 0;">No notifications yet.</div>';
+                    return;
+                }
+                list.innerHTML = notifs.slice().reverse().map(n => {
+                    const dt = n.sent_at ? new Date(n.sent_at).toLocaleString() : '';
+                    return `<div style="padding:10px; border-bottom:1px solid #eee;"><div style="font-weight:700;">${n.type}</div><div>${n.message}</div><div style="color:#888; font-size:0.8rem; margin-top:4px;">${dt}</div></div>`;
+                }).join('');
+            } catch (e) {
+                list.innerHTML = '<div style="padding:8px 0;">Cannot load notifications (server not running).</div>';
+            }
+        }
+        
+        // Allow Enter key to search
+        document.getElementById('appId').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') trackApplication();
+        });
+        document.getElementById('mobile').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') trackApplication();
+        });
+    </script>
+</body>
+</html>

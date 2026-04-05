@@ -1,0 +1,246 @@
+{
+  "crops": [
+    {
+      "crop_id": "PADDY",
+      "crop_name": "Paddy (Rice)",
+      "category": "food_crops",
+      "seasons": ["kharif", "zaid"],
+      "states_grown": ["West Bengal", "Punjab", "Tamil Nadu", "Andhra Pradesh", "Odisha", "Bihar", "Assam", "Maharashtra"],
+      "average_yield_kg_ha": 3500,
+      "cost_of_cultivation_rs_ha": 35000,
+      "msp_rs_quintal": 2183,
+      "loss_sensitivity": {
+        "flood": "high",
+        "drought": "high",
+        "cyclone": "high",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "WHEAT",
+      "crop_name": "Wheat",
+      "category": "food_crops",
+      "seasons": ["rabi"],
+      "states_grown": ["Punjab", "Haryana", "Uttar Pradesh", "Madhya Pradesh", "Rajasthan", "Gujarat"],
+      "average_yield_kg_ha": 3200,
+      "cost_of_cultivation_rs_ha": 30000,
+      "msp_rs_quintal": 2275,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "low",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "SOYBEAN",
+      "crop_name": "Soybean",
+      "category": "oilseeds",
+      "seasons": ["kharif"],
+      "states_grown": ["Madhya Pradesh", "Maharashtra", "Rajasthan", "Karnataka", "Gujarat"],
+      "average_yield_kg_ha": 1800,
+      "cost_of_cultivation_rs_ha": 25000,
+      "msp_rs_quintal": 4300,
+      "loss_sensitivity": {
+        "flood": "high",
+        "drought": "moderate",
+        "cyclone": "low",
+        "pest": "high"
+      }
+    },
+    {
+      "crop_id": "COTTON",
+      "crop_name": "Cotton",
+      "category": "commercial_crops",
+      "seasons": ["kharif"],
+      "states_grown": ["Gujarat", "Maharashtra", "Telangana", "Andhra Pradesh", "Rajasthan", "Karnataka", "Tamil Nadu"],
+      "average_yield_kg_ha": 450,
+      "cost_of_cultivation_rs_ha": 50000,
+      "msp_rs_quintal": 6620,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "moderate",
+        "pest": "high"
+      }
+    },
+    {
+      "crop_id": "MAIZE",
+      "crop_name": "Maize",
+      "category": "food_crops",
+      "seasons": ["kharif", "rabi"],
+      "states_grown": ["Karnataka", "Andhra Pradesh", "Tamil Nadu", "Maharashtra", "Bihar", "Uttar Pradesh"],
+      "average_yield_kg_ha": 2800,
+      "cost_of_cultivation_rs_ha": 28000,
+      "msp_rs_quintal": 1962,
+      "loss_sensitivity": {
+        "flood": "high",
+        "drought": "moderate",
+        "cyclone": "moderate",
+        "pest": "low"
+      }
+    },
+    {
+      "crop_id": "MUSTARD",
+      "crop_name": "Mustard",
+      "category": "oilseeds",
+      "seasons": ["rabi"],
+      "states_grown": ["Rajasthan", "Uttar Pradesh", "Haryana", "Madhya Pradesh", "Gujarat", "West Bengal"],
+      "average_yield_kg_ha": 1200,
+      "cost_of_cultivation_rs_ha": 18000,
+      "msp_rs_quintal": 5050,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "low",
+        "pest": "low"
+      }
+    },
+    {
+      "crop_id": "GROUNDNUT",
+      "crop_name": "Groundnut",
+      "category": "oilseeds",
+      "seasons": ["kharif"],
+      "states_grown": ["Gujarat", "Tamil Nadu", "Andhra Pradesh", "Karnataka", "Maharashtra", "Rajasthan"],
+      "average_yield_kg_ha": 1500,
+      "cost_of_cultivation_rs_ha": 22000,
+      "msp_rs_quintal": 5850,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "low",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "JOWAR",
+      "crop_name": "Sorghum (Jowar)",
+      "category": "food_crops",
+      "seasons": ["kharif", "rabi"],
+      "states_grown": ["Maharashtra", "Karnataka", "Madhya Pradesh", "Tamil Nadu", "Rajasthan"],
+      "average_yield_kg_ha": 1500,
+      "cost_of_cultivation_rs_ha": 18000,
+      "msp_rs_quintal": 2970,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "low",
+        "cyclone": "low",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "PULSES",
+      "crop_name": "Pulses (Tur/Arhar)",
+      "category": "food_crops",
+      "seasons": ["kharif", "rabi"],
+      "states_grown": ["Maharashtra", "Uttar Pradesh", "Madhya Pradesh", "Karnataka", "Gujarat"],
+      "average_yield_kg_ha": 1200,
+      "cost_of_cultivation_rs_ha": 20000,
+      "msp_rs_quintal": 7000,
+      "loss_sensitivity": {
+        "flood": "high",
+        "drought": "moderate",
+        "cyclone": "low",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "SUGARCANE",
+      "crop_name": "Sugarcane",
+      "category": "commercial_crops",
+      "seasons": ["annual"],
+      "states_grown": ["Uttar Pradesh", "Maharashtra", "Karnataka", "Tamil Nadu", "Gujarat", "Haryana"],
+      "average_yield_kg_ha": 70000,
+      "cost_of_cultivation_rs_ha": 80000,
+      "msp_rs_quintal": 350,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "low",
+        "pest": "moderate"
+      }
+    },
+    {
+      "crop_id": "COCONUT",
+      "crop_name": "Coconut",
+      "category": "horticultural_crops",
+      "seasons": ["annual"],
+      "states_grown": ["Kerala", "Tamil Nadu", "Karnataka", "Andhra Pradesh", "Odisha", "Maharashtra"],
+      "average_yield_nuts_ha": 10000,
+      "cost_of_cultivation_rs_ha": 40000,
+      "msp_rs_nut": 30,
+      "loss_sensitivity": {
+        "flood": "moderate",
+        "drought": "high",
+        "cyclone": "high",
+        "pest": "low"
+      }
+    },
+    {
+      "crop_id": "VEGETABLES",
+      "crop_name": "Vegetables (General)",
+      "category": "horticultural_crops",
+      "seasons": ["all"],
+      "states_grown": ["all"],
+      "average_yield_kg_ha": 20000,
+      "cost_of_cultivation_rs_ha": 45000,
+      "msp_rs_quintal": 1500,
+      "loss_sensitivity": {
+        "flood": "high",
+        "drought": "high",
+        "cyclone": "moderate",
+        "pest": "high"
+      }
+    }
+  ],
+  "state_yields": {
+    "Maharashtra": {
+      "paddy": 2800,
+      "soybean": 1600,
+      "cotton": 400,
+      "jowar": 1400,
+      "pulses": 900,
+      "vegetables": 18000
+    },
+    "Karnataka": {
+      "paddy": 3200,
+      "cotton": 480,
+      "jowar": 1600,
+      "groundnut": 1400,
+      "sugarcane": 75000
+    },
+    "Odisha": {
+      "paddy": 3800,
+      "coconut": 12000,
+      "vegetables": 22000
+    },
+    "Rajasthan": {
+      "wheat": 3400,
+      "mustard": 1300,
+      "cotton": 350,
+      "groundnut": 1200
+    },
+    "Bihar": {
+      "paddy": 3600,
+      "maize": 3000,
+      "wheat": 2800
+    },
+    "Assam": {
+      "paddy": 3200,
+      "jute": 2500,
+      "vegetables": 15000
+    },
+    "Andhra Pradesh": {
+      "paddy": 4000,
+      "cotton": 500,
+      "groundnut": 1800,
+      "sugarcane": 80000
+    },
+    "Tamil Nadu": {
+      "paddy": 4200,
+      "cotton": 550,
+      "coconut": 15000,
+      "sugarcane": 90000
+    }
+  }
+}

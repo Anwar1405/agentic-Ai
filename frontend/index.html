@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriDSS - Agriculture Policy Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>AgriDSS</span>
+                </div>
+                <h1>Agriculture Decision Support System</h1>
+            </div>
+            <div class="header-right">
+                <div class="status-badge active">
+                    <i class="fas fa-circle"></i>
+                    <span>System Active</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="form-container">
+                <h2><i class="fas fa-file-alt"></i> Farmer Subsidy Application</h2>
+                
+                <form id="applicationForm" class="application-form">
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="farmerId">Farmer ID</label>
+                                <input type="text" id="farmerId" name="farmerId" placeholder="Auto-generated">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" name="age" min="18" max="100" placeholder="18-100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="aadhar">Aadhar Number *</label>
+                                <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" placeholder="12-digit Aadhar" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Land & Location</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <select id="state" name="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Assam">Assam</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="district">District *</label>
+                                <select id="district" name="district" required>
+                                    <option value="">Select District</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="village">Village *</label>
+                                <input type="text" id="village" name="village" placeholder="Village name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="landSize">Land Size (hectares) *</label>
+                                <input type="number" id="landSize" name="landSize" step="0.01" min="0.01" max="100" placeholder="0.01 - 100" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="surveyNumber">Survey Number *</label>
+                                <input type="text" id="surveyNumber" name="surveyNumber" placeholder="Survey/Plot number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pattaNumber">Patta Number *</label>
+                                <input type="text" id="pattaNumber" name="pattaNumber" placeholder="Land record number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cropType">Crop Type *</label>
+                                <select id="cropType" name="cropType" required>
+                                    <option value="">Select Crop</option>
+                                    <option value="Rice">Rice</option>
+                                    <option value="Wheat">Wheat</option>
+                                    <option value="Maize">Maize</option>
+                                    <option value="Pulses">Pulses</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Soybean">Soybean</option>
+                                    <option value="Groundnut">Groundnut</option>
+                                    <option value="Sugarcane">Sugarcane</option>
+                                    <option value="Jowar">Jowar</option>
+                                    <option value="Bajra">Bajra</option>
+                                    <option value="Ragi">Ragi</option>
+                                    <option value="Tobacco">Tobacco</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="season">Season *</label>
+                                <select id="season" name="season" required>
+                                    <option value="">Select Season</option>
+                                    <option value="Kharif">Kharif (Monsoon)</option>
+                                    <option value="Rabi">Rabi (Winter)</option>
+                                    <option value="Zaid">Zaid (Summer)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-cloud"></i> Crop Loss Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="lossReason">Loss Reason *</label>
+                                <select id="lossReason" name="lossReason" required>
+                                    <option value="">Select Reason</option>
+                                    <option value="Flood">Flood</option>
+                                    <option value="Drought">Drought</option>
+                                    <option value="Cyclone">Cyclone</option>
+                                    <option value="Pest">Pest Attack</option>
+                                    <option value="Disease">Disease</option>
+                                    <option value="Hailstorm">Hailstorm</option>
+                                    <option value="Fire">Fire</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="lossDate">Loss Date *</label>
+                                <input type="date" id="lossDate" name="lossDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lossPercentage">Loss Percentage (%) *</label>
+                                <input type="number" id="lossPercentage" name="lossPercentage" min="1" max="100" placeholder="1-100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="affectedArea">Affected Area (hectares) *</label>
+                                <input type="number" id="affectedArea" name="affectedArea" step="0.01" min="0.01" placeholder="Affected land area" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-hand-holding-usd"></i> Select Scheme</h3>
+                        <div class="scheme-stats" id="schemeStats" style="display: flex; gap: 15px; margin-bottom: 15px; padding: 10px; background: #f5f5f5; border-radius: 8px;">
+                            <span style="color: green;"><i class="fas fa-check-circle"></i> Active: <strong id="activeCount">0</strong></span>
+                            <span style="color: red;"><i class="fas fa-times-circle"></i> Inactive: <strong id="inactiveCount">0</strong></span>
+                            <span style="color: #666;">Total: <strong id="totalCount">0</strong></span>
+                        </div>
+                        
+                        <div class="form-tabs" style="margin-bottom: 15px;">
+                            <button type="button" class="tab-btn active" onclick="showTab('active')" id="tabActive">
+                                <i class="fas fa-check-circle"></i> Active Schemes
+                            </button>
+                            <button type="button" class="tab-btn" onclick="showTab('inactive')" id="tabInactive">
+                                <i class="fas fa-times-circle"></i> Inactive Schemes
+                            </button>
+                        </div>
+                        
+                        <div id="activeSchemesList" class="schemes-list" style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #fff;">
+                            <p style="color: #666; text-align: center;">Loading...</p>
+                        </div>
+                        
+                        <div id="inactiveSchemesList" class="schemes-list" style="display: none; max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #fff;">
+                            <p style="color: #666; text-align: center;">Loading...</p>
+                        </div>
+                        
+                        <div class="form-grid" style="margin-top: 15px;">
+                            <div class="form-group" style="grid-column: 1 / -1;">
+                                <label for="schemeSelect">Choose Scheme *</label>
+                                <select id="schemeSelect" name="schemeSelect" required>
+                                    <option value="">Select a Scheme</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-rupee-sign"></i> Financial Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="annualIncome">Annual Income (₹) *</label>
+                                <input type="number" id="annualIncome" name="annualIncome" min="0" step="1000" placeholder="Total annual income" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="familySize">Family Size *</label>
+                                <input type="number" id="familySize" name="familySize" min="1" max="20" placeholder="1-20 members" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="farmerType">Farmer Type *</label>
+                                <select id="farmerType" name="farmerType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="Small">Small Farmer (< 2 ha)</option>
+                                    <option value="Marginal">Marginal Farmer (< 1 ha)</option>
+                                    <option value="Medium">Medium Farmer (2-10 ha)</option>
+                                    <option value="Large">Large Farmer (> 10 ha)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="requestedAmount">Requested Subsidy (₹) *</label>
+                                <input type="number" id="requestedAmount" name="requestedAmount" min="0" step="1000" placeholder="Amount requested" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-upload"></i> Document Upload</h3>
+                        <div class="document-upload">
+                            <div class="upload-item" onclick="document.getElementById('aadharDoc').click()">
+                                <i class="fas fa-id-card upload-icon"></i>
+                                <label for="aadharDoc">Aadhar Card *</label>
+                                <input type="file" id="aadharDoc" name="aadharDoc" accept=".pdf,.jpg,.jpeg,.png" required onchange="updateFileName(this)">
+                                <span class="file-name" id="aadharDoc-name">Click to upload</span>
+                            </div>
+                            <div class="upload-item" onclick="document.getElementById('landDoc').click()">
+                                <i class="fas fa-file-contract upload-icon"></i>
+                                <label for="landDoc">Land Records *</label>
+                                <input type="file" id="landDoc" name="landDoc" accept=".pdf,.jpg,.jpeg,.png" required onchange="updateFileName(this)">
+                                <span class="file-name" id="landDoc-name">Click to upload</span>
+                            </div>
+                            <div class="upload-item" onclick="document.getElementById('cropDoc').click()">
+                                <i class="fas fa-camera upload-icon"></i>
+                                <label for="cropDoc">Crop Damage Photo *</label>
+                                <input type="file" id="cropDoc" name="cropDoc" accept=".jpg,.jpeg,.png" required onchange="updateFileName(this)">
+                                <span class="file-name" id="cropDoc-name">Click to upload</span>
+                            </div>
+                            <div class="upload-item" onclick="document.getElementById('bankDoc').click()">
+                                <i class="fas fa-university upload-icon"></i>
+                                <label for="bankDoc">Bank Passbook *</label>
+                                <input type="file" id="bankDoc" name="bankDoc" accept=".pdf,.jpg,.jpeg,.png" required onchange="updateFileName(this)">
+                                <span class="file-name" id="bankDoc-name">Click to upload</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-info-circle"></i> Terms & Conditions</h3>
+                        <div class="terms-content">
+                            <p>By submitting this application, I confirm that:</p>
+                            <ul>
+                                <li>All information provided is true and correct</li>
+                                <li>I understand that false information may lead to legal action</li>
+                                <li>The final decision will be taken by the agriculture officer</li>
+                                <li>This is an AI-assisted decision support system</li>
+                                <li>I agree to provide additional information if requested</li>
+                            </ul>
+                            <div class="terms-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the terms and conditions *</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="submit-container">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Application
+                            </button>
+                            <div class="form-status" id="formStatus">
+                                <i class="fas fa-info-circle"></i> Ready to submit
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="result-panel hidden" id="resultPanel">
+                <h3><i class="fas fa-clipboard-check"></i> Decision Result</h3>
+                
+                <div class="result-card" id="decisionCard">
+                    <h4 id="decisionTitle"><i class="fas fa-check-circle"></i> Processing Complete</h4>
+                    <p class="confidence">Confidence: <span id="confidenceLevel">0%</span></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
+                        Recommended Scheme: <strong id="schemeName">-</strong>
+                    </p>
+                    <div class="amount" id="subsidyAmount">₹0</div>
+                    <p id="officerExplanation" style="font-size: 0.875rem; color: #666; margin-top: 10px;"></p>
+                </div>
+                
+                <div class="officer-actions" id="officerActions" style="margin-top: 20px; display: none;">
+                    <h4 style="margin-bottom: 10px; color: #1e5631;"><i class="fas fa-user-tie"></i> Officer Decision</h4>
+                    <p style="font-size: 0.875rem; color: #666; margin-bottom: 15px;">Approve or reject this application based on the AI recommendation:</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button type="button" id="btnApprove" class="action-btn approve-btn" onclick="submitOfficerDecision('APPROVED')">
+                            <i class="fas fa-check"></i> Approve
+                        </button>
+                        <button type="button" id="btnReject" class="action-btn reject-btn" onclick="submitOfficerDecision('REJECTED')">
+                            <i class="fas fa-times"></i> Reject
+                        </button>
+                        <button type="button" id="btnReview" class="action-btn review-btn" onclick="submitOfficerDecision('REVIEW')">
+                            <i class="fas fa-search"></i> Send to Review
+                        </button>
+                    </div>
+                    <p id="decisionStatus" style="margin-top: 10px; font-size: 0.875rem;"></p>
+                </div>
+                
+                <div class="agent-results">
+                    <h4 style="margin-bottom: 10px; color: #1e5631;"><i class="fas fa-robot"></i> Agent Analysis</h4>
+                    <div id="agentResults"></div>
+                </div>
+                
+                <div id="shapExplanations" style="margin-top: 20px;"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Agriculture Department, Government of India | AgriDSS v1.0</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Help & Support</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

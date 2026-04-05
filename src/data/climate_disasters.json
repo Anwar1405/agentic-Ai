@@ -1,0 +1,174 @@
+{
+  "disaster_events": [
+    {
+      "event_id": "FLOOD_2024_001",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "disaster_type": "flood",
+      "start_date": "2024-07-15",
+      "end_date": "2024-07-25",
+      "severity": "severe",
+      "affected_villages": ["Velhe", "Bhor", "Maval", "Mulshi"],
+      "rainfall_mm": 450,
+      "damage_assessment": {
+        "crops_affected": ["paddy", "soybean", "vegetables"],
+        "area_hectares": 12500,
+        "estimated_loss_percentage": 65
+      }
+    },
+    {
+      "event_id": "DROUGHT_2024_002",
+      "state": "Rajasthan",
+      "district": "Jaisalmer",
+      "disaster_type": "drought",
+      "start_date": "2024-04-01",
+      "end_date": "2024-09-30",
+      "severity": "severe",
+      "affected_villages": ["Jaisalmer", "Sam", "Pokhran", "Fatehgarh"],
+      "rainfall_deficit_mm": -65,
+      "damage_assessment": {
+        "crops_affected": ["wheat", "mustard", "cotton"],
+        "area_hectares": 45000,
+        "estimated_loss_percentage": 80
+      }
+    },
+    {
+      "event_id": "CYCLONE_2024_003",
+      "state": "Odisha",
+      "district": "Puri",
+      "disaster_type": "cyclone",
+      "start_date": "2024-10-10",
+      "end_date": "2024-10-12",
+      "severity": "very_severe",
+      "affected_villages": ["Puri", "Konark", "Satapada", "Chilika"],
+      "wind_speed_kmh": 180,
+      "damage_assessment": {
+        "crops_affected": ["paddy", "coconut", "vegetables"],
+        "area_hectares": 28000,
+        "estimated_loss_percentage": 75
+      }
+    },
+    {
+      "event_id": "FLOOD_2024_004",
+      "state": "Bihar",
+      "district": "Madhubani",
+      "disaster_type": "flood",
+      "start_date": "2024-08-01",
+      "end_date": "2024-08-15",
+      "severity": "moderate",
+      "affected_villages": ["Madhubani", "Jhanjharpur", "Lohara", "Basua"],
+      "river": "Kosi",
+      "damage_assessment": {
+        "crops_affected": ["paddy", "maize", "vegetables"],
+        "area_hectares": 8500,
+        "estimated_loss_percentage": 45
+      }
+    },
+    {
+      "event_id": "PEST_2024_005",
+      "state": "Telangana",
+      "district": "Karimnagar",
+      "disaster_type": "pest",
+      "start_date": "2024-08-15",
+      "end_date": "2024-09-30",
+      "severity": "severe",
+      "affected_villages": ["Karimnagar", "Huzurabad", "Jammikunta"],
+      "pest_name": "Pink Bollworm",
+      "damage_assessment": {
+        "crops_affected": ["cotton"],
+        "area_hectares": 15000,
+        "estimated_loss_percentage": 55
+      }
+    },
+    {
+      "event_id": "DROUGHT_2024_006",
+      "state": "Karnataka",
+      "district": "Bagalkot",
+      "disaster_type": "drought",
+      "start_date": "2024-06-01",
+      "end_date": "2024-10-31",
+      "severity": "severe",
+      "affected_villages": ["Bagalkot", "Hungund", "Jamkhandi", "Mudhol"],
+      "rainfall_deficit_mm": -55,
+      "damage_assessment": {
+        "crops_affected": ["jowar", "cotton", "groundnut"],
+        "area_hectares": 32000,
+        "estimated_loss_percentage": 70
+      }
+    },
+    {
+      "event_id": "CYCLONE_2024_007",
+      "state": "Andhra Pradesh",
+      "district": "Visakhapatnam",
+      "disaster_type": "cyclone",
+      "start_date": "2024-11-05",
+      "end_date": "2024-11-08",
+      "severity": "severe",
+      "affected_villages": ["Visakhapatnam", "Anakapalli", "Nellimarla"],
+      "wind_speed_kmh": 140,
+      "damage_assessment": {
+        "crops_affected": ["paddy", "cashew", "mango"],
+        "area_hectares": 12000,
+        "estimated_loss_percentage": 60
+      }
+    },
+    {
+      "event_id": "FLOOD_2024_008",
+      "state": "Assam",
+      "district": "Dhubri",
+      "disaster_type": "flood",
+      "start_date": "2024-06-15",
+      "end_date": "2024-07-30",
+      "severity": "severe",
+      "affected_villages": ["Dhubri", "Gauripur", "Bilasipara"],
+      "river": "Brahmaputra",
+      "damage_assessment": {
+        "crops_affected": ["paddy", "jute", "vegetables"],
+        "area_hectares": 18000,
+        "estimated_loss_percentage": 70
+      }
+    }
+  ],
+  "disaster_types": {
+    "flood": {
+      "description": "Excessive rainfall causing waterlogging",
+      "verification_methods": ["satellite_imagery", "rainfall_data", "river_gauge"],
+      "severity_levels": {
+        "low": {"rainfall_mm": "100-200"},
+        "moderate": {"rainfall_mm": "200-400"},
+        "severe": {"rainfall_mm": "400-600"},
+        "very_severe": {"rainfall_mm": ">600"}
+      }
+    },
+    "drought": {
+      "description": "Prolonged period of deficient rainfall",
+      "verification_methods": ["rainfall_data", "soil_moisture", "vegetation_index"],
+      "severity_levels": {
+        "low": {"deficit": "-20 to -40%"},
+        "moderate": {"deficit": "-40 to -60%"},
+        "severe": {"deficit": "-60 to -80%"},
+        "extreme": {"deficit": "> -80%"}
+      }
+    },
+    "cyclone": {
+      "description": "Tropical storm with high winds",
+      "verification_methods": ["imd_alert", "wind_speed_data", "satellite"],
+      "severity_levels": {
+        "low": {"wind_kmh": "60-100"},
+        "moderate": {"wind_kmh": "100-140"},
+        "severe": {"wind_kmh": "140-170"},
+        "very_severe": {"wind_kmh": ">170"}
+      }
+    },
+    "pest": {
+      "description": "Pest infestation affecting crops",
+      "verification_methods": ["field_report", "survey", "expert_assessment"],
+      "severity_levels": {
+        "low": {"affected_area_percentage": "10-20"},
+        "moderate": {"affected_area_percentage": "20-40"},
+        "severe": {"affected_area_percentage": "40-70"},
+        "very_severe": {"affected_area_percentage": ">70"}
+      }
+    }
+  }
+}

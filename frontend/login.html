@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - AgriDSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e5631 0%, #2e7d32 50%, #145222 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      overflow: hidden;
+    }
+    .header {
+      padding: 22px;
+      background: #0f3d1d;
+      color: white;
+    }
+    .header h1 { font-size: 1.2rem; }
+    .header p { margin-top: 6px; opacity: 0.85; font-size: 0.9rem; }
+    .body { padding: 22px; }
+    .field { margin-bottom: 14px; }
+    label { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; color: #333; }
+    input {
+      width: 100%;
+      padding: 12px 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    input:focus { outline: none; border-color: #1e5631; box-shadow: 0 0 0 3px rgba(30,86,49,0.12); }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #1e5631;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn:disabled { background: #9db5a5; cursor: not-allowed; }
+    .hint {
+      margin-top: 14px;
+      padding: 12px;
+      background: #f5f7fa;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .error { margin-top: 12px; color: #c62828; font-weight: 600; font-size: 0.9rem; }
+    .links { margin-top: 16px; display: flex; justify-content: space-between; gap: 10px; }
+    .links a { color: #1e5631; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h1><i class="fas fa-leaf"></i> AgriDSS Login</h1>
+      <p>Officer/Admin access + optional farmer login</p>
+    </div>
+    <div class="body">
+      <div class="field">
+        <label for="email">Email / Username</label>
+        <input id="email" type="text" placeholder="officer@agridss.gov.in">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••">
+      </div>
+      <button class="btn" id="loginBtn" onclick="login()">
+        <i class="fas fa-sign-in-alt"></i> Login
+      </button>
+      <div class="error" id="error" style="display:none;"></div>
+
+      <div class="hint">
+        <div><strong>Demo accounts</strong></div>
+        <div style="margin-top:6px;">Officer: `officer@agridss.gov.in` / `officer123`</div>
+        <div>Admin: `admin@agridss.gov.in` / `admin123`</div>
+      </div>
+
+      <div class="links">
+        <a href="farmer_portal.html"><i class="fas fa-seedling"></i> Farmer Portal</a>
+        <a href="track_application.html"><i class="fas fa-search"></i> Track</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function login() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const btn = document.getElementById('loginBtn');
+      const err = document.getElementById('error');
+      err.style.display = 'none';
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in...';
+
+      try {
+        const res = await fetch('http://127.0.0.1:8000/api/auth/login?email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password), {
+          method: 'POST'
+        });
+        const data = await res.json();
+        if (!data.success) {
+          throw new Error(data.error || 'Login failed');
+        }
+        localStorage.setItem('agridss_user', JSON.stringify(data.user));
+        localStorage.setItem('agridss_token', data.token || '');
+
+        if (data.user.role === 'officer' || data.user.role === 'admin') {
+          window.location.href = 'officer_dashboard.html';
+        } else {
+          window.location.href = 'farmer_portal.html';
+        }
+      } catch (e) {
+        err.textContent = e.message;
+        err.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Login';
+      }
+    }
+
+    document.getElementById('password').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') login();
+    });
+  </script>
+</body>
+</html>
